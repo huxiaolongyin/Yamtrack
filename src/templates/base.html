@@ -208,14 +208,16 @@
                   {% get_current_language as CURRENT_LANGUAGE %}
                   {% if CURRENT_LANGUAGE == "zh-hans" %}
                     <input type="hidden" name="language" value="en">
-                    <button type="submit"
-                            class="min-w-0 grow text-left text-sm text-gray-400 hover:text-white cursor-pointer"
-                            title="{% trans 'Switch to English' %}">English</button>
+                    <a href="{{ request.get_full_path }}"
+                       onclick="event.preventDefault(); this.closest('form').requestSubmit();"
+                       class="min-w-0 grow text-left text-sm text-gray-400 hover:text-white cursor-pointer"
+                       title="{% trans 'Switch to English' %}">English</a>
                   {% else %}
                     <input type="hidden" name="language" value="zh-hans">
-                    <button type="submit"
-                            class="min-w-0 grow text-left text-sm text-gray-400 hover:text-white cursor-pointer"
-                            title="{% trans 'Switch to Simplified Chinese' %}">简体中文</button>
+                    <a href="{{ request.get_full_path }}"
+                       onclick="event.preventDefault(); this.closest('form').requestSubmit();"
+                       class="min-w-0 grow text-left text-sm text-gray-400 hover:text-white cursor-pointer"
+                       title="{% trans 'Switch to Simplified Chinese' %}">简体中文</a>
                   {% endif %}
                 </form>
 

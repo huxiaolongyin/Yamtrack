@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 11:45+0800\n"
+"POT-Creation-Date: 2026-08-24 11:52+0800\n"
 "PO-Revision-Date: 2026-08-24 12:00+0800\n"
 "Last-Translator: Jacob <1453366421@qq.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -1562,19 +1562,19 @@ msgstr "列表"
 msgid "Calendar"
 msgstr "日历"
 
-#: templates/base.html:213
+#: templates/base.html:214
 msgid "Switch to English"
 msgstr "切换到英语"
 
-#: templates/base.html:218
+#: templates/base.html:220
 msgid "Switch to Simplified Chinese"
 msgstr "切换到简体中文"
 
-#: templates/base.html:237 templates/users/base.html:8
+#: templates/base.html:239 templates/users/base.html:8
 msgid "Settings"
 msgstr "设置"
 
-#: templates/base.html:246
+#: templates/base.html:248
 msgid "Logout"
 msgstr "退出登录"
 

@@ -72,11 +72,11 @@
       },
     
       getProgressLabel() {
-        if (this.mediaType === 'anime') return 'Progress (Episodes)';
-        if (this.mediaType === 'manga') return 'Progress (Chapters)';
-        if (this.mediaType === 'game') return 'Progress (Play Time)';
-        if (this.mediaType === 'book') return 'Progress (Pages)';
-        return 'Progress';
+        if (this.mediaType === 'anime') return gettext('Progress (Episodes)');
+        if (this.mediaType === 'manga') return gettext('Progress (Chapters)');
+        if (this.mediaType === 'game') return gettext('Progress (Play Time)');
+        if (this.mediaType === 'book') return gettext('Progress (Pages)');
+        return gettext('Progress');
       },
     
       validateForm() {
@@ -84,7 +84,7 @@
         if (this.mediaType === 'season') {
           const parentTvId = document.getElementById('parent-tv-id').value;
           if (!parentTvId) {
-            alert('Please select a parent TV show from the dropdown');
+            alert(gettext('Please select a parent TV show from the dropdown'));
             return false;
           }
         }
@@ -93,7 +93,7 @@
         if (this.mediaType === 'episode') {
           const parentSeasonId = document.getElementById('parent-season-id').value;
           if (!parentSeasonId) {
-            alert('Please select a parent Season from the dropdown');
+            alert(gettext('Please select a parent Season from the dropdown'));
             return false;
           }
         }

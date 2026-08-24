@@ -1,4 +1,4 @@
-{% load app_tags %}
+{% load app_tags i18n %}
 
 <section class="space-y-5">
   <div class="space-y-4">
@@ -55,7 +55,7 @@
                       hx-trigger="click"
                       type="button"
                       class="rounded-md border border-gray-700 bg-[#2a2f35] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#313842] cursor-pointer"
-                      hx-on:click="this.remove()">Load all ({{ media_list.total }})</button>
+                      hx-on:click="this.remove()">{% blocktrans with total=media_list.total %}Load all ({{ total }}){% endblocktrans %}</button>
               <div id="loading-indicator-{{ section.id }}-{{ media_type }}"
                    class="htmx-indicator hidden text-center">
                 <div class="inline-flex items-center justify-center">

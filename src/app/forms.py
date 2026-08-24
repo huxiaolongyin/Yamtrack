@@ -287,7 +287,7 @@ class GameForm(MediaForm):
     progress = CustomDurationField(
         required=False,
         widget=forms.TextInput(attrs={"placeholder": "hh:mm"}),
-        label="Progress (Time Played)",
+        label=_("Progress (Time Played)"),
     )
 
     class Meta(MediaForm.Meta):

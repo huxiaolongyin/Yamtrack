@@ -6,6 +6,7 @@ from django.db.models import Q
 from django.template.defaultfilters import pluralize
 from django.utils import formats, timezone
 from django.utils.dateparse import parse_datetime
+from django.utils.translation import gettext
 
 from app import config, helpers
 from app.models import MediaTypes, Status
@@ -101,9 +102,9 @@ def build_journal_days(entries, user):
         day = timezone.localdate(entry["date"])
         if not days or days[-1]["day"] != day:
             if day == today:
-                label = "Today"
+                label = gettext("Today")
             elif day == yesterday:
-                label = "Yesterday"
+                label = gettext("Yesterday")
             else:
                 label = formats.date_format(day, user.date_format)
             days.append(

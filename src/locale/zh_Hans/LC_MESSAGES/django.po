@@ -1,0 +1,2816 @@
+# Simplified Chinese translations for Yamtrack.
+# Copyright (C) 2026 Yamtrack contributors
+# This file is distributed under the same license as Yamtrack.
+# Jacob <1453366421@qq.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-24 11:12+0800\n"
+"PO-Revision-Date: 2026-08-24 12:00+0800\n"
+"Last-Translator: Jacob <1453366421@qq.com>\n"
+"Language-Team: Simplified Chinese\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: app/forms.py:70
+msgid "Invalid time format"
+msgstr "时间格式无效"
+
+#: app/forms.py:77
+#, python-format
+msgid "Minutes must be between 0 and %(max_min)s."
+msgstr "分钟数必须在 0 到 %(max_min)s 之间。"
+
+#: app/forms.py:94
+msgid ""
+"Invalid time format. Provide duration in hours (e.g., '5', '1.5'), hours and "
+"minutes (e.g., '5:30', '5h 30min'), or just minutes (e.g., '30min')."
+msgstr ""
+"时间格式无效。请输入小时数（如“5”“1.5”）、小时和分钟（如“5:30”“5h 30min”），"
+"或仅输入分钟数（如“30min”）。"
+
+#: app/forms.py:108 app/forms.py:115
+msgid "Select"
+msgstr "选择"
+
+#: app/forms.py:109 templates/app/create_entry.html:137
+msgid "Parent TV Show"
+msgstr "所属电视剧"
+
+#: app/forms.py:116 templates/app/create_entry.html:184
+msgid "Parent Season"
+msgstr "所属季度"
+
+#: app/forms.py:165
+msgid "Parent TV show is required for seasons"
+msgstr "季度必须指定所属电视剧"
+
+#: app/forms.py:175
+msgid "Parent season is required for episodes"
+msgstr "剧集必须指定所属季度"
+
+#: app/forms.py:183
+msgid "Title is required for this media type"
+msgstr "此媒体类型必须填写标题"
+
+#: app/forms.py:290
+msgid "Progress (Time Played)"
+msgstr "进度（游玩时长）"
+
+#: app/history_processor.py:105 templates/events/calendar.html:33
+#: templates/events/components/calendar_list.html:11
+msgid "Today"
+msgstr "今天"
+
+#: app/history_processor.py:107
+msgid "Yesterday"
+msgstr "昨天"
+
+#: app/models.py:43
+msgid "The Movie Database"
+msgstr "The Movie Database"
+
+#: app/models.py:44 users/templatetags/user_tags.py:25
+msgid "MyAnimeList"
+msgstr "MyAnimeList"
+
+#: app/models.py:45
+msgid "MangaUpdates"
+msgstr "MangaUpdates"
+
+#: app/models.py:46
+msgid "Internet Game Database"
+msgstr "Internet Game Database"
+
+#: app/models.py:47
+msgid "Open Library"
+msgstr "Open Library"
+
+#: app/models.py:48
+msgid "Hardcover"
+msgstr "Hardcover"
+
+#: app/models.py:49
+msgid "Comic Vine"
+msgstr "Comic Vine"
+
+#: app/models.py:50
+msgid "BoardGameGeek"
+msgstr "BoardGameGeek"
+
+#: app/models.py:51
+msgid "Manual"
+msgstr "手动添加"
+
+#: app/models.py:57
+msgid "TV Show"
+msgstr "电视剧"
+
+#: app/models.py:58
+msgid "TV Season"
+msgstr "电视剧季度"
+
+#: app/models.py:59 templates/app/media_details.html:579
+msgid "Episode"
+msgstr "剧集"
+
+#: app/models.py:60
+msgid "Movie"
+msgstr "电影"
+
+#: app/models.py:61
+msgid "Anime"
+msgstr "动画"
+
+#: app/models.py:62
+msgid "Manga"
+msgstr "日式漫画"
+
+#: app/models.py:63
+msgid "Game"
+msgstr "游戏"
+
+#: app/models.py:64
+msgid "Book"
+msgstr "图书"
+
+#: app/models.py:65
+msgid "Comic"
+msgstr "漫画"
+
+#: app/models.py:66
+msgid "Boardgame"
+msgstr "桌游"
+
+#: app/models.py:776
+msgid "Completed"
+msgstr "已完成"
+
+#: app/models.py:777 templates/app/statistics.html:116
+msgid "In Progress"
+msgstr "进行中"
+
+#: app/models.py:778
+msgid "Planning"
+msgstr "计划中"
+
+#: app/models.py:779
+msgid "Paused"
+msgstr "已暂停"
+
+#: app/models.py:780
+msgid "Dropped"
+msgstr "已弃置"
+
+#: app/models.py:786 templates/users/import_data.html:485
+msgid "Success"
+msgstr "成功"
+
+#: app/models.py:787
+msgid "Warning"
+msgstr "警告"
+
+#: app/models.py:788
+msgid "Error"
+msgstr "错误"
+
+#: app/models.py:789
+msgid "Info"
+msgstr "信息"
+
+#: app/models.py:1166 app/models.py:1410
+#, python-format
+msgid "had %(count)d released episode marked as watched automatically."
+msgid_plural "had %(count)d released episodes marked as watched automatically."
+msgstr[0] "有 %(count)d 集已发布剧集被自动标记为已观看。"
+
+#: app/models.py:1183
+msgid "was left in progress because unreleased episodes or seasons remain."
+msgstr "因仍有未发布的剧集或季度，保持为进行中。"
+
+#: app/models.py:1292
+#, python-format
+msgid "Season %(season)d was marked as in progress automatically."
+msgstr "第 %(season)d 季已自动标记为进行中。"
+
+#: app/models.py:1328
+msgid ""
+"remains in progress because another season is still pending or has not aired "
+"yet."
+msgstr "因另一季度仍待观看或尚未播出，保持为进行中。"
+
+#: app/models.py:1342 app/models.py:1827
+msgid "was marked as completed automatically."
+msgstr "已自动标记为已完成。"
+
+#: app/models.py:1433
+msgid "was left in progress because unreleased episodes remain."
+msgstr "因仍有未发布的剧集，保持为进行中。"
+
+#: app/templatetags/app_tags.py:148
+msgctxt "media type plural label"
+msgid "TV Show"
+msgid_plural "TV Shows"
+msgstr[0] "电视剧"
+
+#: app/templatetags/app_tags.py:151
+msgctxt "media type plural label"
+msgid "TV Season"
+msgid_plural "TV Seasons"
+msgstr[0] "电视剧季度"
+
+#: app/templatetags/app_tags.py:154
+msgctxt "media type plural label"
+msgid "Episode"
+msgid_plural "Episodes"
+msgstr[0] "剧集"
+
+#: app/templatetags/app_tags.py:157
+msgctxt "media type plural label"
+msgid "Movie"
+msgid_plural "Movies"
+msgstr[0] "电影"
+
+#: app/templatetags/app_tags.py:160
+msgctxt "media type plural label"
+msgid "Anime"
+msgid_plural "Anime"
+msgstr[0] "动画"
+
+#: app/templatetags/app_tags.py:163
+msgctxt "media type plural label"
+msgid "Manga"
+msgid_plural "Manga"
+msgstr[0] "日式漫画"
+
+#: app/templatetags/app_tags.py:166
+msgctxt "media type plural label"
+msgid "Game"
+msgid_plural "Games"
+msgstr[0] "游戏"
+
+#: app/templatetags/app_tags.py:169
+msgctxt "media type plural label"
+msgid "Book"
+msgid_plural "Books"
+msgstr[0] "图书"
+
+#: app/templatetags/app_tags.py:172
+msgctxt "media type plural label"
+msgid "Comic"
+msgid_plural "Comics"
+msgstr[0] "漫画"
+
+#: app/templatetags/app_tags.py:175
+msgctxt "media type plural label"
+msgid "Boardgame"
+msgid_plural "Boardgames"
+msgstr[0] "桌游"
+
+#: app/views.py:447
+msgid "Manual items cannot be synced."
+msgstr "手动添加的条目无法同步。"
+
+#: app/views.py:463
+msgid "The data was recently synced, please wait a few seconds."
+msgstr "数据刚刚同步过，请稍候几秒。"
+
+#: app/views.py:539
+#, python-format
+msgid "%(title)s was synced to %(source)s successfully."
+msgstr "%(title)s 已成功同步到 %(source)s。"
+
+#: app/views.py:712
+msgid "Invalid form data"
+msgstr "表单数据无效"
+
+#: app/views.py:778
+#, python-format
+msgid "Season %(episode_number)s"
+msgstr "第 %(episode_number)s 季"
+
+#: app/views.py:782 templates/app/components/fill_track_episode.html:27
+#, python-format
+msgid "Episode %(episode_number)s"
+msgstr "第 %(episode_number)s 集"
+
+#: app/views.py:789
+#, python-format
+msgid "%(media_name)s already exists in the database."
+msgstr "%(media_name)s 已存在于数据库中。"
+
+#: app/views.py:822
+#, python-format
+msgid "%(item)s added successfully."
+msgstr "已成功添加 %(item)s。"
+
+#: app/views.py:957
+msgid "Record not found"
+msgstr "未找到记录"
+
+#: events/calendar/main.py:20
+msgid "Manual sources are not processed"
+msgstr "不处理手动来源"
+
+#: events/calendar/main.py:24
+msgid "No items to process"
+msgstr "没有可处理的条目"
+
+#: events/notifications.py:34
+msgid "No users with release notifications enabled"
+msgstr "没有启用发布通知的用户"
+
+#: events/notifications.py:46
+msgid "No recent releases found"
+msgstr "未发现最近发布的内容"
+
+#: events/notifications.py:51
+msgid "🔔 YamTrack: New Releases Available! 🔔"
+msgstr "🔔 Yamtrack：有新内容发布！🔔"
+
+#: events/notifications.py:93
+msgid "No users with daily digest enabled"
+msgstr "没有启用每日摘要的用户"
+
+#: events/notifications.py:104
+msgid "No releases scheduled for today"
+msgstr "今天没有计划发布的内容"
+
+#: events/notifications.py:106
+msgid "📆 YamTrack: Today's Releases 📆"
+msgstr "📆 Yamtrack：今日发布 📆"
+
+#: events/notifications.py:417
+msgid "TV SHOW"
+msgstr "电视剧"
+
+#: events/notifications.py:418
+msgid "TV Shows"
+msgstr "电视剧"
+
+#: events/notifications.py:419
+msgid "EPISODE"
+msgstr "剧集"
+
+#: events/notifications.py:420
+msgid "MOVIE"
+msgstr "电影"
+
+#: events/notifications.py:421
+msgid "ANIME"
+msgstr "动画"
+
+#: events/notifications.py:422
+msgid "MANGA"
+msgstr "日式漫画"
+
+#: events/notifications.py:423
+msgid "GAME"
+msgstr "游戏"
+
+#: events/notifications.py:424
+msgid "BOOK"
+msgstr "图书"
+
+#: events/notifications.py:425
+msgid "COMIC"
+msgstr "漫画"
+
+#: events/notifications.py:426
+msgid "BOARDGAME"
+msgstr "桌游"
+
+#: events/notifications.py:462
+msgid "Enjoy your media!"
+msgstr "祝你观赏愉快！"
+
+#: events/views.py:114
+msgid "The task to refresh upcoming releases has been queued."
+msgstr "刷新即将发布内容的任务已加入队列。"
+
+#: integrations/imports/anilist.py:48
+msgid "Invalid Anilist secret key."
+msgstr "AniList 密钥无效。"
+
+#: integrations/imports/anilist.py:83
+msgid "Invalid AniList access token."
+msgstr "AniList 访问令牌无效。"
+
+#: integrations/imports/goodreads.py:81
+#, python-format
+msgid "Error processing entry: %(description)s - %(error)s"
+msgstr "处理条目时出错：%(description)s - %(error)s"
+
+#: integrations/imports/goodreads.py:88 integrations/imports/hltb.py:76
+#: integrations/imports/hltb.py:84 integrations/imports/imdb.py:98
+#: integrations/imports/imdb.py:106 integrations/imports/yamtrack.py:83
+#, python-format
+msgid "Error processing entry: %(row)s"
+msgstr "处理条目时出错：%(row)s"
+
+#: integrations/imports/goodreads.py:136
+#, python-format
+msgid "%(title)s: Couldn't find this book via Title or ISBN13 in %(source)s"
+msgstr "%(title)s：无法通过标题或 ISBN-13 在 %(source)s 中找到此书"
+
+#: integrations/imports/helpers.py:243
+msgid "Invalid import time."
+msgstr "导入时间无效。"
+
+#: integrations/imports/helpers.py:250
+msgid "The same import task is already scheduled."
+msgstr "相同的导入任务已在计划中。"
+
+#: integrations/imports/helpers.py:279
+#, python-format
+msgid "%(source)s import task scheduled."
+msgstr "%(source)s 导入任务已安排。"
+
+#: integrations/imports/hltb.py:61 integrations/imports/imdb.py:83
+#: integrations/imports/yamtrack.py:63
+msgid "Invalid file format. Please upload a CSV file."
+msgstr "文件格式无效，请上传 CSV 文件。"
+
+#: integrations/imports/hltb.py:106
+#, python-format
+msgid "%(title)s: Couldn't find a game with this title in %(source)s"
+msgstr "%(title)s：无法在 %(source)s 中找到同名游戏"
+
+#: integrations/imports/hltb.py:151
+#, python-format
+msgid ""
+"%(title_list)s: They were matched to the same ID %(media_id)s - none imported"
+msgstr "%(title_list)s：它们匹配到了同一个 ID %(media_id)s，均未导入"
+
+#: integrations/imports/imdb.py:131
+#, python-format
+msgid "Invalid or missing IMDB ID for title: %(title)s"
+msgstr "标题 %(title)s 的 IMDb ID 无效或缺失"
+
+#: integrations/imports/imdb.py:141
+#, python-format
+msgid "Unsupported title type '%(title_type)s' for title: %(title)s - skipped"
+msgstr "标题 %(title)s 的类型“%(title_type)s”不受支持，已跳过"
+
+#: integrations/imports/imdb.py:149
+#, python-format
+msgid "Unknown title type '%(title_type)s' for title: %(title)s - skipped"
+msgstr "标题 %(title)s 的类型“%(title_type)s”未知，已跳过"
+
+#: integrations/imports/imdb.py:160
+#, python-format
+msgid "Couldn't find a match in %(source)s for title: %(title)s"
+msgstr "无法在 %(source)s 中找到与标题 %(title)s 匹配的内容"
+
+#: integrations/imports/imdb.py:214
+#, python-format
+msgid ""
+"%(title_list)s: They were matched to the same TMDB ID %(media_id)s - none "
+"imported"
+msgstr "%(title_list)s：它们匹配到了同一个 TMDB ID %(media_id)s，均未导入"
+
+#: integrations/imports/kitsu.py:98 integrations/imports/mal.py:91
+#, python-format
+msgid "User %(username)s not found."
+msgstr "未找到用户 %(username)s。"
+
+#: integrations/imports/kitsu.py:102
+#, python-format
+msgid "Multiple users found for %(username)s, please use your user ID. "
+msgstr "找到多个名为 %(username)s 的用户，请改用用户 ID。"
+
+#: integrations/imports/kitsu.py:103
+msgid "User IDs can be found in the URL when viewing your Kitsu profile."
+msgstr "查看 Kitsu 个人资料时，可在网址中找到用户 ID。"
+
+#: integrations/imports/kitsu.py:134
+#, python-format
+msgid "Error processing entry: %(title)s (%(kitsu_id)s) - %(entry)s"
+msgstr "处理条目时出错：%(title)s（%(kitsu_id)s）- %(entry)s"
+
+#: integrations/imports/kitsu.py:257
+#, python-format
+msgid ""
+"Could not import unknown item - missing media data from Kitsu. Relationship: "
+"%(relationship)s"
+msgstr "无法导入未知条目：Kitsu 媒体数据缺失。关系：%(relationship)s"
+
+#: integrations/imports/kitsu.py:324
+#, python-format
+msgid "%(media_title)s: No valid external ID found."
+msgstr "%(media_title)s：未找到有效的外部 ID。"
+
+#: integrations/imports/mal.py:99
+#, python-format
+msgid "Error processing entry: %(content)s"
+msgstr "处理条目时出错：%(content)s"
+
+#: integrations/imports/simkl.py:76
+msgid "Invalid SIMKL secret key."
+msgstr "SIMKL 密钥无效。"
+
+#: integrations/imports/simkl.py:186 integrations/imports/simkl.py:348
+#, python-format
+msgid "%(title)s: No TMDB ID found"
+msgstr "%(title)s：未找到 TMDB ID"
+
+#: integrations/imports/simkl.py:192 integrations/imports/simkl.py:354
+#, python-format
+msgid "%(title)s (%(tmdb_id)s) already present in the import list"
+msgstr "%(title)s（%(tmdb_id)s）已在导入列表中"
+
+#: integrations/imports/simkl.py:258
+#, python-format
+msgid "Error processing entry: %(tv)s"
+msgstr "处理条目时出错：%(tv)s"
+
+#: integrations/imports/simkl.py:377 integrations/imports/trakt.py:390
+#, python-format
+msgid "%(title)s: not found in %(source)s with ID %(tmdb_id)s."
+msgstr "%(title)s：未在 %(source)s 中找到 ID 为 %(tmdb_id)s 的内容。"
+
+#: integrations/imports/simkl.py:412
+#, python-format
+msgid "Error processing entry: %(movie)s"
+msgstr "处理条目时出错：%(movie)s"
+
+#: integrations/imports/simkl.py:431
+#, python-format
+msgid "%(title)s: No MyAnimeList ID found"
+msgstr "%(title)s：未找到 MyAnimeList ID"
+
+#: integrations/imports/simkl.py:437
+#, python-format
+msgid "%(title)s (%(mal_id)s) already present in the import list"
+msgstr "%(title)s（%(mal_id)s）已在导入列表中"
+
+#: integrations/imports/simkl.py:460
+#, python-format
+msgid "%(title)s: not found in %(source)s with ID %(mal_id)s."
+msgstr "%(title)s：未在 %(source)s 中找到 ID 为 %(mal_id)s 的内容。"
+
+#: integrations/imports/steam.py:45
+msgid "Steam API key not configured in environment variables"
+msgstr "环境变量中未配置 Steam API 密钥"
+
+#: integrations/imports/steam.py:113
+msgid "Invalid response from Steam API"
+msgstr "Steam API 返回了无效响应"
+
+#: integrations/imports/steam.py:119
+#, python-format
+msgid "No games found in Steam response for user %(steam_id)s"
+msgstr "Steam 响应中没有找到用户 %(steam_id)s 的游戏"
+
+#: integrations/imports/steam.py:145
+msgid "Steam API rate limit exceeded. Please try again later."
+msgstr "已超出 Steam API 频率限制，请稍后重试。"
+
+#: integrations/imports/steam.py:148
+msgid "Steam profile is private or invalid"
+msgstr "Steam 个人资料为私密或无效"
+
+#: integrations/imports/steam.py:151
+msgid "Bad request to Steam API. Please check the Steam ID."
+msgstr "Steam API 请求错误，请检查 Steam ID。"
+
+#: integrations/imports/steam.py:154
+msgid "Invalid Steam API key"
+msgstr "Steam API 密钥无效"
+
+#: integrations/imports/steam.py:156
+#, python-format
+msgid "Steam API error: %(status_code)s"
+msgstr "Steam API 错误：%(status_code)s"
+
+#: integrations/imports/steam.py:161
+msgid "Steam API request failed after all retries"
+msgstr "Steam API 请求在所有重试后仍然失败"
+
+#: integrations/imports/steam.py:183
+#, python-format
+msgid "%(name)s (%(appid)s): Couldn't find a match in %(source)s"
+msgstr "%(name)s（%(appid)s）：无法在 %(source)s 中找到匹配项"
+
+#: integrations/imports/steam.py:253
+#, python-format
+msgid "Couldn't find a match in %(source)s"
+msgstr "无法在 %(source)s 中找到匹配项"
+
+#: integrations/imports/steam.py:260
+#, python-format
+msgid "Failed to process Steam game %(name)s (%(appid)s): %(error)s"
+msgstr "处理 Steam 游戏 %(name)s（%(appid)s）失败：%(error)s"
+
+#: integrations/imports/trakt.py:143
+msgid "Invalid Trakt secret key."
+msgstr "Trakt 密钥无效。"
+
+#: integrations/imports/trakt.py:288
+#, python-format
+msgid ""
+"User slug %(username)s not found. User slug can be found in your Trakt "
+"profile URL."
+msgstr "未找到用户标识 %(username)s。可在 Trakt 个人资料网址中找到用户标识。"
+
+#: integrations/imports/trakt.py:294
+msgid "This account is set to private, use OAuth import instead."
+msgstr "此账户已设为私密，请改用 OAuth 导入。"
+
+#: integrations/imports/trakt.py:347
+#, python-format
+msgid "Error processing history entry: %(entry)s"
+msgstr "处理历史记录时出错：%(entry)s"
+
+#: integrations/imports/trakt.py:364
+#, python-format
+msgid "%(title)s: No %(source)s ID found."
+msgstr "%(title)s：未找到 %(source)s ID。"
+
+#: integrations/imports/trakt.py:526
+#, python-format
+msgid "%(item_identifier)s: not found in %(source)s with ID %(tmdb_id)s."
+msgstr "%(item_identifier)s：未在 %(source)s 中找到 ID 为 %(tmdb_id)s 的内容。"
+
+#: integrations/imports/trakt.py:641
+#, python-format
+msgid "Error processing watchlist entry: %(entry)s"
+msgstr "处理稍后观看条目时出错：%(entry)s"
+
+#: integrations/imports/trakt.py:660
+#, python-format
+msgid "Error processing rating entry: %(entry)s"
+msgstr "处理评分条目时出错：%(entry)s"
+
+#: integrations/imports/trakt.py:677
+#, python-format
+msgid "Error processing comment entry: %(entry)s"
+msgstr "处理评论条目时出错：%(entry)s"
+
+#: integrations/imports/yamtrack.py:73
+#, python-format
+msgid "Error processing entry with ID %(media_id)s (%(media_type)s): %(error)s"
+msgstr "处理 ID 为 %(media_id)s（%(media_type)s）的条目时出错：%(error)s"
+
+#: integrations/imports/yamtrack.py:168
+#, python-format
+msgid "%(title)s (%(media_type)s): %(errors)s"
+msgstr "%(title)s（%(media_type)s）：%(errors)s"
+
+#: integrations/imports/yamtrack.py:217
+#, python-format
+msgid "Missing metadata for: %(row)s"
+msgstr "以下内容缺少元数据：%(row)s"
+
+#: integrations/tasks.py:26
+msgid ""
+"\n"
+"\n"
+"\n"
+" Couldn't import the following media: \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"\n"
+" 无法导入以下媒体：\n"
+"\n"
+
+#: integrations/tasks.py:47
+msgid "No media was imported."
+msgstr "没有导入任何媒体。"
+
+#: integrations/tasks.py:49
+#, python-format
+msgid "Imported %(media_list)s."
+msgstr "已导入 %(media_list)s。"
+
+#: integrations/views.py:62
+msgid "Invalid or expired Trakt authorization request."
+msgstr "Trakt 授权请求无效或已过期。"
+
+#: integrations/views.py:66
+msgid "Trakt authorization failed."
+msgstr "Trakt 授权失败。"
+
+#: integrations/views.py:89 integrations/views.py:124
+msgid "The task to import media from Trakt has been queued."
+msgstr "从 Trakt 导入媒体的任务已加入队列。"
+
+#: integrations/views.py:110
+msgid "Trakt username is required."
+msgstr "必须填写 Trakt 用户名。"
+
+#: integrations/views.py:144
+msgid "Trakt export zip file is required."
+msgstr "必须提供 Trakt 导出 ZIP 文件。"
+
+#: integrations/views.py:202
+msgid "The task to import media from Simkl has been queued."
+msgstr "从 Simkl 导入媒体的任务已加入队列。"
+
+#: integrations/views.py:223
+msgid "MyAnimeList username is required."
+msgstr "必须填写 MyAnimeList 用户名。"
+
+#: integrations/views.py:233
+msgid "The task to import media from MyAnimeList has been queued."
+msgstr "从 MyAnimeList 导入媒体的任务已加入队列。"
+
+#: integrations/views.py:285 integrations/views.py:318
+msgid "AniList username is required."
+msgstr "必须填写 AniList 用户名。"
+
+#: integrations/views.py:299 integrations/views.py:331
+msgid "AniList import queued."
+msgstr "AniList 导入任务已加入队列。"
+
+#: integrations/views.py:349
+msgid "Kitsu user ID is required."
+msgstr "必须填写 Kitsu 用户 ID。"
+
+#: integrations/views.py:358
+msgid "The task to import media from Kitsu has been queued."
+msgstr "从 Kitsu 导入媒体的任务已加入队列。"
+
+#: integrations/views.py:379
+msgid "Yamtrack CSV file is required."
+msgstr "必须提供 Yamtrack CSV 文件。"
+
+#: integrations/views.py:390
+msgid "The task to import media from Yamtrack CSV file has been queued."
+msgstr "从 Yamtrack CSV 文件导入媒体的任务已加入队列。"
+
+#: integrations/views.py:401
+msgid "HowLongToBeat CSV file is required."
+msgstr "必须提供 HowLongToBeat CSV 文件。"
+
+#: integrations/views.py:412
+msgid "The task to import media from HowLongToBeat CSV file has been queued."
+msgstr "从 HowLongToBeat CSV 文件导入媒体的任务已加入队列。"
+
+#: integrations/views.py:422
+msgid "Steam ID is required."
+msgstr "必须填写 Steam ID。"
+
+#: integrations/views.py:431
+msgid "The task to import media from Steam has been queued."
+msgstr "从 Steam 导入媒体的任务已加入队列。"
+
+#: integrations/views.py:451
+msgid "IMDB CSV file is required."
+msgstr "必须提供 IMDb CSV 文件。"
+
+#: integrations/views.py:462
+msgid "The task to import media from IMDB CSV file has been queued."
+msgstr "从 IMDb CSV 文件导入媒体的任务已加入队列。"
+
+#: integrations/views.py:473
+msgid "GoodReads CSV file is required."
+msgstr "必须提供 Goodreads CSV 文件。"
+
+#: integrations/views.py:484
+msgid "The task to import media from GoodReads CSV file has been queued."
+msgstr "从 Goodreads CSV 文件导入媒体的任务已加入队列。"
+
+#: integrations/views.py:554 integrations/views.py:585
+msgid "Missing payload"
+msgstr "缺少请求数据"
+
+#: lists/views.py:100
+msgid "List not found"
+msgstr "未找到列表"
+
+#: lists/views.py:234
+msgid "You do not have permission to edit this list."
+msgstr "你没有编辑此列表的权限。"
+
+#: lists/views.py:248
+msgid "You do not have permission to delete this list."
+msgstr "你没有删除此列表的权限。"
+
+#: templates/400.html:6 templates/400.html:14
+msgid "Bad Request"
+msgstr "请求错误"
+
+#: templates/400.html:16
+msgid ""
+"The server could not understand the request due to invalid syntax or missing "
+"parameters."
+msgstr "由于语法无效或缺少参数，服务器无法理解此请求。"
+
+#: templates/400.html:19 templates/403_csrf.html:31
+#, python-format
+msgid ""
+"If you believe this was a bug, please %(link_start)sreport the "
+"issue%(link_end)s."
+msgstr "如果你认为这是程序缺陷，请%(link_start)s报告问题%(link_end)s。"
+
+#: templates/400.html:28 templates/403.html:33 templates/403_csrf.html:45
+#: templates/404.html:26 templates/500.html:37
+#: templates/socialaccount/connections.html:95
+msgid "Back to Home"
+msgstr "返回首页"
+
+#: templates/403.html:6 templates/403_csrf.html:6
+msgid "Forbidden"
+msgstr "禁止访问"
+
+#: templates/403.html:14 templates/403_csrf.html:14
+msgid "Access Forbidden"
+msgstr "访问被禁止"
+
+#: templates/403.html:16 templates/403_csrf.html:16
+msgid ""
+"You don't have permission to access this resource. Please log in or contact "
+"an administrator."
+msgstr "你没有访问此资源的权限。请登录或联系管理员。"
+
+#: templates/403.html:20 templates/404.html:17 templates/500.html:23
+msgid "If you believe this was a bug, please"
+msgstr "如果你认为这是程序缺陷，请"
+
+#: templates/403.html:21
+msgid "report the issue."
+msgstr "报告问题。"
+
+#: templates/403.html:28 templates/403_csrf.html:40
+msgid "Log In"
+msgstr "登录"
+
+#: templates/403_csrf.html:19
+msgid "Using a Reverse Proxy?"
+msgstr "正在使用反向代理？"
+
+#: templates/403_csrf.html:21
+#, python-format
+msgid ""
+"If you're accessing YamTrack through a reverse proxy, you need to set the "
+"%(code_start)sURLS%(code_end)s environment variable to your application URL."
+msgstr ""
+"如果通过反向代理访问 Yamtrack，需要将 %(code_start)sURLS%(code_end)s 环境变量"
+"设为应用网址。"
+
+#: templates/403_csrf.html:27
+msgid "For example "
+msgstr "例如"
+
+#: templates/404.html:6
+msgid "Page not found"
+msgstr "找不到页面"
+
+#: templates/404.html:14
+msgid "Page Not Found"
+msgstr "找不到页面"
+
+#: templates/404.html:15
+msgid "The page you are looking for doesn't exist or has been moved."
+msgstr "你要查找的页面不存在或已被移动。"
+
+#: templates/500.html:6
+msgid "Server Error"
+msgstr "服务器错误"
+
+#: templates/500.html:14
+msgid "Something Went Wrong"
+msgstr "出现问题"
+
+#: templates/500.html:19
+msgid "We're sorry, but there was an error processing your request."
+msgstr "很抱歉，处理你的请求时发生错误。"
+
+#: templates/500.html:32
+msgid "Try Again"
+msgstr "重试"
+
+#: templates/account/login.html:7
+msgid "Login"
+msgstr "登录"
+
+#: templates/account/login.html:11
+msgid "Sign in to your account"
+msgstr "登录你的账户"
+
+#: templates/account/login.html:28
+msgid "Sign In"
+msgstr "登录"
+
+#: templates/account/login.html:41
+msgid "Need an account?"
+msgstr "还没有账户？"
+
+#: templates/account/login.html:43
+msgid "Register now"
+msgstr "立即注册"
+
+#: templates/account/signup.html:6
+msgid "Register"
+msgstr "注册"
+
+#: templates/account/signup.html:10
+msgid "Create your account"
+msgstr "创建你的账户"
+
+#: templates/account/signup.html:26
+msgid "Create Account"
+msgstr "创建账户"
+
+#: templates/account/signup.html:38
+msgid "Already have an account?"
+msgstr "已有账户？"
+
+#: templates/account/signup.html:40
+msgid "Sign in"
+msgstr "登录"
+
+#: templates/allauth/elements/hr.html:5
+msgid "Or continue with"
+msgstr "或使用以下方式继续"
+
+#: templates/app/components/cast_card.html:14
+#, python-format
+msgid "Open TMDB page for %(name)s"
+msgstr "打开 %(name)s 的 TMDB 页面"
+
+#: templates/app/components/fill_history.html:6 templates/app/journal.html:147
+msgid "Activity History"
+msgstr "活动记录"
+
+#: templates/app/components/fill_history.html:16
+msgid "Instance"
+msgstr "实例"
+
+#: templates/app/components/fill_history.html:29
+msgid "You haven't started tracking it yet."
+msgstr "你还没有开始记录此条目。"
+
+#: templates/app/components/fill_track.html:85
+#: templates/app/components/fill_track_episode.html:62
+#: templates/lists/components/list_form.html:46
+msgid "Delete"
+msgstr "删除"
+
+#: templates/app/components/fill_track_episode.html:14
+#: templates/app/media_details.html:587
+msgid "Track Episode"
+msgstr "记录本集"
+
+#: templates/app/components/fill_track_episode.html:30
+msgid "Watched once"
+msgstr "已观看 1 次"
+
+#: templates/app/components/fill_track_episode.html:32
+#, python-format
+msgid "Watched %(watch_count)s times"
+msgstr "已观看 %(watch_count)s 次"
+
+#: templates/app/components/fill_track_episode.html:35
+msgid "Not watched yet"
+msgstr "尚未观看"
+
+#: templates/app/components/fill_track_episode.html:44
+msgid "Previous Watches"
+msgstr "以往观看记录"
+
+#: templates/app/components/fill_track_episode.html:52
+msgid "No date provided"
+msgstr "未提供日期"
+
+#: templates/app/components/fill_track_episode.html:96
+msgid "Watch Date"
+msgstr "观看日期"
+
+#: templates/app/components/fill_track_episode.html:117
+msgid "Add watched entry with current settings"
+msgstr "使用当前设置添加观看记录"
+
+#: templates/app/components/fill_track_episode.html:117
+msgid "Add watch"
+msgstr "添加观看记录"
+
+#: templates/app/components/fill_track_episode.html:143
+msgid "Fills in the current date and time"
+msgstr "填入当前日期和时间"
+
+#: templates/app/components/fill_track_episode.html:143
+msgid "Fill in current time"
+msgstr "填入当前时间"
+
+#: templates/app/components/fill_track_episode.html:150
+msgid "Fills in the date and time the episode will be finished if started now"
+msgstr "填入从现在开始观看时的预计结束日期和时间"
+
+#: templates/app/components/fill_track_episode.html:151
+msgid "Fill in end time"
+msgstr "填入结束时间"
+
+#: templates/app/components/fill_track_episode.html:160
+msgid "Fills in the air date of the episode, if available"
+msgstr "填入本集播出日期（如有）"
+
+#: templates/app/components/fill_track_episode.html:160
+msgid "Fill in air date"
+msgstr "填入播出日期"
+
+#: templates/app/components/fill_track_episode.html:167
+msgid "Clears the watch date and time"
+msgstr "清除观看日期和时间"
+
+#: templates/app/components/fill_track_episode.html:167
+msgid "Fill in no date"
+msgstr "不填写日期"
+
+#: templates/app/components/home_grid.html:40
+#: templates/app/components/media_card.html:72
+#: templates/app/components/media_card_list.html:40
+#: templates/app/media_details.html:35
+msgid "Add to tracker"
+msgstr "添加到记录"
+
+#: templates/app/components/home_grid.html:48
+#: templates/app/components/media_card.html:82
+#: templates/app/components/media_card_list.html:49
+#: templates/app/media_details.html:307 templates/app/media_details.html:603
+msgid "Add to custom lists"
+msgstr "添加到自定义列表"
+
+#: templates/app/components/home_grid.html:56
+#: templates/app/components/media_card.html:91
+#: templates/app/components/media_card_list.html:58
+#: templates/app/media_details.html:332 templates/app/media_details.html:625
+msgid "View your activity history"
+msgstr "查看你的活动记录"
+
+#: templates/app/components/home_section.html:58
+#, python-format
+msgid "Load all (%(total)s)"
+msgstr "加载全部（%(total)s）"
+
+#: templates/app/components/journal_items.html:29
+msgid "Delete activity"
+msgstr "删除活动记录"
+
+#: templates/app/components/journal_items.html:50
+msgid "Delete activity?"
+msgstr "删除活动记录？"
+
+#: templates/app/components/search_parent_season.html:15
+msgid "No seasons found matching"
+msgstr "没有找到匹配的季度"
+
+#: templates/app/components/search_parent_season.html:15
+#: templates/app/components/search_parent_tv.html:15
+msgid "Please try a different search term."
+msgstr "请尝试其他搜索词。"
+
+#: templates/app/components/search_parent_tv.html:15
+msgid "No TV shows found matching"
+msgstr "没有找到匹配的电视剧"
+
+#: templates/app/create_entry.html:6
+msgid "Create"
+msgstr "创建"
+
+#: templates/app/create_entry.html:12
+msgid "Create Custom Entry"
+msgstr "创建自定义条目"
+
+#: templates/app/create_entry.html:13
+msgid ""
+"Add a custom media entry to your collection if it's not available in the "
+"database."
+msgstr "如果数据库中没有你要找的内容，可将自定义媒体条目添加到收藏中。"
+
+#: templates/app/create_entry.html:111 users/models.py:86
+msgid "Media Type"
+msgstr "媒体类型"
+
+#: templates/app/create_entry.html:127 templates/app/media_list.html:148
+#: users/models.py:34 users/models.py:41 users/models.py:85
+msgid "Title"
+msgstr "标题"
+
+#: templates/app/create_entry.html:129
+msgid "Enter title"
+msgstr "输入标题"
+
+#: templates/app/create_entry.html:142
+msgid "Search for a TV show..."
+msgstr "搜索电视剧…"
+
+#: templates/app/create_entry.html:159
+msgid "Season Number"
+msgstr "季度编号"
+
+#: templates/app/create_entry.html:189
+msgid "Search for a season..."
+msgstr "搜索季度…"
+
+#: templates/app/create_entry.html:206
+msgid "Episode Number"
+msgstr "剧集编号"
+
+#: templates/app/create_entry.html:231
+msgid "Image URL"
+msgstr "图片网址"
+
+#: templates/app/create_entry.html:236
+msgid "Enter image URL"
+msgstr "输入图片网址"
+
+#: templates/app/create_entry.html:252 templates/app/media_list.html:149
+msgid "Score"
+msgstr "评分"
+
+#: templates/app/create_entry.html:278 templates/app/media_details.html:270
+#: templates/app/media_list.html:151 users/models.py:42
+msgid "Progress"
+msgstr "进度"
+
+#: templates/app/create_entry.html:308 templates/app/media_list.html:156
+msgid "Status"
+msgstr "状态"
+
+#: templates/app/create_entry.html:322 templates/app/journal.html:63
+#: templates/app/media_list.html:157 templates/app/statistics.html:62
+#: users/models.py:43
+msgid "Start Date"
+msgstr "开始日期"
+
+#: templates/app/create_entry.html:331 templates/app/journal.html:70
+#: templates/app/media_list.html:158 templates/app/statistics.html:69
+#: users/models.py:44
+msgid "End Date"
+msgstr "结束日期"
+
+#: templates/app/create_entry.html:340
+msgid "Notes"
+msgstr "备注"
+
+#: templates/app/create_entry.html:344
+msgid "Add any notes or comments..."
+msgstr "添加备注或评论…"
+
+#: templates/app/create_entry.html:351
+msgid "Create Entry"
+msgstr "创建条目"
+
+#: templates/app/home.html:6 templates/app/home.html:12 templates/base.html:88
+msgid "Home"
+msgstr "首页"
+
+#: templates/app/home.html:17
+msgid "Hide unreleased"
+msgstr "隐藏未发布内容"
+
+#: templates/app/journal.html:7 templates/app/journal.html:12
+#: templates/base.html:160
+msgid "Journal"
+msgstr "日志"
+
+#: templates/app/journal.html:13
+msgid "A feed of everything you've done in Yamtrack"
+msgstr "汇总你在 Yamtrack 中的所有活动"
+
+#: templates/app/journal.html:37 templates/app/statistics.html:36
+msgid "Predefined Ranges"
+msgstr "预设范围"
+
+#: templates/app/journal.html:40 templates/app/statistics.html:39
+msgid "Custom Range"
+msgstr "自定义范围"
+
+#: templates/app/journal.html:81 templates/app/statistics.html:80
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/app/journal.html:86 templates/app/statistics.html:85
+msgid "Apply Range"
+msgstr "应用范围"
+
+#: templates/app/journal.html:101
+msgid "Tracked Activities"
+msgstr "已记录活动"
+
+#: templates/app/journal.html:114
+msgid "Most Active Day"
+msgstr "最活跃的一天"
+
+#: templates/app/journal.html:118
+#, python-format
+msgid "%(percentage)s%% of activity"
+msgstr "活动占比 %(percentage)s%%"
+
+#: templates/app/journal.html:130
+msgid "Current Streak"
+msgstr "当前连续天数"
+
+#: templates/app/journal.html:133
+#, python-format
+msgid "%(count)s day"
+msgid_plural "%(count)s days"
+msgstr[0] "%(count)s 天"
+
+#: templates/app/journal.html:136
+#, python-format
+msgid "Longest: %(count)s day"
+msgid_plural "Longest: %(count)s days"
+msgstr[0] "最长连续记录：%(count)s 天"
+
+#: templates/app/journal.html:180
+#, python-format
+msgid "%(date)s: %(count)s activity"
+msgid_plural "%(date)s: %(count)s activities"
+msgstr[0] "%(date)s：%(count)s 条活动"
+
+#: templates/app/journal.html:193
+msgid "Less"
+msgstr "少"
+
+#: templates/app/journal.html:199
+msgid "More"
+msgstr "多"
+
+#: templates/app/journal.html:217
+msgid "No tracking activity in this date range."
+msgstr "此日期范围内没有记录活动。"
+
+#: templates/app/media_details.html:42
+msgid "More tracking options"
+msgstr "更多记录选项"
+
+#: templates/app/media_details.html:63
+msgid "Add new entry"
+msgstr "添加新条目"
+
+#: templates/app/media_details.html:192
+msgid "YOUR SCORE"
+msgstr "你的评分"
+
+#: templates/app/media_details.html:205
+msgid "Click to edit"
+msgstr "点击编辑"
+
+#: templates/app/media_details.html:250
+msgid "Your History"
+msgstr "你的记录"
+
+#: templates/app/media_details.html:256 templates/app/media_details.html:526
+#: templates/users/import_data.html:489
+msgid "Started"
+msgstr "开始于"
+
+#: templates/app/media_details.html:263
+msgid "Ended"
+msgstr "结束于"
+
+#: templates/app/media_details.html:286
+msgid "Your notes"
+msgstr "你的备注"
+
+#: templates/app/media_details.html:302
+msgid "Actions"
+msgstr "操作"
+
+#: templates/app/media_details.html:316
+msgid "Add to lists"
+msgstr "添加到列表"
+
+#: templates/app/media_details.html:341
+msgid "Activity history"
+msgstr "活动记录"
+
+#: templates/app/media_details.html:356
+msgid "Sync metadata with provider"
+msgstr "与提供商同步元数据"
+
+#: templates/app/media_details.html:371
+msgid "Sync metadata"
+msgstr "同步元数据"
+
+#: templates/app/media_details.html:376
+msgid "Details"
+msgstr "详情"
+
+#: templates/app/media_details.html:392
+msgid "Provider"
+msgstr "提供商"
+
+#: templates/app/media_details.html:399 templates/users/about.html:29
+msgid "Links"
+msgstr "链接"
+
+#: templates/app/media_details.html:410
+msgid "No details available"
+msgstr "暂无详情"
+
+#: templates/app/media_details.html:422
+msgid "Cast"
+msgstr "演职人员"
+
+#: templates/app/media_details.html:434
+msgid "View all"
+msgstr "查看全部"
+
+#: templates/app/media_details.html:435
+#, python-format
+msgid "%(count)s cast members"
+msgstr "%(count)s 位演职人员"
+
+#: templates/app/media_details.html:492
+msgid "Edit entry"
+msgstr "编辑条目"
+
+#: templates/app/media_details.html:528 templates/users/import_data.html:483
+msgid "Finished"
+msgstr "已看完"
+
+#: templates/app/media_details.html:559
+msgid "Episodes"
+msgstr "剧集"
+
+#: templates/app/media_details.html:673
+msgid "Streaming"
+msgstr "在线观看"
+
+#: templates/app/media_details.html:704
+msgid "Time to Beat"
+msgstr "通关时长"
+
+#: templates/app/media_details.html:713
+msgid "Main Story"
+msgstr "主线剧情"
+
+#: templates/app/media_details.html:724
+msgid "Main + Extra"
+msgstr "主线 + 额外内容"
+
+#: templates/app/media_details.html:735
+msgid "Completionist"
+msgstr "完全通关"
+
+#: templates/app/media_list.html:30
+#, python-format
+msgid "Search %(media_type_plural)s in %(target_username)s's list..."
+msgstr "在 %(target_username)s 的列表中搜索%(media_type_plural)s…"
+
+#: templates/app/media_list.html:30
+#, python-format
+msgid "Search %(media_type_plural)s in your list..."
+msgstr "在你的列表中搜索%(media_type_plural)s…"
+
+#: templates/app/media_list.html:110 templates/app/search.html:26
+msgid "Grid View"
+msgstr "网格视图"
+
+#: templates/app/media_list.html:115
+msgid "Table View"
+msgstr "表格视图"
+
+#: templates/app/media_list.html:128
+#, python-format
+msgid "No %(media_plural)s Tracked Yet"
+msgstr "尚未记录%(media_plural)s"
+
+#: templates/app/media_list.html:131
+#, python-format
+msgid ""
+"Start tracking your %(media_type)s to keep a record of what you've "
+"%(media_type|media_past_verb)s."
+msgstr ""
+"开始记录你的%(media_type)s，保存你已经%(media_type|media_past_verb)s的内容。"
+
+#: templates/app/media_list.html:135
+#, python-format
+msgid "Browse %(media_type)s"
+msgstr "浏览%(media_type)s"
+
+#: templates/app/media_list.html:154
+msgid "Last Watched"
+msgstr "最近观看"
+
+#: templates/app/media_list.html:184
+#, python-format
+msgid "%(username)s's Media:"
+msgstr "%(username)s 的媒体："
+
+#: templates/app/search.html:6
+msgid "Search"
+msgstr "搜索"
+
+#: templates/app/search.html:11
+msgid "Search Results"
+msgstr "搜索结果"
+
+#: templates/app/search.html:13
+msgid "Source"
+msgstr "来源"
+
+#: templates/app/search.html:29
+msgid "List View"
+msgstr "列表视图"
+
+#: templates/app/search.html:100
+msgid "No results found"
+msgstr "未找到结果"
+
+#: templates/app/search.html:102
+msgid "We couldn't find any matches for"
+msgstr "找不到任何匹配项："
+
+#: templates/app/search.html:102
+msgid "Try checking your spelling or using different keywords."
+msgstr "请检查拼写或尝试其他关键词。"
+
+#: templates/app/statistics.html:7 templates/app/statistics.html:12
+#: templates/base.html:145
+msgid "Statistics"
+msgstr "统计"
+
+#: templates/app/statistics.html:13
+msgid "Track your media consumption habits"
+msgstr "了解你的媒体消费习惯"
+
+#: templates/app/statistics.html:101
+msgid "Completed Items"
+msgstr "已完成条目"
+
+#: templates/app/statistics.html:129
+msgid "Average Rating"
+msgstr "平均评分"
+
+#: templates/app/statistics.html:144
+#, python-format
+msgid "%% Rated"
+msgstr "评分比例 %%"
+
+#: templates/app/statistics.html:159
+msgid "Consumption"
+msgstr "消费量"
+
+#: templates/app/statistics.html:177
+msgid "Media Type Distribution"
+msgstr "媒体类型分布"
+
+#: templates/app/statistics.html:188
+msgid "No media types to display"
+msgstr "没有可显示的媒体类型"
+
+#: templates/app/statistics.html:189
+msgid "Add different types of media to see their distribution."
+msgstr "添加不同类型的媒体后即可查看分布。"
+
+#: templates/app/statistics.html:196
+msgid "Status Distribution"
+msgstr "状态分布"
+
+#: templates/app/statistics.html:207
+msgid "No status data to display"
+msgstr "没有可显示的状态数据"
+
+#: templates/app/statistics.html:208
+msgid "Track media items with different statuses to see their distribution."
+msgstr "记录不同状态的媒体条目后即可查看分布。"
+
+#: templates/app/statistics.html:215
+msgid "Status Distribution by Media Type"
+msgstr "各媒体类型的状态分布"
+
+#: templates/app/statistics.html:226
+msgid "No data available"
+msgstr "暂无数据"
+
+#: templates/app/statistics.html:228
+msgid ""
+"Add media items with different statuses to see their distribution by type."
+msgstr "添加不同状态的媒体条目后即可按类型查看分布。"
+
+#: templates/app/statistics.html:236
+msgid "Score Distribution by Media Type"
+msgstr "各媒体类型的评分分布"
+
+#: templates/app/statistics.html:247 templates/app/statistics.html:269
+msgid "No ratings yet"
+msgstr "尚无评分"
+
+#: templates/app/statistics.html:248 templates/app/statistics.html:270
+msgid "Rate your media items to see score distribution statistics."
+msgstr "为媒体条目评分后即可查看评分分布统计。"
+
+#: templates/app/statistics.html:256
+msgid "Top Rated Media"
+msgstr "最高评分媒体"
+
+#: templates/base.html:12
+msgid "Search and track media on Yamtrack."
+msgstr "在 Yamtrack 中搜索和记录媒体内容。"
+
+#: templates/base.html:130
+msgid "Create Custom"
+msgstr "创建自定义条目"
+
+#: templates/base.html:175 templates/lists/components/fill_lists.html:5
+#: templates/lists/custom_lists.html:10 templates/lists/custom_lists.html:17
+msgid "Lists"
+msgstr "列表"
+
+#: templates/base.html:190 templates/events/calendar.html:6
+#: templates/events/calendar.html:11
+msgid "Calendar"
+msgstr "日历"
+
+#: templates/base.html:210
+msgid "Language"
+msgstr "语言"
+
+#: templates/base.html:238 templates/users/base.html:8
+msgid "Settings"
+msgstr "设置"
+
+#: templates/base.html:247
+msgid "Logout"
+msgstr "退出登录"
+
+#: templates/events/calendar.html:12
+msgid "Track upcoming releases from your list."
+msgstr "记录列表中即将发布的内容。"
+
+#: templates/events/calendar.html:39
+msgid "Fetch New Releases"
+msgstr "获取新发布内容"
+
+#: templates/events/calendar.html:71
+msgid "Export link"
+msgstr "导出链接"
+
+#: templates/events/calendar.html:74
+msgid ""
+"This link can be used to integrate your calendar into any of your calendar "
+"applications."
+msgstr "此链接可用于将日历集成到任意日历应用中。"
+
+#: templates/lists/components/fill_lists.html:16
+msgid "You haven't created any lists yet."
+msgstr "你还没有创建任何列表。"
+
+#: templates/lists/components/list_form.html:12
+#: templates/lists/list_detail.html:40
+msgid "Edit List"
+msgstr "编辑列表"
+
+#: templates/lists/components/list_form.html:14
+msgid "Create New List"
+msgstr "新建列表"
+
+#: templates/lists/components/list_form.html:41
+msgid "Save"
+msgstr "保存"
+
+#: templates/lists/components/list_form.html:53
+msgid "Create List"
+msgstr "创建列表"
+
+#: templates/lists/components/list_grid.html:18
+msgid "Edit list"
+msgstr "编辑列表"
+
+#: templates/lists/components/list_item_button.html:9
+msgid "Remove"
+msgstr "移除"
+
+#: templates/lists/components/list_item_button.html:17
+msgid "Add"
+msgstr "添加"
+
+#: templates/lists/custom_lists.html:18
+msgid "Organize and share your media lists"
+msgstr "整理并分享你的媒体列表"
+
+#: templates/lists/custom_lists.html:23
+msgid "New List"
+msgstr "新列表"
+
+#: templates/lists/custom_lists.html:37
+msgid "Search lists..."
+msgstr "搜索列表…"
+
+#: templates/lists/custom_lists.html:59 users/models.py:75
+msgid "Last Item Added"
+msgstr "最近添加条目"
+
+#: templates/lists/custom_lists.html:60 users/models.py:76
+msgid "Name"
+msgstr "名称"
+
+#: templates/lists/custom_lists.html:61 users/models.py:78
+msgid "Newest First"
+msgstr "最新优先"
+
+#: templates/lists/custom_lists.html:62 users/models.py:77
+msgid "Items Count"
+msgstr "条目数量"
+
+#: templates/lists/custom_lists.html:103
+msgid "No Lists Created Yet"
+msgstr "尚未创建列表"
+
+#: templates/lists/custom_lists.html:104
+msgid ""
+"Create custom lists to organize your media collection and share with friends."
+msgstr "创建自定义列表来整理媒体收藏并与朋友分享。"
+
+#: templates/lists/custom_lists.html:107
+msgid "Create Your First List"
+msgstr "创建第一个列表"
+
+#: templates/lists/list_detail.html:59
+msgid "Search in collection..."
+msgstr "在收藏中搜索…"
+
+#: templates/lists/list_detail.html:159 users/models.py:50
+msgid "All"
+msgstr "全部"
+
+#: templates/lists/list_detail.html:216
+msgid "No items in this list yet"
+msgstr "此列表中还没有条目"
+
+#: templates/lists/list_detail.html:217
+msgid "Start adding your favorite media to build your collection"
+msgstr "添加喜爱的媒体，开始建立你的收藏"
+
+#: templates/lists/list_detail.html:220
+msgid "Browse Media"
+msgstr "浏览媒体"
+
+#: templates/socialaccount/connections.html:7
+#: templates/socialaccount/connections.html:11
+msgid "Account Connections"
+msgstr "账户连接"
+
+#: templates/socialaccount/connections.html:18
+msgid ""
+"You can sign in to your account using any of the following third-party "
+"accounts"
+msgstr "你可以使用以下任一第三方账户登录"
+
+#: templates/socialaccount/connections.html:66
+msgid "Remove Selected"
+msgstr "移除所选项"
+
+#: templates/socialaccount/connections.html:75
+msgid "You currently have no third-party accounts connected to this account."
+msgstr "当前没有连接到此账户的第三方账户。"
+
+#: templates/socialaccount/connections.html:83
+msgid "Add a Third-Party Account"
+msgstr "添加第三方账户"
+
+#: templates/users/about.html:8 templates/users/base.html:68
+msgid "About"
+msgstr "关于"
+
+#: templates/users/about.html:13
+msgid "About Yamtrack"
+msgstr "关于 Yamtrack"
+
+#: templates/users/about.html:19
+msgid "Description"
+msgstr "简介"
+
+#: templates/users/about.html:22
+msgid ""
+"Yamtrack is an open-source media tracker that helps you organize and track "
+"your media."
+msgstr "Yamtrack 是一款开源媒体记录工具，帮助你整理和记录媒体内容。"
+
+#: templates/users/about.html:37
+msgid "Source Code"
+msgstr "源代码"
+
+#: templates/users/about.html:46
+msgid "Documentation"
+msgstr "文档"
+
+#: templates/users/about.html:55
+msgid "Bug Reports"
+msgstr "问题反馈"
+
+#: templates/users/about.html:64
+msgid "License"
+msgstr "许可证"
+
+#: templates/users/about.html:67
+msgid "Yamtrack is licensed under the"
+msgstr "Yamtrack 使用以下许可证："
+
+#: templates/users/about.html:79
+msgid "Attribution"
+msgstr "鸣谢"
+
+#: templates/users/about.html:82
+msgid "Movie and TV streaming providers from"
+msgstr "电影和电视剧流媒体提供商数据来自"
+
+#: templates/users/about.html:87
+msgid "JustWatch"
+msgstr "JustWatch"
+
+#: templates/users/about.html:95
+msgid "Version"
+msgstr "版本"
+
+#: templates/users/account.html:8 templates/users/base.html:19
+msgid "Account"
+msgstr "账户"
+
+#: templates/users/account.html:16
+msgid "Profile Information"
+msgstr "个人资料"
+
+#: templates/users/account.html:29
+msgid "Username"
+msgstr "用户名"
+
+#: templates/users/account.html:42
+msgid "Profile visibility"
+msgstr "个人资料可见性"
+
+#: templates/users/account.html:47
+msgid "Private profile"
+msgstr "私密个人资料"
+
+#: templates/users/account.html:49
+msgid "Hide your profile and media lists from anonymous visitors."
+msgstr "对未登录访客隐藏你的个人资料和媒体列表。"
+
+#: templates/users/account.html:68 templates/users/integrations.html:160
+#: templates/users/integrations.html:300
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: templates/users/account.html:77
+msgid "Change Password"
+msgstr "更改密码"
+
+#: templates/users/account.html:92
+msgid "Current Password"
+msgstr "当前密码"
+
+#: templates/users/account.html:116
+msgid "New Password"
+msgstr "新密码"
+
+#: templates/users/account.html:140
+msgid "Confirm New Password"
+msgstr "确认新密码"
+
+#: templates/users/account.html:166
+msgid "Update Password"
+msgstr "更新密码"
+
+#: templates/users/account.html:177
+msgid "Third-Party Connections"
+msgstr "第三方连接"
+
+#: templates/users/account.html:179
+msgid "Manage your connected third-party accounts for easier sign-in."
+msgstr "管理已连接的第三方账户，以便更轻松地登录。"
+
+#: templates/users/account.html:183
+msgid "Manage Account Connections"
+msgstr "管理账户连接"
+
+#: templates/users/advanced.html:8 templates/users/advanced.html:17
+#: templates/users/base.html:61
+msgid "Advanced"
+msgstr "高级"
+
+#: templates/users/advanced.html:23 templates/users/advanced.html:39
+msgid "Clear Search Cache"
+msgstr "清除搜索缓存"
+
+#: templates/users/advanced.html:26
+msgid ""
+"Yamtrack stores your search results in a cache to speed up performance and "
+"reduce API calls."
+msgstr "Yamtrack 会缓存搜索结果，以提升性能并减少 API 调用。"
+
+#: templates/users/advanced.html:28
+msgid "Normally, these cached results expire automatically after 24 hours."
+msgstr "这些缓存结果通常会在 24 小时后自动过期。"
+
+#: templates/users/advanced.html:29
+msgid ""
+"If your search results appear outdated, you can clear the cache manually."
+msgstr "如果搜索结果似乎已过时，可以手动清除缓存。"
+
+#: templates/users/advanced.html:31
+msgid "Your next search may be slightly slower as fresh data is retrieved."
+msgstr "由于需要获取新数据，下次搜索可能会稍慢。"
+
+#: templates/users/base.html:9
+msgid "Configure your account and preferences"
+msgstr "配置账户和偏好设置"
+
+#: templates/users/base.html:26 templates/users/preferences.html:7
+#: templates/users/preferences.html:14
+msgid "Preferences"
+msgstr "偏好设置"
+
+#: templates/users/base.html:33 templates/users/notifications.html:7
+#: templates/users/notifications.html:16
+msgid "Notifications"
+msgstr "通知"
+
+#: templates/users/base.html:40 templates/users/integrations.html:7
+msgid "Integrations"
+msgstr "集成"
+
+#: templates/users/base.html:47
+msgid "Import Data"
+msgstr "导入数据"
+
+#: templates/users/base.html:54 templates/users/export_data.html:13
+msgid "Export Data"
+msgstr "导出数据"
+
+#: templates/users/components/excluded_items.html:4
+msgid "Currently Excluded"
+msgstr "当前已排除"
+
+#: templates/users/components/excluded_items.html:30
+msgid "No media items excluded yet"
+msgstr "尚未排除任何媒体条目"
+
+#: templates/users/components/search_results.html:22
+msgid "Exclude"
+msgstr "排除"
+
+#: templates/users/components/search_results.html:28
+msgid "No matching items found"
+msgstr "未找到匹配条目"
+
+#: templates/users/export_data.html:6
+msgid "Export"
+msgstr "导出"
+
+#: templates/users/export_data.html:15
+msgid "Back up your data or export it for use with other services."
+msgstr "备份数据，或将其导出以供其他服务使用。"
+
+#: templates/users/export_data.html:16
+msgid "Your export will include all your media items."
+msgstr "导出内容将包含你的所有媒体条目。"
+
+#: templates/users/export_data.html:20
+msgid "Export as CSV"
+msgstr "导出为 CSV"
+
+#: templates/users/import_data.html:7 templates/users/import_data.html:104
+#: templates/users/import_data.html:181 templates/users/import_data.html:219
+#: templates/users/import_data.html:267 templates/users/import_data.html:360
+msgid "Import"
+msgstr "导入"
+
+#: templates/users/import_data.html:18
+msgid "Import Settings"
+msgstr "导入设置"
+
+#: templates/users/import_data.html:20
+msgid "Configure your import preferences."
+msgstr "配置导入偏好。"
+
+#: templates/users/import_data.html:24
+msgid "Import Frequency"
+msgstr "导入频率"
+
+#: templates/users/import_data.html:28
+msgid "One Time Import"
+msgstr "仅导入一次"
+
+#: templates/users/import_data.html:29 users/helpers.py:73
+msgid "Every Day"
+msgstr "每天"
+
+#: templates/users/import_data.html:30
+msgid "Every 2 Days"
+msgstr "每 2 天"
+
+#: templates/users/import_data.html:35
+msgid "Import Time"
+msgstr "导入时间"
+
+#: templates/users/import_data.html:42
+msgid "Import Mode"
+msgstr "导入模式"
+
+#: templates/users/import_data.html:46
+msgid "Only Sync New Items"
+msgstr "仅同步新条目"
+
+#: templates/users/import_data.html:47
+msgid "Sync New Items and Overwrite Existing"
+msgstr "同步新条目并覆盖现有条目"
+
+#: templates/users/import_data.html:60
+msgid "Import Sources"
+msgstr "导入来源"
+
+#: templates/users/import_data.html:63
+#, python-format
+msgid ""
+"Some of these require additional configuration, check the "
+"%(link_start)simport configuration guide%(link_end)s."
+msgstr "部分来源需要额外配置，请查看%(link_start)s导入配置指南%(link_end)s。"
+
+#: templates/users/import_data.html:78
+msgid "Import method"
+msgstr "导入方式"
+
+#: templates/users/import_data.html:81
+msgid "Public"
+msgstr "公开"
+
+#: templates/users/import_data.html:82
+msgid "Private (requires authentication)"
+msgstr "私密（需要授权）"
+
+#: templates/users/import_data.html:83
+msgid "Export (requires ZIP file)"
+msgstr "导出文件（需要 ZIP 文件）"
+
+#: templates/users/import_data.html:97
+msgid "Public Trakt username"
+msgstr "公开的 Trakt 用户名"
+
+#: templates/users/import_data.html:120
+msgid "Connect with Trakt & Import"
+msgstr "连接 Trakt 并导入"
+
+#: templates/users/import_data.html:142
+msgid "Select ZIP File"
+msgstr "选择 ZIP 文件"
+
+#: templates/users/import_data.html:150
+msgid "Import TV shows, movies and anime"
+msgstr "导入电视剧、电影和动画"
+
+#: templates/users/import_data.html:158
+msgid "Connect with Simkl & Import"
+msgstr "连接 Simkl 并导入"
+
+#: templates/users/import_data.html:166 templates/users/import_data.html:191
+#: templates/users/import_data.html:243
+msgid "Import anime and manga"
+msgstr "导入动画和日式漫画"
+
+#: templates/users/import_data.html:175
+msgid "MAL username"
+msgstr "MAL 用户名"
+
+#: templates/users/import_data.html:198
+msgid "Import private profile (requires authentication)"
+msgstr "导入私密个人资料（需要授权）"
+
+#: templates/users/import_data.html:212
+msgid "Public AniList username"
+msgstr "公开的 AniList 用户名"
+
+#: templates/users/import_data.html:235
+msgid "Connect with AniList & Import"
+msgstr "连接 AniList 并导入"
+
+#: templates/users/import_data.html:252
+msgid "Kitsu user ID"
+msgstr "Kitsu 用户 ID"
+
+#: templates/users/import_data.html:259
+msgid "Find it on your Kitsu profile URL:"
+msgstr "可在 Kitsu 个人资料网址中找到："
+
+#: templates/users/import_data.html:279
+msgid "View CSV format documentation"
+msgstr "查看 CSV 格式文档"
+
+#: templates/users/import_data.html:300 templates/users/import_data.html:327
+#: templates/users/import_data.html:389 templates/users/import_data.html:416
+msgid "Select CSV File"
+msgstr "选择 CSV 文件"
+
+#: templates/users/import_data.html:335
+msgid "Import games from your Steam library"
+msgstr "从 Steam 游戏库导入游戏"
+
+#: templates/users/import_data.html:344
+msgid "Steam 64-bit ID"
+msgstr "Steam 64 位 ID"
+
+#: templates/users/import_data.html:351
+msgid "Find it on your Steam account details page under your username."
+msgstr "可在 Steam 账户详情页的用户名下方找到。"
+
+#: templates/users/import_data.html:354
+msgid ""
+"Your profile must be public if the API key you are using is not linked to "
+"the Steam ID you are requesting."
+msgstr ""
+"如果使用的 API 密钥未关联到所请求的 Steam ID，你的个人资料必须设为公开。"
+
+#: templates/users/import_data.html:428
+msgid "Active Periodic Imports"
+msgstr "已启用的定期导入"
+
+#: templates/users/import_data.html:431
+msgid ""
+"Automated imports that run on a schedule. These will continue to sync your "
+"media until disabled."
+msgstr "按计划自动运行的导入任务。停用前，它们会持续同步你的媒体。"
+
+#: templates/users/import_data.html:452
+#, python-format
+msgid "Username: %(username)s"
+msgstr "用户名：%(username)s"
+
+#: templates/users/import_data.html:453
+#, python-format
+msgid "Mode: %(mode)s"
+msgstr "模式：%(mode)s"
+
+#: templates/users/import_data.html:454
+#, python-format
+msgid "Last Import: %(last_run)s"
+msgstr "上次导入：%(last_run)s"
+
+#: templates/users/import_data.html:455
+#, python-format
+msgid "Next Import: %(next_run)s"
+msgstr "下次导入：%(next_run)s"
+
+#: templates/users/import_data.html:460
+msgid "No periodic imports configured"
+msgstr "尚未配置定期导入"
+
+#: templates/users/import_data.html:461
+msgid "Set up an import with a daily or 2-day frequency to see it here"
+msgstr "设置每天或每 2 天导入后，将在此处显示"
+
+#: templates/users/import_data.html:471
+msgid "Import History"
+msgstr "导入历史"
+
+#: templates/users/import_data.html:474
+msgid "Showing import activity from the last 7 days."
+msgstr "显示最近 7 天的导入活动。"
+
+#: templates/users/import_data.html:491
+msgid "Failed"
+msgstr "失败"
+
+#: templates/users/import_data.html:493
+msgid "Pending"
+msgstr "等待中"
+
+#: templates/users/import_data.html:509
+msgid "Show failed items"
+msgstr "显示失败条目"
+
+#: templates/users/import_data.html:514
+msgid "Show traceback"
+msgstr "显示错误追踪"
+
+#: templates/users/import_data.html:529
+msgid "No imports in the last 7 days"
+msgstr "最近 7 天没有导入记录"
+
+#: templates/users/import_data.html:530
+msgid "Import your media from any source to see the history here"
+msgstr "从任意来源导入媒体后，可在此查看历史记录"
+
+#: templates/users/integrations.html:21
+msgid "Token"
+msgstr "令牌"
+
+#: templates/users/integrations.html:35 templates/users/integrations.html:184
+#: templates/users/integrations.html:215 templates/users/integrations.html:253
+#: templates/users/integrations.html:326 templates/users/integrations.html:363
+msgid "Copy"
+msgstr "复制"
+
+#: templates/users/integrations.html:45
+msgid "Regenerating will invalidate the previous token"
+msgstr "重新生成后，原令牌将失效"
+
+#: templates/users/integrations.html:53
+msgid "Regenerate"
+msgstr "重新生成"
+
+#: templates/users/integrations.html:62
+msgid "Media Servers"
+msgstr "媒体服务器"
+
+#: templates/users/integrations.html:71
+msgid "Integration services"
+msgstr "集成服务"
+
+#: templates/users/integrations.html:79 templates/users/integrations.html:104
+msgid "Jellyfin"
+msgstr "Jellyfin"
+
+#: templates/users/integrations.html:88 templates/users/integrations.html:273
+msgid "Plex"
+msgstr "Plex"
+
+#: templates/users/integrations.html:97 templates/users/integrations.html:343
+msgid "Emby"
+msgstr "Emby"
+
+#: templates/users/integrations.html:111
+msgid "Webhook Events"
+msgstr "Webhook 事件"
+
+#: templates/users/integrations.html:124
+msgid "Process MarkPlayed events"
+msgstr "处理 MarkPlayed 事件"
+
+#: templates/users/integrations.html:142
+msgid "Process MarkUnplayed events"
+msgstr "处理 MarkUnplayed 事件"
+
+#: templates/users/integrations.html:166
+msgid "Official Webhook Plugin"
+msgstr "官方 Webhook 插件"
+
+#: templates/users/integrations.html:168 templates/users/integrations.html:228
+msgid "You will need to have TMDB and TVDB as metadata providers in Jellyfin."
+msgstr "需要在 Jellyfin 中将 TMDB 和 TVDB 配置为元数据提供商。"
+
+#: templates/users/integrations.html:174 templates/users/integrations.html:247
+msgid "Restart your server, then configure the plugin:"
+msgstr "重启服务器，然后配置插件："
+
+#: templates/users/integrations.html:176
+msgid ""
+"Click on the \"Add Generic Destination\" button to create a new webhook."
+msgstr "点击“Add Generic Destination”按钮创建新的 Webhook。"
+
+#: templates/users/integrations.html:177
+msgid "Name: Yamtrack"
+msgstr "名称：Yamtrack"
+
+#: templates/users/integrations.html:192
+msgid "Notification Type: Playback Start and Playback Stop"
+msgstr "通知类型：Playback Start 和 Playback Stop"
+
+#: templates/users/integrations.html:193
+msgid "User Filter: Your Jellyfin User"
+msgstr "用户筛选：你的 Jellyfin 用户"
+
+#: templates/users/integrations.html:194
+msgid "Finally, under the \"Template\" section, paste the following code."
+msgstr "最后，在“Template”部分粘贴以下代码。"
+
+#: templates/users/integrations.html:226
+msgid "Unofficial Webhooks Plugin"
+msgstr "非官方 Webhooks 插件"
+
+#: templates/users/integrations.html:260
+msgid "Payload format: Default"
+msgstr "负载格式：Default"
+
+#: templates/users/integrations.html:261
+msgid "Listen to events only for: Your Jellyfin User"
+msgstr "仅监听以下用户的事件：你的 Jellyfin 用户"
+
+#: templates/users/integrations.html:262
+msgid "Events: Play, Stop, MarkPlayed and MarkUnplayed"
+msgstr "事件：Play、Stop、MarkPlayed 和 MarkUnplayed"
+
+#: templates/users/integrations.html:280
+msgid "Plex Usernames"
+msgstr "Plex 用户名"
+
+#: templates/users/integrations.html:306 templates/users/integrations.html:350
+msgid "Setup Instructions"
+msgstr "设置说明"
+
+#: templates/users/integrations.html:308
+msgid "You will need to have a PlexPass in order to have webhooks enabled"
+msgstr "必须拥有 Plex Pass 才能启用 Webhook"
+
+#: templates/users/integrations.html:309
+msgid "Go to Settings > Server > Network and enable Webhooks"
+msgstr "前往 Settings > Server > Network 并启用 Webhooks"
+
+#: templates/users/integrations.html:311
+#, python-format
+msgid ""
+"In Plex settings, go to "
+"%(plex_webhook_link_start)sWebhooks%(plex_webhook_link_end)s."
+msgstr ""
+"在 Plex 设置中，前"
+"往%(plex_webhook_link_start)sWebhooks%(plex_webhook_link_end)s。"
+
+#: templates/users/integrations.html:316
+msgid ""
+"In the Webhooks section, click on \"Add Webhook\" and enter the following "
+"URL:"
+msgstr "在 Webhooks 部分点击“Add Webhook”，然后输入以下网址："
+
+#: templates/users/integrations.html:352
+msgid "In Emby, go to Settings > Notifications"
+msgstr "在 Emby 中，前往 Settings > Notifications"
+
+#: templates/users/integrations.html:353
+msgid "In the Notifications section, click on \"Add Notification\""
+msgstr "在 Notifications 部分点击“Add Notification”"
+
+#: templates/users/integrations.html:355
+msgid "In the Notification settings:"
+msgstr "在通知设置中："
+
+#: templates/users/integrations.html:371
+msgid "Request content type: multipart/form-data"
+msgstr "请求内容类型：multipart/form-data"
+
+#: templates/users/integrations.html:372
+msgid "Events: Play and Stop"
+msgstr "事件：Play 和 Stop"
+
+#: templates/users/integrations.html:373
+msgid "Limit user events to: Your Emby User"
+msgstr "用户事件限制为：你的 Emby 用户"
+
+#: templates/users/integrations.html:374
+msgid ""
+"\"Limit library events to\" and \"Limit devices events to\" are optional"
+msgstr "“Limit library events to”和“Limit devices events to”为可选项"
+
+#: templates/users/notifications.html:19
+msgid "Configure how you want to receive notifications about your media."
+msgstr "配置接收媒体通知的方式。"
+
+#: templates/users/notifications.html:27
+msgid "Apprise URLs"
+msgstr "Apprise 网址"
+
+#: templates/users/notifications.html:36
+#, python-format
+msgid ""
+"%(apprise_link_start)sApprise%(apprise_link_end)s is a notification service "
+"that supports %(platforms_start)smany platforms%(platforms_end)s including:"
+msgstr ""
+"%(apprise_link_start)sApprise%(apprise_link_end)s 是一项通知服务，支持包括以"
+"下服务在内的%(platforms_start)s众多平台%(platforms_end)s："
+
+#: templates/users/notifications.html:42
+msgid "Discord"
+msgstr "Discord"
+
+#: templates/users/notifications.html:43
+msgid "Telegram"
+msgstr "Telegram"
+
+#: templates/users/notifications.html:44
+msgid "Slack"
+msgstr "Slack"
+
+#: templates/users/notifications.html:45
+msgid "Email"
+msgstr "电子邮件"
+
+#: templates/users/notifications.html:46
+msgid "Pushover"
+msgstr "Pushover"
+
+#: templates/users/notifications.html:47
+msgid "ntfy"
+msgstr "ntfy"
+
+#: templates/users/notifications.html:48
+msgid "And many more..."
+msgstr "以及更多平台…"
+
+#: templates/users/notifications.html:51
+#, python-format
+msgid ""
+"Enter one URL per line. Example: %(code_start)sdiscord://webhook_id/"
+"webhook_token%(code_end)s"
+msgstr ""
+"每行输入一个网址。示例：%(code_start)sdiscord://webhook_id/"
+"webhook_token%(code_end)s"
+
+#: templates/users/notifications.html:59
+msgid ""
+"Enter each Apprise URL on a separate line to send notifications to multiple "
+"services."
+msgstr "每行填写一个 Apprise 网址，即可向多个服务发送通知。"
+
+#: templates/users/notifications.html:64
+msgid "Notification Settings"
+msgstr "通知设置"
+
+#: templates/users/notifications.html:73
+msgid "Enable Daily Digest"
+msgstr "启用每日摘要"
+
+#: templates/users/notifications.html:76
+msgid ""
+"Receive a single notification each day with all media scheduled to release "
+"that day"
+msgstr "每天接收一条通知，汇总当天计划发布的所有媒体"
+
+#: templates/users/notifications.html:95 users/models.py:409
+msgid "Receive notifications for recently released media"
+msgstr "接收最近发布内容的通知"
+
+#: templates/users/notifications.html:98
+msgid "Get notified when new episodes, chapters, or other media are released"
+msgstr "在新剧集、章节或其他媒体发布时收到通知"
+
+#: templates/users/notifications.html:119
+msgid "Test Notifications"
+msgstr "测试通知"
+
+#: templates/users/notifications.html:124
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: templates/users/notifications.html:134
+msgid "Excluded Media Items"
+msgstr "已排除的媒体条目"
+
+#: templates/users/notifications.html:137
+msgid "Exclude specific media items from notifications:"
+msgstr "从通知中排除指定媒体条目："
+
+#: templates/users/notifications.html:140
+msgid "Search for media to exclude..."
+msgstr "搜索要排除的媒体…"
+
+#: templates/users/preferences.html:16
+msgid "Customize the look and behavior of the application."
+msgstr "自定义应用的外观和行为。"
+
+#: templates/users/preferences.html:27
+msgid "Hide Hover Overlay on Touch Devices"
+msgstr "在触控设备上隐藏悬浮操作层"
+
+#: templates/users/preferences.html:30
+msgid ""
+"Hide the media card hover overlay with action buttons on touch devices for a "
+"cleaner mobile experience. On desktop, the overlay will still appear when "
+"you hover your mouse over media cards."
+msgstr ""
+"在触控设备上隐藏带操作按钮的媒体卡片悬浮层，使移动端界面更简洁。在桌面端，将"
+"鼠标悬停在媒体卡片上时仍会显示此操作层。"
+
+#: templates/users/preferences.html:50
+msgid "Obfuscate Unseen Episodes"
+msgstr "模糊未观看剧集"
+
+#: templates/users/preferences.html:53
+msgid "When enabled, unseen episode images and descriptions will be blurred."
+msgstr "启用后，未观看剧集的图片和简介将被模糊处理。"
+
+#: templates/users/preferences.html:73
+msgid "Bulk Completion Date"
+msgstr "批量完成日期"
+
+#: templates/users/preferences.html:76
+msgid ""
+"When marking a TV show or season as completed, its episodes will be marked "
+"as completed with this date."
+msgstr "将电视剧或季度标记为已完成时，其剧集也会使用此日期标记为已完成。"
+
+#: templates/users/preferences.html:95
+msgid "Show progress bar on media items"
+msgstr "在媒体条目上显示进度条"
+
+#: templates/users/preferences.html:98
+msgid ""
+"Display a progress bar on media items. Items which don't have max progress "
+"will be using a dotted line."
+msgstr "在媒体条目上显示进度条。没有最大进度的条目将使用虚线表示。"
+
+#: templates/users/preferences.html:118 users/models.py:356
+msgid "Hide completed media in recommendations"
+msgstr "在推荐中隐藏已完成媒体"
+
+#: templates/users/preferences.html:121
+msgid ""
+"Hide media you've already completed from the recommendations section on "
+"detail pages."
+msgstr "在详情页的推荐区域中隐藏你已经完成的媒体。"
+
+#: templates/users/preferences.html:141
+msgid "Hide zero ratings"
+msgstr "隐藏零分评分"
+
+#: templates/users/preferences.html:143
+msgid "Hide the rating badge from media cards when the rating is zero."
+msgstr "评分为零时，不在媒体卡片上显示评分徽章。"
+
+#: templates/users/preferences.html:162
+msgid "Date Format"
+msgstr "日期格式"
+
+#: templates/users/preferences.html:164
+msgid "Choose how dates are displayed throughout the application."
+msgstr "选择整个应用中的日期显示方式。"
+
+#: templates/users/preferences.html:182
+msgid "Time Format"
+msgstr "时间格式"
+
+#: templates/users/preferences.html:184
+msgid "Choose between 12-hour or 24-hour clock display."
+msgstr "选择使用 12 小时制或 24 小时制。"
+
+#: templates/users/preferences.html:202
+msgid "Week Start Day"
+msgstr "每周起始日"
+
+#: templates/users/preferences.html:204
+msgid "Choose which day the week starts on for calendars and statistics."
+msgstr "选择日历和统计中每周从星期几开始。"
+
+#: templates/users/preferences.html:222
+msgid "Watch Provider Region"
+msgstr "观看提供商地区"
+
+#: templates/users/preferences.html:225
+msgid ""
+"Choose the region to show watch providers for. Setting this to disabled will "
+"hide the box from the media page."
+msgstr "选择用于显示观看提供商的地区。设为禁用后，媒体页面将隐藏此区域。"
+
+#: templates/users/preferences.html:244
+msgid "Media Types"
+msgstr "媒体类型"
+
+#: templates/users/preferences.html:247
+msgid ""
+"Control which media types are visible throughout the app (sidebar, search, "
+"calendar, notifications)."
+msgstr "控制应用各处（侧边栏、搜索、日历、通知）显示哪些媒体类型。"
+
+#: templates/users/preferences.html:277
+msgid "Save Preferences"
+msgstr "保存偏好设置"
+
+#: users/forms.py:18
+msgid "Enter your username"
+msgstr "输入用户名"
+
+#: users/forms.py:20
+msgid "Enter your password"
+msgstr "输入密码"
+
+#: users/forms.py:33
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: users/forms.py:35
+msgid "Confirm your password"
+msgstr "再次输入密码"
+
+#: users/forms.py:46
+msgid "Changing the username is not allowed for the demo account."
+msgstr "演示账户不允许更改用户名。"
+
+#: users/forms.py:69
+msgid "Changing the password is not allowed for the demo account."
+msgstr "演示账户不允许更改密码。"
+
+#: users/forms.py:117
+#, python-format
+msgid "%(url)s is not a valid Apprise URL."
+msgstr "%(url)s 不是有效的 Apprise 网址。"
+
+#: users/helpers.py:20
+msgid "Unexpected error occurred while processing the task."
+msgstr "处理任务时发生意外错误。"
+
+#: users/helpers.py:23
+msgid "This task is currently running."
+msgstr "此任务正在运行。"
+
+#: users/helpers.py:40
+msgid "This task has been queued and is waiting to run."
+msgstr "此任务已加入队列，正在等待运行。"
+
+#: users/helpers.py:57
+msgid "Only New Items"
+msgstr "仅新条目"
+
+#: users/helpers.py:57
+msgid "Overwrite Existing"
+msgstr "覆盖现有条目"
+
+#: users/helpers.py:75
+msgid "Every 2 days"
+msgstr "每 2 天"
+
+#: users/helpers.py:77
+#, python-format
+msgid "Cron: %(expr)s"
+msgstr "Cron：%(expr)s"
+
+#: users/models.py:30
+msgid "Upcoming"
+msgstr "即将发布"
+
+#: users/models.py:31
+msgid "Recent"
+msgstr "最近发布"
+
+#: users/models.py:32
+msgid "Completion"
+msgstr "完成度"
+
+#: users/models.py:33
+msgid "Episodes Left"
+msgstr "剩余剧集"
+
+#: users/models.py:40
+msgid "Rating"
+msgstr "评分"
+
+#: users/models.py:61 users/models.py:68
+msgid "Grid"
+msgstr "网格"
+
+#: users/models.py:62
+msgid "Table"
+msgstr "表格"
+
+#: users/models.py:69
+msgid "List"
+msgstr "列表"
+
+#: users/models.py:84
+msgid "Date Added"
+msgstr "添加日期"
+
+#: users/models.py:92
+msgid "Current Date"
+msgstr "当前日期"
+
+#: users/models.py:93
+msgid "Release Date"
+msgstr "发布日期"
+
+#: users/models.py:94
+msgid "No Date"
+msgstr "无日期"
+
+#: users/models.py:100
+msgid "2026-01-18 (ISO)"
+msgstr "2026-01-18（ISO）"
+
+#: users/models.py:101
+msgid "18/01/2026 (EU)"
+msgstr "18/01/2026（欧洲）"
+
+#: users/models.py:102
+msgid "01/18/2026 (US)"
+msgstr "01/18/2026（美国）"
+
+#: users/models.py:103
+msgid "Jan 18, 2026"
+msgstr "2026年1月18日"
+
+#: users/models.py:104
+msgid "18 Jan, 2026"
+msgstr "2026年1月18日"
+
+#: users/models.py:110
+msgid "14:30 (24-hour)"
+msgstr "14:30（24 小时制）"
+
+#: users/models.py:111
+msgid "2:30 PM (12-hour)"
+msgstr "下午 2:30（12 小时制）"
+
+#: users/models.py:127
+msgid "Toggle profile visibility to anonymous users"
+msgstr "切换个人资料对未登录用户的可见性"
+
+#: users/models.py:143
+msgid "Hide unreleased media from the home page"
+msgstr "从首页隐藏未发布媒体"
+
+#: users/models.py:311
+msgid "Hide hover overlay on touch devices"
+msgstr "在触控设备上隐藏悬浮操作层"
+
+#: users/models.py:316
+msgid "Blur unseen episode images and descriptions"
+msgstr "模糊未观看剧集的图片和简介"
+
+#: users/models.py:324
+msgid "Date to use when bulk-marking media as completed"
+msgstr "批量将媒体标记为已完成时使用的日期"
+
+#: users/models.py:331
+msgid "Preferred date display format"
+msgstr "首选日期显示格式"
+
+#: users/models.py:337
+msgid "Preferred time display format"
+msgstr "首选时间显示格式"
+
+#: users/models.py:344
+msgid "First day of the week"
+msgstr "每周的第一天"
+
+#: users/models.py:350
+msgid "Show progress bar"
+msgstr "显示进度条"
+
+#: users/models.py:362
+msgid "Hide zero ratings from media cards"
+msgstr "从媒体卡片中隐藏零分评分"
+
+#: users/models.py:369
+msgid "Region to show watch providers for"
+msgstr "用于显示观看提供商的地区"
+
+#: users/models.py:399
+msgid "Apprise URLs for notifications"
+msgstr "用于通知的 Apprise 网址"
+
+#: users/models.py:405
+msgid "Items excluded from notifications"
+msgstr "从通知中排除的条目"
+
+#: users/models.py:413
+msgid "Receive a daily digest of upcoming releases"
+msgstr "接收即将发布内容的每日摘要"
+
+#: users/models.py:421
+msgid "Token for external integrations"
+msgstr "外部集成使用的令牌"
+
+#: users/models.py:425
+msgid "Comma-separated list of Plex usernames for webhook matching"
+msgstr "用于匹配 Webhook 的 Plex 用户名列表，以英文逗号分隔"
+
+#: users/models.py:429
+msgid "Process Jellyfin MarkPlayed webhook events"
+msgstr "处理 Jellyfin MarkPlayed Webhook 事件"
+
+#: users/models.py:433
+msgid "Process Jellyfin MarkUnplayed webhook events"
+msgstr "处理 Jellyfin MarkUnplayed Webhook 事件"
+
+#: users/models.py:660
+msgid "Import from Trakt"
+msgstr "从 Trakt 导入"
+
+#: users/models.py:661
+msgid "Import from SIMKL"
+msgstr "从 SIMKL 导入"
+
+#: users/models.py:662
+msgid "Import from MyAnimeList"
+msgstr "从 MyAnimeList 导入"
+
+#: users/models.py:663
+msgid "Import from AniList"
+msgstr "从 AniList 导入"
+
+#: users/models.py:664
+msgid "Import from Kitsu"
+msgstr "从 Kitsu 导入"
+
+#: users/models.py:665
+msgid "Import from Yamtrack"
+msgstr "从 Yamtrack 导入"
+
+#: users/models.py:666
+msgid "Import from HowLongToBeat"
+msgstr "从 HowLongToBeat 导入"
+
+#: users/models.py:667
+msgid "Import from Steam"
+msgstr "从 Steam 导入"
+
+#: users/models.py:668
+msgid "Import from IMDB"
+msgstr "从 IMDb 导入"
+
+#: users/models.py:669
+msgid "Import from GoodReads"
+msgstr "从 Goodreads 导入"
+
+#: users/templatetags/user_tags.py:17
+msgid "Kitsu"
+msgstr "Kitsu"
+
+#: users/templatetags/user_tags.py:21
+msgid "Trakt"
+msgstr "Trakt"
+
+#: users/templatetags/user_tags.py:29
+msgid "AniList"
+msgstr "AniList"
+
+#: users/templatetags/user_tags.py:33
+msgid "SIMKL"
+msgstr "SIMKL"
+
+#: users/templatetags/user_tags.py:37
+msgid "YamTrack"
+msgstr "Yamtrack"
+
+#: users/templatetags/user_tags.py:41
+msgid "HowLongToBeat"
+msgstr "HowLongToBeat"
+
+#: users/templatetags/user_tags.py:45
+msgid "IMDB"
+msgstr "IMDb"
+
+#: users/templatetags/user_tags.py:49
+msgid "Steam"
+msgstr "Steam"
+
+#: users/templatetags/user_tags.py:53
+msgid "GoodReads"
+msgstr "Goodreads"
+
+#: users/views.py:43
+msgid "Your profile has been updated!"
+msgstr "你的个人资料已更新！"
+
+#: users/views.py:68
+msgid "Your password has been updated!"
+msgstr "你的密码已更新！"
+
+#: users/views.py:95
+msgid "Notification settings updated successfully!"
+msgstr "通知设置已成功更新！"
+
+#: users/views.py:194
+msgid "No notification URLs configured."
+msgstr "尚未配置通知网址。"
+
+#: users/views.py:202
+msgid "YamTrack Test Notification"
+msgstr "Yamtrack 测试通知"
+
+#: users/views.py:204
+msgid ""
+"This is a test notification from YamTrack. If you're seeing this, your "
+"notifications are working correctly!"
+msgstr ""
+"这是一条来自 Yamtrack 的测试通知。若你看到此消息，说明通知功能运行正常！"
+
+#: users/views.py:210
+msgid "Test notification sent successfully!"
+msgstr "测试通知已成功发送！"
+
+#: users/views.py:212
+msgid "Failed to send test notification."
+msgstr "测试通知发送失败。"
+
+#: users/views.py:242
+msgid "This section is view-only for demo accounts."
+msgstr "演示账户只能查看此部分。"
+
+#: users/views.py:286
+msgid "Settings updated."
+msgstr "设置已更新。"
+
+#: users/views.py:332
+msgid "Import schedule deleted."
+msgstr "导入计划已删除。"
+
+#: users/views.py:334
+msgid "Import schedule not found."
+msgstr "未找到导入计划。"
+
+#: users/views.py:344
+msgid "Token regenerated successfully."
+msgstr "令牌已成功重新生成。"
+
+#: users/views.py:369
+msgid "Plex usernames updated successfully"
+msgstr "Plex 用户名已成功更新"
+
+#: users/views.py:389
+msgid "Jellyfin webhook settings updated successfully"
+msgstr "Jellyfin Webhook 设置已成功更新"
+
+#: users/views.py:402
+#, python-format
+msgid "Successfully cleared %(count)d search entry"
+msgid_plural "Successfully cleared %(count)d search entries"
+msgstr[0] "已成功清除 %(count)d 条搜索记录"

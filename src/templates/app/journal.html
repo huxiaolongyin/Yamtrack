@@ -4,7 +4,7 @@
 {% load i18n %}
 
 {% block title %}
-  Journal - Yamtrack
+  {% trans "Journal" %} - Yamtrack
 {% endblock title %}
 
 {% block content %}
@@ -78,12 +78,12 @@
           <div class="flex justify-end gap-2 pt-2">
             <button @click="isOpen = false"
                     class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm rounded-md transition-colors cursor-pointer">
-              Cancel
+              {% trans "Cancel" %}
             </button>
             <button @click="applyCustomRange()"
                     class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm rounded-md transition-colors cursor-pointer flex items-center gap-2">
               {% include "app/icons/checkmark.svg" with classes="w-4 h-4" %}
-              Apply Range
+              {% trans "Apply Range" %}
             </button>
           </div>
         </div>
@@ -114,7 +114,9 @@
         <h3 class="text-sm font-medium text-gray-400">{% trans "Most Active Day" %}</h3>
         {% if activity_data.stats.most_active_day %}
           <p class="text-2xl font-bold">{{ activity_data.stats.most_active_day }}</p>
-          <p class="text-sm text-gray-500">{{ activity_data.stats.most_active_day_percentage }}% of activity</p>
+          <p class="text-sm text-gray-500">
+            {% blocktrans with percentage=activity_data.stats.most_active_day_percentage %}{{ percentage }}% of activity{% endblocktrans %}
+          </p>
         {% else %}
           <p class="text-2xl font-bold text-gray-500">--</p>
         {% endif %}
@@ -128,10 +130,10 @@
         <h3 class="text-sm font-medium text-gray-400">{% trans "Current Streak" %}</h3>
         {% if activity_data.stats.most_active_day %}
           <p class="text-2xl font-bold">
-            {{ activity_data.stats.current_streak }} day{{ activity_data.stats.current_streak|pluralize }}
+            {% blocktrans count count=activity_data.stats.current_streak %}{{ count }} day{% plural %}{{ count }} days{% endblocktrans %}
           </p>
           <p class="text-sm text-gray-500">
-            Longest: {{ activity_data.stats.longest_streak }} day{{ activity_data.stats.longest_streak|pluralize }}
+            {% blocktrans count count=activity_data.stats.longest_streak %}Longest: {{ count }} day{% plural %}Longest: {{ count }} days{% endblocktrans %}
           </p>
         {% else %}
           <p class="text-2xl font-bold text-gray-500">--</p>
@@ -175,8 +177,9 @@
             {% for week in activity_data.calendar_weeks %}
               <div class="flex flex-col gap-1">
                 {% for day in week %}
+                  {% blocktrans count count=day.count with date=day.date asvar activity_title %}{{ date }}: {{ count }} activity{% plural %}{{ date }}: {{ count }} activities{% endblocktrans %}
                   <div class="w-4 h-4 rounded-sm transition-colors duration-200 hover:ring-2 hover:ring-white {% if day.level == 0 %}bg-[#3a414c]{% elif day.level == 1 %}bg-indigo-600{% elif day.level == 2 %}bg-indigo-500{% elif day.level == 3 %}bg-indigo-400{% elif day.level == 4 %}bg-indigo-300{% endif %}"
-                       title="{{ day.date }}: {{ day.count }} activit{{ day.count|pluralize:"y,ies" }}"></div>
+                       title="{{ activity_title }}"></div>
                 {% endfor %}
               </div>
             {% endfor %}

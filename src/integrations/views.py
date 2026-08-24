@@ -42,18 +42,15 @@ def trakt_oauth(request):
     }
     state_token = secrets.token_urlsafe(32)
     request.session[state_token] = state
-    return redirect(
-        f"{url}?{
-            urlencode(
-                {
-                    'client_id': settings.TRAKT_API,
-                    'redirect_uri': redirect_uri,
-                    'response_type': 'code',
-                    'state': state_token,
-                }
-            )
-        }",
+    query = urlencode(
+        {
+            "client_id": settings.TRAKT_API,
+            "redirect_uri": redirect_uri,
+            "response_type": "code",
+            "state": state_token,
+        }
     )
+    return redirect(f"{url}?{query}")
 
 
 @require_GET
@@ -62,11 +59,11 @@ def import_trakt_private(request):
     state_token = request.GET.get("state")
     state = request.session.get(state_token)
     if not state:
-        messages.error(request, "Invalid or expired Trakt authorization request.")
+        messages.error(request, _("Invalid or expired Trakt authorization request."))
         return redirect("import_data")
 
     if not request.GET.get("code"):
-        messages.error(request, "Trakt authorization failed.")
+        messages.error(request, _("Trakt authorization failed."))
         return redirect("import_data")
 
     redirect_uri = state.get("redirect_uri") or app_helpers.build_absolute_app_url(
@@ -144,7 +141,7 @@ def import_trakt_export(request):
     file = request.FILES.get("trakt_export_zip")
 
     if not file:
-        messages.error(request, "Trakt export zip file is required.")
+        messages.error(request, _("Trakt export zip file is required."))
         return redirect("import_data")
 
     mode = request.POST["mode"]
@@ -177,18 +174,15 @@ def simkl_oauth(request):
     state_token = secrets.token_urlsafe(32)
     request.session[state_token] = state
 
-    return redirect(
-        f"{url}?{
-            urlencode(
-                {
-                    'client_id': settings.SIMKL_ID,
-                    'redirect_uri': redirect_uri,
-                    'response_type': 'code',
-                    'state': state_token,
-                }
-            )
-        }",
+    query = urlencode(
+        {
+            "client_id": settings.SIMKL_ID,
+            "redirect_uri": redirect_uri,
+            "response_type": "code",
+            "state": state_token,
+        }
     )
+    return redirect(f"{url}?{query}")
 
 
 @require_GET
@@ -268,18 +262,15 @@ def anilist_oauth(request):
     state_token = secrets.token_urlsafe(32)
     request.session[state_token] = state
 
-    return redirect(
-        f"{url}?{
-            urlencode(
-                {
-                    'client_id': settings.ANILIST_ID,
-                    'redirect_uri': redirect_uri,
-                    'response_type': 'code',
-                    'state': state_token,
-                }
-            )
-        }",
+    query = urlencode(
+        {
+            "client_id": settings.ANILIST_ID,
+            "redirect_uri": redirect_uri,
+            "response_type": "code",
+            "state": state_token,
+        }
     )
+    return redirect(f"{url}?{query}")
 
 
 @require_GET

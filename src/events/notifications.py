@@ -6,7 +6,7 @@ from django.apps import apps
 from django.contrib.auth import get_user_model
 from django.db.models import Q
 from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext as _
 
 from app.models import TV, MediaTypes, Season
 from app.templatetags import app_tags
@@ -43,12 +43,12 @@ def send_releases():
     events = Event.objects.sort_with_sentinel_last(base_queryset)
 
     if not events.exists():
-        return "No recent releases found"
+        return _("No recent releases found")
 
     result = send_notifications(
         events=events,
         users=users,
-        title="🔔 YamTrack: New Releases Available! 🔔",
+        title=_("🔔 YamTrack: New Releases Available! 🔔"),
     )
 
     # Mark events as notified
@@ -90,7 +90,7 @@ def send_daily_digest():
     )
 
     if not users.exists():
-        return "No users with daily digest enabled"
+        return _("No users with daily digest enabled")
 
     # Get today's events using the converted UTC times
     base_queryset = Event.objects.filter(
@@ -101,9 +101,9 @@ def send_daily_digest():
     events = Event.objects.sort_with_sentinel_last(base_queryset)
 
     if not events.exists():
-        return "No releases scheduled for today"
+        return _("No releases scheduled for today")
 
-    title = "📆 YamTrack: Today's Releases 📆"
+    title = _("📆 YamTrack: Today's Releases 📆")
 
     result = send_notifications(
         events=events,
@@ -413,6 +413,19 @@ def format_notification(releases):
     Returns:
         Formatted notification text as a string
     """
+    media_type_labels = {
+        MediaTypes.TV.value: _("TV SHOW"),
+        MediaTypes.SEASON.value: _("TV Shows"),
+        MediaTypes.EPISODE.value: _("EPISODE"),
+        MediaTypes.MOVIE.value: _("MOVIE"),
+        MediaTypes.ANIME.value: _("ANIME"),
+        MediaTypes.MANGA.value: _("MANGA"),
+        MediaTypes.GAME.value: _("GAME"),
+        MediaTypes.BOOK.value: _("BOOK"),
+        MediaTypes.COMIC.value: _("COMIC"),
+        MediaTypes.BOARDGAME.value: _("BOARDGAME"),
+    }
+
     # Group releases by media type
     releases_by_type = {}
     for event in releases:
@@ -431,10 +444,7 @@ def format_notification(releases):
         icon = app_tags.unicode_icon(media_type)
 
         # Add a header for each media type with icon
-        if media_type == MediaTypes.SEASON.value:
-            notification_body.append(f"{icon}  TV Shows")
-        else:
-            notification_body.append(f"{icon}  {media_type.upper()}")
+        notification_body.append(f"{icon}  {media_type_labels[media_type]}")
 
         for event in media_events:
             if event.is_sentinel_time:
@@ -449,7 +459,7 @@ def format_notification(releases):
         # Add a blank line between media types
         notification_body.append("")
 
-    notification_body.append("Enjoy your media!")
+    notification_body.append(_("Enjoy your media!"))
 
     return "\n".join(notification_body)
 

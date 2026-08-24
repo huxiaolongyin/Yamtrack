@@ -1,0 +1,201 @@
+# Simplified Chinese translations for Yamtrack JavaScript.
+# Copyright (C) 2026 Yamtrack contributors
+# This file is distributed under the same license as Yamtrack.
+# Jacob <1453366421@qq.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-24 11:04+0800\n"
+"PO-Revision-Date: 2026-08-24 12:00+0800\n"
+"Last-Translator: Jacob <1453366421@qq.com>\n"
+"Language-Team: Simplified Chinese\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: static/js/copy-item.js:67
+msgid ""
+"Could not copy to clipboard. Please select the text and press Ctrl+C/Cmd+C "
+"to copy."
+msgstr "无法复制到剪贴板。请选择文本，然后按 Ctrl+C/Cmd+C 复制。"
+
+#: static/js/date-range.js:5 static/js/date-range.js:22
+#: static/js/date-range.js:126 static/js/date-range.js:408
+msgid "Last 12 Months"
+msgstr "最近 12 个月"
+
+#: static/js/date-range.js:13 static/js/date-range.js:62
+#: static/js/date-range.js:312
+msgid "Today"
+msgstr "今天"
+
+#: static/js/date-range.js:14 static/js/date-range.js:68
+#: static/js/date-range.js:320
+msgid "Yesterday"
+msgstr "昨天"
+
+#: static/js/date-range.js:15 static/js/date-range.js:75
+#: static/js/date-range.js:330
+msgid "This Week"
+msgstr "本周"
+
+#: static/js/date-range.js:16 static/js/date-range.js:84
+#: static/js/date-range.js:338
+msgid "Last 7 Days"
+msgstr "最近 7 天"
+
+#: static/js/date-range.js:17 static/js/date-range.js:90
+#: static/js/date-range.js:345
+msgid "This Month"
+msgstr "本月"
+
+#: static/js/date-range.js:18 static/js/date-range.js:96
+#: static/js/date-range.js:353
+msgid "Last 30 Days"
+msgstr "最近 30 天"
+
+#: static/js/date-range.js:19 static/js/date-range.js:102
+#: static/js/date-range.js:361
+msgid "Last 90 Days"
+msgstr "最近 90 天"
+
+#: static/js/date-range.js:20 static/js/date-range.js:108
+#: static/js/date-range.js:368
+msgid "This Year"
+msgstr "今年"
+
+#: static/js/date-range.js:21 static/js/date-range.js:114
+#: static/js/date-range.js:392
+msgid "Last 6 Months"
+msgstr "最近 6 个月"
+
+#: static/js/date-range.js:23 static/js/date-range.js:136
+#: static/js/date-range.js:290
+msgid "All Time"
+msgstr "全部时间"
+
+#: static/js/i18n/catalog.js:5
+msgid "Progress (Episodes)"
+msgstr "进度（剧集）"
+
+#: static/js/i18n/catalog.js:6
+msgid "Progress (Chapters)"
+msgstr "进度（章节）"
+
+#: static/js/i18n/catalog.js:7
+msgid "Progress (Play Time)"
+msgstr "进度（游玩时长）"
+
+#: static/js/i18n/catalog.js:8
+msgid "Progress (Pages)"
+msgstr "进度（页数）"
+
+#: static/js/i18n/catalog.js:9
+msgid "Progress"
+msgstr "进度"
+
+#: static/js/i18n/catalog.js:10
+msgid "Please select a parent TV show from the dropdown"
+msgstr "请从下拉列表中选择所属电视剧"
+
+#: static/js/i18n/catalog.js:11
+msgid "Please select a parent Season from the dropdown"
+msgstr "请从下拉列表中选择所属季度"
+
+#: static/js/i18n/catalog.js:12
+msgid "hh:mm"
+msgstr "时:分"
+
+#: static/js/i18n/catalog.js:13
+msgid "Show less"
+msgstr "收起"
+
+#: static/js/i18n/catalog.js:14
+msgid "Read more"
+msgstr "展开阅读"
+
+#: static/js/i18n/catalog.js:15
+#, javascript-format
+msgid "Search %s..."
+msgstr "搜索%s…"
+
+#: static/js/i18n/catalog.js:16
+msgid "All Types"
+msgstr "所有类型"
+
+#: static/js/i18n/catalog.js:17
+msgid "Date Added"
+msgstr "添加日期"
+
+#: static/js/i18n/catalog.js:18
+msgid "Title"
+msgstr "标题"
+
+#: static/js/i18n/catalog.js:19
+msgid "Media Type"
+msgstr "媒体类型"
+
+#: static/js/i18n/catalog.js:20
+msgid "Import TV shows and movies"
+msgstr "导入电视剧和电影"
+
+#: static/js/i18n/catalog.js:21
+msgid "File uploads are not available for periodic imports"
+msgstr "定期导入不支持上传文件"
+
+#: static/js/i18n/catalog.js:22
+msgid "Import from YamTrack backup"
+msgstr "从 Yamtrack 备份导入"
+
+#: static/js/i18n/catalog.js:23
+msgid "Import games"
+msgstr "导入游戏"
+
+#: static/js/i18n/catalog.js:24
+msgid "Import movies and TV shows from your ratings"
+msgstr "根据你的评分导入电影和电视剧"
+
+#: static/js/i18n/catalog.js:25
+msgid "Import from GoodReads backup"
+msgstr "从 Goodreads 备份导入"
+
+#: static/js/i18n/catalog.js:26
+msgid "Hide failed items"
+msgstr "隐藏失败条目"
+
+#: static/js/i18n/catalog.js:27
+msgid "Show failed items"
+msgstr "显示失败条目"
+
+#: static/js/i18n/catalog.js:28
+msgid "Hide traceback"
+msgstr "隐藏错误追踪"
+
+#: static/js/i18n/catalog.js:29
+msgid "Show traceback"
+msgstr "显示错误追踪"
+
+#: static/js/statistics-charts.js:35 static/js/statistics-charts.js:37
+#: static/js/statistics-charts.js:339
+msgid "Score"
+msgstr "评分"
+
+#: static/js/statistics-charts.js:72
+msgid "Total"
+msgstr "总计"
+
+#: static/js/statistics-charts.js:131
+msgid "Count"
+msgstr "数量"
+
+#: static/js/statistics-charts.js:346
+msgid "Number of Items"
+msgstr "条目数"
+
+#: static/js/statistics-charts.js:354
+msgid "Average Score"
+msgstr "平均评分"

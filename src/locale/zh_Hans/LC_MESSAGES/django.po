@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 09:46+0000\n"
+"POT-Creation-Date: 2026-08-24 10:06+0000\n"
 "PO-Revision-Date: 2026-08-24 12:00+0800\n"
 "Last-Translator: Jacob <1453366421@qq.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -1443,22 +1443,22 @@ msgstr "处理评论条目时出错：%(entry)s"
 msgid "The uploaded file is not a valid Trakt export archive."
 msgstr "上传的文件不是有效的 Trakt 导出归档。"
 
-#: integrations/imports/trakt.py:912
+#: integrations/imports/trakt.py:911
 msgid "The uncompressed Trakt export archive is too large to import."
 msgstr "解压后的 Trakt 导出归档过大，无法导入。"
 
-#: integrations/imports/trakt.py:924
+#: integrations/imports/trakt.py:922
 msgid ""
 "The uploaded archive does not contain any Trakt export data. Upload the ZIP "
 "file downloaded from the Trakt website."
 msgstr "上传的归档不包含 Trakt 导出数据。请上传从 Trakt 网站下载的 ZIP 文件。"
 
-#: integrations/imports/trakt.py:951
+#: integrations/imports/trakt.py:949
 #, python-format
 msgid "%(file)s: could not be read, skipped."
 msgstr "%(file)s：无法读取，已跳过。"
 
-#: integrations/imports/trakt.py:969
+#: integrations/imports/trakt.py:967
 #, python-format
 msgid "%(file)s: unexpected contents, skipped."
 msgstr "%(file)s：内容异常，已跳过。"

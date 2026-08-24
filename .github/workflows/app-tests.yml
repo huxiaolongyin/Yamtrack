@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - dev
+      - i18n/zh-hans
   workflow_dispatch:
 
 permissions:
@@ -60,6 +61,16 @@ jobs:
           uv sync --locked --no-default-groups --group test
           uv run playwright install
 
+      - name: Validate translations
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes gettext
+          cd src
+          uv run manage.py makemessages -d django -l zh_Hans
+          uv run manage.py makemessages -d djangojs -l zh_Hans
+          git diff --exit-code -I '^"POT-Creation-Date:' -- locale/zh_Hans
+          uv run manage.py compilemessages
+
       - name: Set environment variables from secrets
         run: |
           if [ -n "${{ secrets.SECRET }}" ]; then echo "SECRET=${{ secrets.SECRET }}" >> $GITHUB_ENV; fi
@@ -71,6 +82,9 @@ jobs:
           if [ -n "${{ secrets.COMICVINE_API }}" ]; then echo "COMICVINE_API=${{ secrets.COMICVINE_API }}" >> $GITHUB_ENV; fi
 
       - name: Run Tests
+        env:
+          # Preserve upstream English assertions; i18n tests explicitly enable zh-hans.
+          LANGUAGE_CODE: en
         run: |
           uv run coverage run src/manage.py test app users integrations lists events --parallel
 

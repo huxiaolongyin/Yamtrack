@@ -2,6 +2,10 @@
 
 # Yamtrack
 
+> 此分支基于 Yamtrack `v0.26.3`，提供默认简体中文、可切换英文的完整 i18n 版本。
+> 发布镜像为 `ghcr.io/huxiaolongyin/yamtrack:0.26.3-i18n.1`；原项目见
+> [FuzzyGrim/Yamtrack](https://github.com/FuzzyGrim/Yamtrack)。
+
 ![App Tests](https://github.com/FuzzyGrim/Yamtrack/actions/workflows/app-tests.yml/badge.svg)
 ![Docker Image](https://github.com/FuzzyGrim/Yamtrack/actions/workflows/docker-image.yml/badge.svg)
 ![CodeFactor](https://www.codefactor.io/repository/github/fuzzygrim/yamtrack/badge)

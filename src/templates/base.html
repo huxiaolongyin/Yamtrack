@@ -206,18 +206,17 @@
                   <input type="hidden" name="next" value="{{ request.get_full_path }}">
                   {% include "app/icons/language.svg" with classes="w-5 h-5 text-gray-400 shrink-0" %}
                   {% get_current_language as CURRENT_LANGUAGE %}
-                  {% get_available_languages as AVAILABLE_LANGUAGES %}
-                  <label for="sidebar-language" class="sr-only">{% trans "Language" %}</label>
-                  <select id="sidebar-language"
-                          name="language"
-                          onchange="this.form.submit()"
-                          class="min-w-0 grow bg-transparent text-sm text-gray-400 hover:text-white focus:outline-none cursor-pointer">
-                    {% for code, name in AVAILABLE_LANGUAGES %}
-                      <option value="{{ code }}"
-                              class="bg-[#1a1d20] text-gray-100"
-                              {% if code == CURRENT_LANGUAGE %}selected{% endif %}>{{ name }}</option>
-                    {% endfor %}
-                  </select>
+                  {% if CURRENT_LANGUAGE == "zh-hans" %}
+                    <input type="hidden" name="language" value="en">
+                    <button type="submit"
+                            class="min-w-0 grow text-left text-sm text-gray-400 hover:text-white cursor-pointer"
+                            title="{% trans 'Switch to English' %}">English</button>
+                  {% else %}
+                    <input type="hidden" name="language" value="zh-hans">
+                    <button type="submit"
+                            class="min-w-0 grow text-left text-sm text-gray-400 hover:text-white cursor-pointer"
+                            title="{% trans 'Switch to Simplified Chinese' %}">简体中文</button>
+                  {% endif %}
                 </form>
 
                 {% url 'account' as account_url %}

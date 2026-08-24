@@ -1098,7 +1098,7 @@ class TV(Media):
         for season_number in season_numbers:
             season_metadata = tv_with_seasons_metadata[f"season/{season_number}"]
 
-            item, _ = Item.objects.get_or_create(
+            item, _created = Item.objects.get_or_create(
                 media_id=self.item.media_id,
                 source=self.item.source,
                 media_type=MediaTypes.SEASON.value,
@@ -1244,7 +1244,7 @@ class TV(Media):
                 continue
 
             if next_unwatched_season is None:
-                item, _ = Item.objects.get_or_create(
+                item, _created = Item.objects.get_or_create(
                     media_id=self.item.media_id,
                     source=self.item.source,
                     media_type=MediaTypes.SEASON.value,
@@ -1663,7 +1663,7 @@ class Season(Media):
             else:
                 status = self.status
 
-            item, _ = Item.objects.get_or_create(
+            item, _created = Item.objects.get_or_create(
                 media_id=self.item.media_id,
                 source=Sources.TMDB.value,
                 media_type=MediaTypes.TV.value,
@@ -1749,7 +1749,7 @@ class Season(Media):
                     image = settings.IMG_NONE
                 break
 
-        item, _ = Item.objects.get_or_create(
+        item, _created = Item.objects.get_or_create(
             media_id=self.item.media_id,
             source=self.item.source,
             media_type=MediaTypes.EPISODE.value,

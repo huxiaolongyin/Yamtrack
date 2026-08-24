@@ -636,7 +636,7 @@ def media_save(request):
             source,
             [season_number],
         )
-        item, _ = Item.objects.get_or_create(
+        item, _created = Item.objects.get_or_create(
             media_id=media_id,
             source=source,
             media_type=media_type,

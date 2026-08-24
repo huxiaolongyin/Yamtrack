@@ -40,5 +40,8 @@ class InternationalizationTests(TestCase):
         """Include inline-template gettext calls in the JavaScript catalog."""
         response = self.client.get(reverse("javascript-catalog"))
 
-        self.assertContains(response, "进度（剧集）")  # noqa: RUF001
-        self.assertContains(response, "定期导入不支持上传文件")
+        self.assertContains(response, r"\u8fdb\u5ea6\uff08\u5267\u96c6\uff09")
+        self.assertContains(
+            response,
+            r"\u5b9a\u671f\u5bfc\u5165\u4e0d\u652f\u6301\u4e0a\u4f20\u6587\u4ef6",
+        )

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 11:12+0800\n"
+"POT-Creation-Date: 2026-08-24 11:45+0800\n"
 "PO-Revision-Date: 2026-08-24 12:00+0800\n"
 "Last-Translator: Jacob <1453366421@qq.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -452,22 +452,22 @@ msgstr "%(title_list)s：它们匹配到了同一个 ID %(media_id)s，均未导
 msgid "Invalid or missing IMDB ID for title: %(title)s"
 msgstr "标题 %(title)s 的 IMDb ID 无效或缺失"
 
-#: integrations/imports/imdb.py:141
+#: integrations/imports/imdb.py:140
 #, python-format
-msgid "Unsupported title type '%(title_type)s' for title: %(title)s - skipped"
+msgid "%(title)s: Unsupported title type '%(title_type)s' - skipped"
 msgstr "标题 %(title)s 的类型“%(title_type)s”不受支持，已跳过"
 
-#: integrations/imports/imdb.py:149
+#: integrations/imports/imdb.py:145
 #, python-format
-msgid "Unknown title type '%(title_type)s' for title: %(title)s - skipped"
+msgid "%(title)s: Unknown title type '%(title_type)s' - skipped"
 msgstr "标题 %(title)s 的类型“%(title_type)s”未知，已跳过"
 
-#: integrations/imports/imdb.py:160
+#: integrations/imports/imdb.py:154
 #, python-format
 msgid "Couldn't find a match in %(source)s for title: %(title)s"
 msgstr "无法在 %(source)s 中找到与标题 %(title)s 匹配的内容"
 
-#: integrations/imports/imdb.py:214
+#: integrations/imports/imdb.py:208
 #, python-format
 msgid ""
 "%(title_list)s: They were matched to the same TMDB ID %(media_id)s - none "
@@ -812,7 +812,7 @@ msgid ""
 msgstr "如果你认为这是程序缺陷，请%(link_start)s报告问题%(link_end)s。"
 
 #: templates/400.html:28 templates/403.html:33 templates/403_csrf.html:45
-#: templates/404.html:26 templates/500.html:37
+#: templates/404.html:25 templates/500.html:36
 #: templates/socialaccount/connections.html:95
 msgid "Back to Home"
 msgstr "返回首页"
@@ -835,7 +835,7 @@ msgstr "你没有访问此资源的权限。请登录或联系管理员。"
 msgid "If you believe this was a bug, please"
 msgstr "如果你认为这是程序缺陷，请"
 
-#: templates/403.html:21
+#: templates/403.html:21 templates/404.html:18 templates/500.html:24
 msgid "report the issue."
 msgstr "报告问题。"
 
@@ -884,7 +884,7 @@ msgstr "出现问题"
 msgid "We're sorry, but there was an error processing your request."
 msgstr "很抱歉，处理你的请求时发生错误。"
 
-#: templates/500.html:32
+#: templates/500.html:31
 msgid "Try Again"
 msgstr "重试"
 
@@ -1046,10 +1046,38 @@ msgstr "添加到自定义列表"
 msgid "View your activity history"
 msgstr "查看你的活动记录"
 
+#: templates/app/components/home_section.html:24
+#, python-format
+msgid "%(count)s item"
+msgid_plural "%(count)s items"
+msgstr[0] "%(count)s 项"
+
 #: templates/app/components/home_section.html:58
 #, python-format
 msgid "Load all (%(total)s)"
 msgstr "加载全部（%(total)s）"
+
+#: templates/app/components/home_section.html:82
+msgid "Nothing is actively moving right now"
+msgstr "当前没有正在进行的内容"
+
+#: templates/app/components/home_section.html:84
+msgid "Your planning shelf is still empty"
+msgstr "你的计划列表还是空的"
+
+#: templates/app/components/home_section.html:89
+msgid ""
+"Start a title and mark it as in progress to see quick updates and release "
+"reminders here."
+msgstr "开始记录一个条目并将其标记为进行中，即可在这里查看快捷更新和发布提醒。"
+
+#: templates/app/components/home_section.html:91
+msgid "Add a few titles to planning to see them here."
+msgstr "将一些条目加入计划后，它们会显示在这里。"
+
+#: templates/app/components/home_section.html:98
+msgid "Browse media"
+msgstr "浏览媒体"
 
 #: templates/app/components/journal_items.html:29
 msgid "Delete activity"
@@ -1338,19 +1366,29 @@ msgstr "剧集"
 msgid "Streaming"
 msgstr "在线观看"
 
-#: templates/app/media_details.html:704
+#: templates/app/media_details.html:677
+msgid ""
+"Watch provider region is not configured. Set a region or disable this "
+"feature in the"
+msgstr "尚未配置观看提供商地区。请在以下位置设置地区或禁用此功能："
+
+#: templates/app/media_details.html:679
+msgid "preferences"
+msgstr "偏好设置"
+
+#: templates/app/media_details.html:700
 msgid "Time to Beat"
 msgstr "通关时长"
 
-#: templates/app/media_details.html:713
+#: templates/app/media_details.html:709
 msgid "Main Story"
 msgstr "主线剧情"
 
-#: templates/app/media_details.html:724
+#: templates/app/media_details.html:720
 msgid "Main + Extra"
 msgstr "主线 + 额外内容"
 
-#: templates/app/media_details.html:735
+#: templates/app/media_details.html:731
 msgid "Completionist"
 msgstr "完全通关"
 
@@ -1524,15 +1562,19 @@ msgstr "列表"
 msgid "Calendar"
 msgstr "日历"
 
-#: templates/base.html:210
-msgid "Language"
-msgstr "语言"
+#: templates/base.html:213
+msgid "Switch to English"
+msgstr "切换到英语"
 
-#: templates/base.html:238 templates/users/base.html:8
+#: templates/base.html:218
+msgid "Switch to Simplified Chinese"
+msgstr "切换到简体中文"
+
+#: templates/base.html:237 templates/users/base.html:8
 msgid "Settings"
 msgstr "设置"
 
-#: templates/base.html:247
+#: templates/base.html:246
 msgid "Logout"
 msgstr "退出登录"
 
@@ -1749,8 +1791,8 @@ msgstr "私密个人资料"
 msgid "Hide your profile and media lists from anonymous visitors."
 msgstr "对未登录访客隐藏你的个人资料和媒体列表。"
 
-#: templates/users/account.html:68 templates/users/integrations.html:160
-#: templates/users/integrations.html:300
+#: templates/users/account.html:68 templates/users/integrations.html:151
+#: templates/users/integrations.html:283
 msgid "Save Changes"
 msgstr "保存更改"
 
@@ -2096,118 +2138,188 @@ msgstr "从任意来源导入媒体后，可在此查看历史记录"
 msgid "Token"
 msgstr "令牌"
 
-#: templates/users/integrations.html:35 templates/users/integrations.html:184
-#: templates/users/integrations.html:215 templates/users/integrations.html:253
-#: templates/users/integrations.html:326 templates/users/integrations.html:363
+#: templates/users/integrations.html:24
+msgid ""
+"This token is used to authenticate webhook requests from your media servers."
+msgstr "此令牌用于验证来自媒体服务器的 Webhook 请求。"
+
+#: templates/users/integrations.html:34 templates/users/integrations.html:174
+#: templates/users/integrations.html:204 templates/users/integrations.html:239
+#: templates/users/integrations.html:309 templates/users/integrations.html:344
 msgid "Copy"
 msgstr "复制"
 
-#: templates/users/integrations.html:45
+#: templates/users/integrations.html:43
 msgid "Regenerating will invalidate the previous token"
 msgstr "重新生成后，原令牌将失效"
 
-#: templates/users/integrations.html:53
+#: templates/users/integrations.html:51
 msgid "Regenerate"
 msgstr "重新生成"
 
-#: templates/users/integrations.html:62
+#: templates/users/integrations.html:60
 msgid "Media Servers"
 msgstr "媒体服务器"
 
-#: templates/users/integrations.html:71
+#: templates/users/integrations.html:63
+msgid ""
+"Connect your media servers to automatically track your watching progress."
+msgstr "连接媒体服务器以自动记录观看进度。"
+
+#: templates/users/integrations.html:68
 msgid "Integration services"
 msgstr "集成服务"
 
-#: templates/users/integrations.html:79 templates/users/integrations.html:104
+#: templates/users/integrations.html:76 templates/users/integrations.html:101
 msgid "Jellyfin"
 msgstr "Jellyfin"
 
-#: templates/users/integrations.html:88 templates/users/integrations.html:273
+#: templates/users/integrations.html:85 templates/users/integrations.html:258
 msgid "Plex"
 msgstr "Plex"
 
-#: templates/users/integrations.html:97 templates/users/integrations.html:343
+#: templates/users/integrations.html:94 templates/users/integrations.html:325
 msgid "Emby"
 msgstr "Emby"
 
-#: templates/users/integrations.html:111
+#: templates/users/integrations.html:104
+msgid "Connect Jellyfin to automatically track your watching progress."
+msgstr "连接 Jellyfin 以自动记录观看进度。"
+
+#: templates/users/integrations.html:107
 msgid "Webhook Events"
 msgstr "Webhook 事件"
 
-#: templates/users/integrations.html:124
+#: templates/users/integrations.html:109
+msgid ""
+"Play and Stop events are always processed. Enable these to sync manual "
+"watched changes from the unofficial Webhooks plugin."
+msgstr ""
+"Play 和 Stop 事件始终会被处理。启用以下选项，可同步非官方 Webhooks 插件中的手"
+"动已观看状态变更。"
+
+#: templates/users/integrations.html:119
 msgid "Process MarkPlayed events"
 msgstr "处理 MarkPlayed 事件"
 
-#: templates/users/integrations.html:142
+#: templates/users/integrations.html:122
+msgid "Mark media as watched when it is manually marked played in Jellyfin."
+msgstr "当媒体在 Jellyfin 中被手动标记为已播放时，将其标记为已观看。"
+
+#: templates/users/integrations.html:135
 msgid "Process MarkUnplayed events"
 msgstr "处理 MarkUnplayed 事件"
 
-#: templates/users/integrations.html:166
+#: templates/users/integrations.html:138
+msgid ""
+"Remove watched progress when it is manually marked unplayed in Jellyfin. "
+"This event can delete media from Yamtrack."
+msgstr ""
+"当媒体在 Jellyfin 中被手动标记为未播放时移除观看进度。此事件可能会从 "
+"Yamtrack 中删除媒体。"
+
+#: templates/users/integrations.html:157
 msgid "Official Webhook Plugin"
 msgstr "官方 Webhook 插件"
 
-#: templates/users/integrations.html:168 templates/users/integrations.html:228
+#: templates/users/integrations.html:159 templates/users/integrations.html:216
 msgid "You will need to have TMDB and TVDB as metadata providers in Jellyfin."
 msgstr "需要在 Jellyfin 中将 TMDB 和 TVDB 配置为元数据提供商。"
 
-#: templates/users/integrations.html:174 templates/users/integrations.html:247
+#: templates/users/integrations.html:161
+msgid ""
+"Install the Webhook plugin from the 'Jellyfin Stable' repo via your server's "
+"Plugin Catalog."
+msgstr "通过服务器的插件目录，从“Jellyfin Stable”仓库安装 Webhook 插件。"
+
+#: templates/users/integrations.html:164 templates/users/integrations.html:233
 msgid "Restart your server, then configure the plugin:"
 msgstr "重启服务器，然后配置插件："
 
-#: templates/users/integrations.html:176
+#: templates/users/integrations.html:166
 msgid ""
 "Click on the \"Add Generic Destination\" button to create a new webhook."
 msgstr "点击“Add Generic Destination”按钮创建新的 Webhook。"
 
-#: templates/users/integrations.html:177
+#: templates/users/integrations.html:167
 msgid "Name: Yamtrack"
 msgstr "名称：Yamtrack"
 
-#: templates/users/integrations.html:192
+#: templates/users/integrations.html:181
 msgid "Notification Type: Playback Start and Playback Stop"
 msgstr "通知类型：Playback Start 和 Playback Stop"
 
-#: templates/users/integrations.html:193
+#: templates/users/integrations.html:182
 msgid "User Filter: Your Jellyfin User"
 msgstr "用户筛选：你的 Jellyfin 用户"
 
-#: templates/users/integrations.html:194
+#: templates/users/integrations.html:183
 msgid "Finally, under the \"Template\" section, paste the following code."
 msgstr "最后，在“Template”部分粘贴以下代码。"
 
-#: templates/users/integrations.html:226
+#: templates/users/integrations.html:214
 msgid "Unofficial Webhooks Plugin"
 msgstr "非官方 Webhooks 插件"
 
-#: templates/users/integrations.html:260
+#: templates/users/integrations.html:218
+msgid "Add this repository"
+msgstr "将此仓库的"
+
+#: templates/users/integrations.html:222
+msgid "link"
+msgstr "链接"
+
+#: templates/users/integrations.html:223
+msgid "to your \"Plugins Catalog\" in Jellyfin settings."
+msgstr "添加到 Jellyfin 设置的“插件目录”中。"
+
+#: templates/users/integrations.html:226
+msgid "From your \"Plugins Catalog\", install the"
+msgstr "在“插件目录”中安装"
+
+#: templates/users/integrations.html:230
+msgid "Unofficial Webhooks plugin"
+msgstr "非官方 Webhooks 插件"
+
+#: templates/users/integrations.html:245
 msgid "Payload format: Default"
 msgstr "负载格式：Default"
 
-#: templates/users/integrations.html:261
+#: templates/users/integrations.html:246
 msgid "Listen to events only for: Your Jellyfin User"
 msgstr "仅监听以下用户的事件：你的 Jellyfin 用户"
 
-#: templates/users/integrations.html:262
+#: templates/users/integrations.html:247
 msgid "Events: Play, Stop, MarkPlayed and MarkUnplayed"
 msgstr "事件：Play、Stop、MarkPlayed 和 MarkUnplayed"
 
-#: templates/users/integrations.html:280
+#: templates/users/integrations.html:261
+msgid "Connect Plex to automatically track your watching progress."
+msgstr "连接 Plex 以自动记录观看进度。"
+
+#: templates/users/integrations.html:264
 msgid "Plex Usernames"
 msgstr "Plex 用户名"
 
-#: templates/users/integrations.html:306 templates/users/integrations.html:350
+#: templates/users/integrations.html:271
+msgid ""
+"This username (or several, comma separated) will be used to filter which "
+"events are sent to your webhook."
+msgstr "此用户名（或以逗号分隔的多个用户名）将用于筛选发送到 Webhook 的事件。"
+
+#: templates/users/integrations.html:289 templates/users/integrations.html:331
 msgid "Setup Instructions"
 msgstr "设置说明"
 
-#: templates/users/integrations.html:308
+#: templates/users/integrations.html:291
 msgid "You will need to have a PlexPass in order to have webhooks enabled"
 msgstr "必须拥有 Plex Pass 才能启用 Webhook"
 
-#: templates/users/integrations.html:309
+#: templates/users/integrations.html:292
 msgid "Go to Settings > Server > Network and enable Webhooks"
 msgstr "前往 Settings > Server > Network 并启用 Webhooks"
 
-#: templates/users/integrations.html:311
+#: templates/users/integrations.html:294
 #, python-format
 msgid ""
 "In Plex settings, go to "
@@ -2216,37 +2328,41 @@ msgstr ""
 "在 Plex 设置中，前"
 "往%(plex_webhook_link_start)sWebhooks%(plex_webhook_link_end)s。"
 
-#: templates/users/integrations.html:316
+#: templates/users/integrations.html:299
 msgid ""
 "In the Webhooks section, click on \"Add Webhook\" and enter the following "
 "URL:"
 msgstr "在 Webhooks 部分点击“Add Webhook”，然后输入以下网址："
 
-#: templates/users/integrations.html:352
+#: templates/users/integrations.html:328
+msgid "Connect Emby to automatically track your watching progress."
+msgstr "连接 Emby 以自动记录观看进度。"
+
+#: templates/users/integrations.html:333
 msgid "In Emby, go to Settings > Notifications"
 msgstr "在 Emby 中，前往 Settings > Notifications"
 
-#: templates/users/integrations.html:353
+#: templates/users/integrations.html:334
 msgid "In the Notifications section, click on \"Add Notification\""
 msgstr "在 Notifications 部分点击“Add Notification”"
 
-#: templates/users/integrations.html:355
+#: templates/users/integrations.html:336
 msgid "In the Notification settings:"
 msgstr "在通知设置中："
 
-#: templates/users/integrations.html:371
+#: templates/users/integrations.html:351
 msgid "Request content type: multipart/form-data"
 msgstr "请求内容类型：multipart/form-data"
 
-#: templates/users/integrations.html:372
+#: templates/users/integrations.html:352
 msgid "Events: Play and Stop"
 msgstr "事件：Play 和 Stop"
 
-#: templates/users/integrations.html:373
+#: templates/users/integrations.html:353
 msgid "Limit user events to: Your Emby User"
 msgstr "用户事件限制为：你的 Emby 用户"
 
-#: templates/users/integrations.html:374
+#: templates/users/integrations.html:354
 msgid ""
 "\"Limit library events to\" and \"Limit devices events to\" are optional"
 msgstr "“Limit library events to”和“Limit devices events to”为可选项"
@@ -2490,8 +2606,8 @@ msgstr "演示账户不允许更改密码。"
 
 #: users/forms.py:117
 #, python-format
-msgid "%(url)s is not a valid Apprise URL."
-msgstr "%(url)s 不是有效的 Apprise 网址。"
+msgid "'%(url)s' is not a valid Apprise URL."
+msgstr "“%(url)s”不是有效的 Apprise 网址。"
 
 #: users/helpers.py:20
 msgid "Unexpected error occurred while processing the task."

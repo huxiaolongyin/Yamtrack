@@ -674,13 +674,9 @@
               {% if watch_provider_region == "UNSET" %}
                 {% url 'preferences' as preferences_url %}
                 <p class="text-sm text-gray-300">
-                  {% blocktrans trimmed with preferences_url_start='<a href="{{ preferences_url }}"
-                    class="text-indigo-400 hover:text-indigo-300 hover:underline">' preferences_url_end='</a>' %}
-                  Watch provider region is not configured. Set a region or disable this feature in the
-                  {{ preferences_url_start }}
-                  preferences
-                  {{ preferences_url_end }}.
-                {% endblocktrans %}
+                  {% trans "Watch provider region is not configured. Set a region or disable this feature in the" %}
+                  <a href="{{ preferences_url }}"
+                     class="text-indigo-400 hover:text-indigo-300 hover:underline">{% trans "preferences" %}</a>.
                 </p>
               {% else %}
                 <div class="flex flex-wrap gap-3">

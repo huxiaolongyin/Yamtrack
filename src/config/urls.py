@@ -14,18 +14,24 @@ from django.contrib.auth.decorators import login_not_required
 from django.urls import include, path
 from django.utils import timezone
 from django.views.decorators.http import last_modified
-from django.views.i18n import JavaScriptCatalog
+from django.views.i18n import JavaScriptCatalog, set_language
 from health_check.views import HealthCheckView
 from redis.asyncio import Redis as RedisClient
 
 last_modified_date = timezone.now()
 
 urlpatterns = [
-    path("i18n/", include("django.conf.urls.i18n")),
+    path(
+        "i18n/setlang/",
+        login_not_required(set_language),
+        name="set_language",
+    ),
     path(
         "jsi18n/",
-        last_modified(lambda req, **kw: last_modified_date)(  # noqa: ARG005
-            JavaScriptCatalog.as_view()
+        login_not_required(
+            last_modified(lambda req, **kw: last_modified_date)(  # noqa: ARG005
+                JavaScriptCatalog.as_view()
+            )
         ),
         name="javascript-catalog",
     ),

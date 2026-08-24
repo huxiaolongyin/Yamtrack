@@ -269,7 +269,7 @@ class SimklImporter:
             episodes = season["episodes"]
             season_metadata = metadata[f"season/{season_number}"]
 
-            season_item, _ = app.models.Item.objects.get_or_create(
+            season_item, _created = app.models.Item.objects.get_or_create(
                 media_id=tmdb_id,
                 source=Sources.TMDB.value,
                 media_type=MediaTypes.SEASON.value,
@@ -297,7 +297,7 @@ class SimklImporter:
             # Process episodes
             for episode in episodes:
                 ep_img = self._get_episode_image(episode, season_number, metadata)
-                episode_item, _ = app.models.Item.objects.get_or_create(
+                episode_item, _created = app.models.Item.objects.get_or_create(
                     media_id=tmdb_id,
                     source=Sources.TMDB.value,
                     media_type=MediaTypes.EPISODE.value,

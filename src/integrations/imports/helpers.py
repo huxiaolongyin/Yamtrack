@@ -89,7 +89,7 @@ def cleanup_existing_media(to_delete, user):
             if not media_ids:
                 continue
 
-            deleted_count, _ = model.objects.filter(
+            deleted_count, _deletion_details = model.objects.filter(
                 item__media_id__in=media_ids,
                 item__source=source,
                 user=user,

@@ -209,10 +209,37 @@ class ManualItemForm(forms.ModelForm):
 class MediaForm(forms.ModelForm):
     """Base form for all media types."""
 
+    common_labels = {
+        "score": _("Score"),
+        "progress": _("Progress"),
+        "status": _("Status"),
+        "start_date": _("Start Date"),
+        "end_date": _("End Date"),
+        "notes": _("Notes"),
+    }
+    progress_labels = {
+        Manga: _("Progress (Chapters)"),
+        Book: _("Progress (Pages)"),
+        Comic: _("Progress (Issues)"),
+        BoardGame: _("Progress (Plays)"),
+    }
+
     instance_id = forms.CharField(widget=forms.HiddenInput(), required=False)
     media_type = forms.CharField(widget=forms.HiddenInput(), required=True)
     source = forms.CharField(widget=forms.HiddenInput(), required=True)
     media_id = forms.CharField(widget=forms.HiddenInput(), required=True)
+
+    def __init__(self, *args, **kwargs):
+        """Apply localized labels shared by all media forms."""
+        super().__init__(*args, **kwargs)
+        for name, label in self.common_labels.items():
+            if name in self.fields:
+                self.fields[name].label = label
+        if "progress" in self.fields:
+            self.fields["progress"].label = self.progress_labels.get(
+                self._meta.model,
+                self.fields["progress"].label,
+            )
 
     class Meta:
         """Define fields and input types."""
@@ -237,7 +264,7 @@ class MediaForm(forms.ModelForm):
             if settings.TRACK_TIME
             else forms.DateInput(attrs={"type": "date"}),
             "notes": forms.Textarea(
-                attrs={"placeholder": "Add any notes or comments...", "rows": "5"},
+                attrs={"placeholder": _("Add any notes or comments..."), "rows": "5"},
             ),
         }
 

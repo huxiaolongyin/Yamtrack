@@ -49,18 +49,13 @@
              @click.outside="confirmOpen = false">
           <h3 class="text-lg font-semibold text-white mb-2">{% trans "Delete activity?" %}</h3>
           <p class="text-sm text-gray-400 mb-6">
-            This removes “
-            {% for change in entry.changes %}
-              {{ change.description }}
-              {% if not forloop.last %},{% endif %}
-            {% endfor %}
-            ” for {{ entry.item }} from your history. This can't be undone.
+            {% blocktrans with item=entry.item %}This removes the activity for {{ item }} from your history. This can't be undone.{% endblocktrans %}
           </p>
           <div class="flex justify-end gap-2">
             <button type="button"
                     @click="confirmOpen = false"
                     class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 text-sm rounded-md transition-colors cursor-pointer">
-              Cancel
+              {% trans "Cancel" %}
             </button>
             <button type="button"
                     hx-delete="{% url 'delete_history_record' entry.media_type entry.id %}"
@@ -69,7 +64,7 @@
                     hx-swap="outerHTML"
                     class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-sm rounded-md transition-colors cursor-pointer flex items-center gap-2">
               {% include "app/icons/trashcan.svg" with classes="w-4 h-4" %}
-              Delete
+              {% trans "Delete" %}
             </button>
           </div>
         </div>

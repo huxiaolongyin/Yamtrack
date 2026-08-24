@@ -126,7 +126,7 @@
                       <div class="flex-1 text-left">
                         <div class="text-sm font-medium">{{ tv_season.season_title }}</div>
                         <div class="text-xs text-gray-400">
-                          {{ tv_season.max_progress }} Episode{{ tv_season.max_progress|pluralize }}
+                          {% blocktrans count episode_count=tv_season.max_progress %}{{ episode_count }} Episode{% plural %}{{ episode_count }} Episodes{% endblocktrans %}
                           {% if tv_season.first_air_date %}• {{ tv_season.first_air_date }}{% endif %}
                         </div>
                       </div>
@@ -153,7 +153,7 @@
                x-init="$nextTick(() => checkClamp())">
             <p x-ref="synopsisText"
                :class="isExpanded ? '' : '{% if media.media_type == MediaTypes.SEASON.value %}line-clamp-4{% else %}line-clamp-5{% endif %}'"
-               class="text-gray-300 text-pretty">{{ media.synopsis|linebreaksbr|safe }}</p>
+               class="text-gray-300 text-pretty">{{ media.synopsis|localized_metadata_value|linebreaksbr|safe }}</p>
             <button x-show="isClamped"
                     @click="isExpanded = !isExpanded"
                     class="text-indigo-400 hover:text-indigo-300 text-sm mt-2 focus:outline-none transition-colors cursor-pointer">
@@ -167,7 +167,9 @@
         <div class="flex flex-wrap gap-4">
           {% if media.score_count is not None %}
             <div class="bg-[#2a2f35] p-3 rounded-lg w-30">
-              <h3 class="text-xs font-semibold text-gray-400 mb-1 text-center">{{ media.source|upper }} SCORE</h3>
+              <h3 class="text-xs font-semibold text-gray-400 mb-1 text-center">
+                {% blocktrans with source=media.source|upper %}{{ source }} Score{% endblocktrans %}
+              </h3>
               <div class="flex items-center justify-center">
                 {% include "app/icons/star.svg" with classes="w-5 h-5 mr-1.5 text-yellow-400 fill-yellow-400" %}
                 {% if media.score is not None %}
@@ -177,7 +179,7 @@
                 {% endif %}
               </div>
               <p class="text-xs text-gray-400 mt-0.5 text-center">
-                {{ media.score_count|intcomma }} vote{{ media.score_count|pluralize }}
+                {% blocktrans count vote_count=media.score_count %}{{ vote_count }} person rated{% plural %}{{ vote_count }} people rated{% endblocktrans %}
               </p>
             </div>
           {% endif %}
@@ -378,18 +380,19 @@
           {% if media.details.items %}
             {% for key, value in media.details.items %}
               <div class="flex justify-between gap-x-4 px-4 py-2.5">
-                <h3 class="text-xs font-semibold text-gray-400 uppercase shrink-0 mt-0.5">{{ key|no_underscore }}</h3>
+                <h3 class="text-xs font-semibold text-gray-400 uppercase shrink-0 mt-0.5">{{ key|media_detail_label:media.media_type }}</h3>
                 <div class="text-sm text-gray-200 text-right">
                   {% if value|is_list %}
-                    {% for item in value %}<p>{{ item|iso_date_format:request.user }}</p>{% endfor %}
+                    {% for item in value %}<p>{{ item|localized_metadata_value|iso_date_format:request.user }}</p>{% endfor %}
                   {% else %}
-                    <p>{{ value|default_if_none:"Unknown"|iso_date_format:request.user }}</p>
+                    {% trans "Unknown" as unknown_value %}
+                    <p>{{ value|default_if_none:unknown_value|localized_metadata_value|iso_date_format:request.user }}</p>
                   {% endif %}
                 </div>
               </div>
             {% endfor %}
             <div class="flex justify-between gap-x-4 px-4 py-2.5">
-              <h3 class="text-xs font-semibold text-gray-400 uppercase shrink-0 mt-0.5">{% trans "Provider" %}</h3>
+              <h3 class="text-xs font-semibold text-gray-400 uppercase shrink-0 mt-0.5">{% trans "Data source" %}</h3>
               <a href="{{ media.source_url }}"
                  class="text-sm text-gray-200 text-right hover:text-indigo-400 transition-colors duration-200"
                  target="_blank">{{ media.source|source_readable }}</a>
@@ -445,13 +448,7 @@
             {% if related_items %}
               <section class="mb-8"
                        x-show="tab === 'overview' || tab === 'related-{{ forloop.counter }}'">
-                <h2 class="text-xl font-bold mb-4">
-                  {% if name == "dlcs" %}
-                    DLCs
-                  {% else %}
-                    {{ name|no_underscore|title }}
-                  {% endif %}
-                </h2>
+                <h2 class="text-xl font-bold mb-4">{{ name|related_media_label }}</h2>
                 <div class="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-4">
                   {% for result in related_items %}
                     {# Set active to highlight the current movie in a collection. Avoid TV media, since seasons have same ID as the parent show #}
@@ -470,7 +467,9 @@
         {# Repeats #}
         {% if user_medias|length > 1 %}
           <section class="mb-8" x-show="tab === 'overview' || tab === 'repeats'">
-            <h2 class="text-xl font-bold mb-4">Repeats ({{ user_medias|length|add:"-1" }})</h2>
+            <h2 class="text-xl font-bold mb-4">
+              {% blocktrans with repeat_count=user_medias|length|add:"-1" %}Repeat records ({{ repeat_count }}){% endblocktrans %}
+            </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {% for user_media in user_medias|slice:"1:" %}
                 <div class="bg-[#2a2f35] rounded-lg px-4 py-3">
@@ -577,7 +576,7 @@
                                 @click="obfuscated = false">{{ episode.title }}</h2>
                             <p class="text-sm text-gray-400">
                               {% trans "Episode" %} {{ episode.episode_number }} • {{ episode.air_date|iso_date_format:request.user|default_if_none:"Unknown air date" }}
-                              {% if episode.runtime %}• {{ episode.runtime }}{% endif %}
+                              {% if episode.runtime %}• {{ episode.runtime|localized_metadata_value }}{% endif %}
                             </p>
                           </div>
                           <div class="flex space-x-2">
@@ -644,18 +643,20 @@
                         <div class="{% if episode.history %}md:h-[calc(2*1.5rem)]{% else %}md:h-[calc(3*1.5rem)]{% endif %} md:overflow-y-auto px-4">
                           <p class="text-sm text-gray-300 leading-relaxed text-pretty {% if user.obfuscate_unseen_episodes and not episode.history %}blur cursor-pointer{% else %}cursor-text{% endif %}"
                              :class="{ 'blur': obfuscated, 'cursor-pointer': obfuscated, 'cursor-text': !obfuscated }"
-                             @click="obfuscated = false">{{ episode.overview }}</p>
+                             @click="obfuscated = false">{{ episode.overview|localized_metadata_value }}</p>
                         </div>
                       </div>
                       {% if episode.history %}
                         <p class="text-xs text-gray-400 mt-2 px-4">
-                          Last watched:
                           {% if episode.history.0.end_date %}
-                            {{ episode.history.0.end_date|datetime_format:user }}
+                            {% blocktrans with watched_at=episode.history.0.end_date|datetime_format:user %}Last watched: {{ watched_at }}{% endblocktrans %}
                           {% else %}
-                            No date provided
+                            {% trans "Last watched: No date provided" %}
                           {% endif %}
-                          {% if episode.history|length > 1 %}• Watched {{ episode.history|length }} times{% endif %}
+                          {% if episode.history|length > 1 %}
+                            •
+                            {% blocktrans count watch_count=episode.history|length %}Watched {{ watch_count }} time{% plural %}Watched {{ watch_count }} times{% endblocktrans %}
+                          {% endif %}
                         </p>
                       {% endif %}
                     </div>

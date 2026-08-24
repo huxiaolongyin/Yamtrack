@@ -49,7 +49,7 @@ class ProviderAPIErrorMiddleware:
                 request,
                 "500.html",
                 {
-                    "error_message": str(exception),
+                    "error_message": exception.get_user_message(),
                     "provider": exception.provider,
                 },
                 status=500,

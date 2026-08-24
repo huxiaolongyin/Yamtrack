@@ -113,7 +113,7 @@
       <div>
         <h3 class="text-sm font-medium text-gray-400">{% trans "Most Active Day" %}</h3>
         {% if activity_data.stats.most_active_day %}
-          <p class="text-2xl font-bold">{{ activity_data.stats.most_active_day }}</p>
+          <p class="text-2xl font-bold">{{ activity_data.stats.most_active_day|localized_metadata_value }}</p>
           <p class="text-sm text-gray-500">
             {% blocktrans with percentage=activity_data.stats.most_active_day_percentage %}{{ percentage }}% of activity{% endblocktrans %}
           </p>
@@ -155,7 +155,7 @@
         <div class="flex mb-2 pl-[36.68px]">
           {% for month, week_count in activity_data.months %}
             <div class="text-xs text-gray-400"
-                 style="width: calc({{ week_count }} * 1rem + ({{ week_count }} * 0.25rem))">{{ month }}</div>
+                 style="width: calc({{ week_count }} * 1rem + ({{ week_count }} * 0.25rem))">{{ month|localized_metadata_value }}</div>
           {% endfor %}
         </div>
 
@@ -167,7 +167,7 @@
               {% if forloop.counter|divisibleby:2 %}
                 <div class="h-4"></div>
               {% else %}
-                <div class="h-4 flex items-center">{{ label }}</div>
+                <div class="h-4 flex items-center">{{ label|localized_metadata_value }}</div>
               {% endif %}
             {% endfor %}
           </div>

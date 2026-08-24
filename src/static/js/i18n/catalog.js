@@ -27,3 +27,8 @@ gettext("Hide failed items");
 gettext("Show failed items");
 gettext("Hide traceback");
 gettext("Show traceback");
+gettext("Completed");
+gettext("In progress");
+gettext("Planning");
+gettext("Paused");
+gettext("Dropped");

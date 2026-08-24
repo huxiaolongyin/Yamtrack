@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 from django.contrib.auth import get_user_model
 from django.test import TestCase
+from django.utils.translation import override
 
 from app.models import (
     TV,
@@ -463,6 +464,7 @@ class ImportTraktExport(TestCase):
         self.assertEqual(manager._match_names("lists-watchlist"), ["lists-watchlist"])
         self.assertEqual(manager.load("lists-watchlist"), [])
 
+    @override("en")
     def test_unreadable_files_are_reported(self):
         """Every unreadable export file is reported in the import summary."""
         archive = build_archive(

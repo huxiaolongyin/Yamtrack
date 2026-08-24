@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 11:04+0800\n"
+"POT-Creation-Date: 2026-08-24 09:16+0000\n"
 "PO-Revision-Date: 2026-08-24 12:00+0800\n"
 "Last-Translator: Jacob <1453366421@qq.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -179,23 +179,43 @@ msgstr "隐藏错误追踪"
 msgid "Show traceback"
 msgstr "显示错误追踪"
 
-#: static/js/statistics-charts.js:35 static/js/statistics-charts.js:37
-#: static/js/statistics-charts.js:339
+#: static/js/i18n/catalog.js:30
+msgid "Completed"
+msgstr "已完成"
+
+#: static/js/i18n/catalog.js:31
+msgid "In progress"
+msgstr "进行中"
+
+#: static/js/i18n/catalog.js:32
+msgid "Planning"
+msgstr "计划中"
+
+#: static/js/i18n/catalog.js:33
+msgid "Paused"
+msgstr "已暂停"
+
+#: static/js/i18n/catalog.js:34
+msgid "Dropped"
+msgstr "已放弃"
+
+#: static/js/statistics-charts.js:49 static/js/statistics-charts.js:51
+#: static/js/statistics-charts.js:361
 msgid "Score"
 msgstr "评分"
 
-#: static/js/statistics-charts.js:72
+#: static/js/statistics-charts.js:86
 msgid "Total"
 msgstr "总计"
 
-#: static/js/statistics-charts.js:131
+#: static/js/statistics-charts.js:145
 msgid "Count"
 msgstr "数量"
 
-#: static/js/statistics-charts.js:346
+#: static/js/statistics-charts.js:368
 msgid "Number of Items"
 msgstr "条目数"
 
-#: static/js/statistics-charts.js:354
+#: static/js/statistics-charts.js:376
 msgid "Average Score"
 msgstr "平均评分"

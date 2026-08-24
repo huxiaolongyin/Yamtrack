@@ -6,12 +6,12 @@ from django.urls import reverse
 from django.utils import formats, timezone
 from django.utils.dateparse import parse_date
 from django.utils.html import format_html
-from django.utils.translation import npgettext
+from django.utils.translation import gettext, npgettext
 from unidecode import unidecode
 
-from app import config, helpers
+from app import config, helpers, localization
 from app.models import MediaTypes, Sources, Status
-from users.models import WATCH_PROVIDER_REGION_UNSET
+from users.models import WATCH_PROVIDER_REGION_UNSET, HomeSortChoices
 
 register = template.Library()
 
@@ -39,6 +39,30 @@ def absolute_app_url(context, path):
 def no_underscore(arg1):
     """Return the title case of the string."""
     return arg1.replace("_", " ")
+
+
+@register.filter
+def media_detail_label(key, media_type):
+    """Return a localized label for a provider metadata detail key."""
+    return localization.get_detail_label(key, media_type)
+
+
+@register.filter
+def related_media_label(key):
+    """Return a localized label for a related-media group key."""
+    return localization.get_related_label(key)
+
+
+@register.filter
+def localized_metadata_value(value):
+    """Localize a bounded provider value while preserving free metadata."""
+    return localization.get_metadata_value(value)
+
+
+@register.filter
+def home_sort_readable(value):
+    """Return the localized label for a home-page sort value."""
+    return HomeSortChoices(value).label
 
 
 @register.filter
@@ -310,9 +334,9 @@ def natural_day(datetime, user):
     days = (datetime_date - today).days
 
     if days == 0:
-        return f"Today {formatted_time}"
+        return gettext("Today %(time)s") % {"time": formatted_time}
     if days == 1:
-        return f"Tomorrow {formatted_time}"
+        return gettext("Tomorrow %(time)s") % {"time": formatted_time}
 
     return f"{formatted_date} {formatted_time}"
 
@@ -552,10 +576,13 @@ def seconds_to_duration(seconds):
         return None
     total_minutes = seconds // 60
     if total_minutes < 30:  # noqa: PLR2004
-        return f"{max(5, round(total_minutes / 5) * 5)}m"
+        rounded_minutes = max(5, round(total_minutes / 5) * 5)
+        return localization.format_duration_minutes(rounded_minutes)
     hours, minutes = divmod(total_minutes, 60)
     if hours == 0:
-        return "30m" if minutes < 45 else "1h"  # noqa: PLR2004
+        rounded_minutes = 30 if minutes < 45 else 60  # noqa: PLR2004
+        return localization.format_duration_minutes(rounded_minutes)
     if minutes >= 45:  # noqa: PLR2004
-        return f"{hours + 1}h"
-    return f"{hours}h" if minutes < 15 else f"{hours}h 30m"  # noqa: PLR2004
+        return localization.format_duration_minutes((hours + 1) * 60)
+    rounded_minutes = hours * 60 if minutes < 15 else hours * 60 + 30  # noqa: PLR2004
+    return localization.format_duration_minutes(rounded_minutes)

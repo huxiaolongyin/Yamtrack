@@ -4,6 +4,7 @@ import time
 import requests
 from defusedxml import ElementTree
 from django.conf import settings
+from django.utils.translation import gettext
 from pyrate_limiter import RedisBucket
 from redis import Redis
 from requests.adapters import HTTPAdapter
@@ -92,6 +93,8 @@ class ProviderAPIError(Exception):
             provider_label = Sources(provider).label
         except ValueError:
             provider_label = provider.title()
+        self.provider_label = provider_label
+        self.details = details
 
         error_text = getattr(response, "text", str(error))
         logger.error("%s error: %s", provider_label, error_text)
@@ -105,6 +108,20 @@ class ProviderAPIError(Exception):
             message += f": {details}"
         message += ". Check the logs for more details."
         super().__init__(message)
+
+    def get_user_message(self):
+        """Return a localized, presentation-safe error message."""
+        message = gettext("There was an error contacting the %(provider)s API") % {
+            "provider": self.provider_label,
+        }
+        if self.status_code is None:
+            message += gettext(" (network error)")
+        else:
+            message += f" (HTTP {self.status_code})"
+        if self.details:
+            message += f": {self.details}"
+        message += gettext(". Check the logs for more details.")
+        return message
 
 
 def raise_not_found_error(provider, media_id, media_type="item"):

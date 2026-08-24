@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Yamtrack 0.26.3-i18n.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-24 11:52+0800\n"
+"POT-Creation-Date: 2026-08-24 09:46+0000\n"
 "PO-Revision-Date: 2026-08-24 12:00+0800\n"
 "Last-Translator: Jacob <1453366421@qq.com>\n"
 "Language-Team: Simplified Chinese\n"
@@ -58,18 +58,768 @@ msgstr "剧集必须指定所属季度"
 msgid "Title is required for this media type"
 msgstr "此媒体类型必须填写标题"
 
-#: app/forms.py:290
+#: app/forms.py:213 templates/app/create_entry.html:252
+#: templates/app/media_list.html:149
+msgid "Score"
+msgstr "评分"
+
+#: app/forms.py:214 templates/app/create_entry.html:278
+#: templates/app/media_details.html:272 templates/app/media_list.html:151
+#: users/models.py:42
+msgid "Progress"
+msgstr "进度"
+
+#: app/forms.py:215 templates/app/create_entry.html:308
+#: templates/app/media_list.html:156
+msgid "Status"
+msgstr "状态"
+
+#: app/forms.py:216 templates/app/create_entry.html:322
+#: templates/app/journal.html:63 templates/app/media_list.html:157
+#: templates/app/statistics.html:62 users/models.py:43
+msgid "Start Date"
+msgstr "开始日期"
+
+#: app/forms.py:217 templates/app/create_entry.html:331
+#: templates/app/journal.html:70 templates/app/media_list.html:158
+#: templates/app/statistics.html:69 users/models.py:44
+msgid "End Date"
+msgstr "结束日期"
+
+#: app/forms.py:218 templates/app/create_entry.html:340
+msgid "Notes"
+msgstr "备注"
+
+#: app/forms.py:221
+msgid "Progress (Chapters)"
+msgstr "进度（章节）"
+
+#: app/forms.py:222
+msgid "Progress (Pages)"
+msgstr "进度（页数）"
+
+#: app/forms.py:223
+msgid "Progress (Issues)"
+msgstr "进度（期数）"
+
+#: app/forms.py:224
+msgid "Progress (Plays)"
+msgstr "进度（游玩次数）"
+
+#: app/forms.py:267 templates/app/create_entry.html:344
+msgid "Add any notes or comments..."
+msgstr "添加备注或评论…"
+
+#: app/forms.py:317
 msgid "Progress (Time Played)"
 msgstr "进度（游玩时长）"
 
+#: app/helpers.py:39
+msgid "Media not found"
+msgstr "未找到媒体"
+
 #: app/history_processor.py:105 templates/events/calendar.html:33
-#: templates/events/components/calendar_list.html:11
+#: templates/events/components/calendar_list.html:12
 msgid "Today"
 msgstr "今天"
 
 #: app/history_processor.py:107
 msgid "Yesterday"
 msgstr "昨天"
+
+#: app/history_processor.py:285
+#, python-format
+msgid "Watched episode %(episode_number)s"
+msgstr "观看了第 %(episode_number)s 集"
+
+#: app/history_processor.py:289
+#, python-format
+msgid "Updated episode %(episode_number)s"
+msgstr "更新了第 %(episode_number)s 集"
+
+#: app/localization.py:10
+msgctxt "media detail label"
+msgid "Format"
+msgstr "作品形式"
+
+#: app/localization.py:11
+msgctxt "book detail label"
+msgid "Physical format"
+msgstr "装帧形式"
+
+#: app/localization.py:12
+msgctxt "media detail label"
+msgid "Release date"
+msgstr "发行日期"
+
+#: app/localization.py:13
+msgctxt "book detail label"
+msgid "Publish date"
+msgstr "出版日期"
+
+#: app/localization.py:14
+msgctxt "media detail label"
+msgid "Start date"
+msgstr "开始日期"
+
+#: app/localization.py:15
+msgctxt "media detail label"
+msgid "End date"
+msgstr "结束日期"
+
+#: app/localization.py:16
+msgctxt "TV detail label"
+msgid "First air date"
+msgstr "首播日期"
+
+#: app/localization.py:17
+msgctxt "TV detail label"
+msgid "Last air date"
+msgstr "最后播出日期"
+
+#: app/localization.py:18
+msgctxt "media detail label"
+msgid "Status"
+msgstr "作品状态"
+
+#: app/localization.py:21
+msgctxt "media detail label"
+msgid "Status in country of origin"
+msgstr "原产地状态"
+
+#: app/localization.py:23
+msgctxt "TV detail label"
+msgid "Seasons"
+msgstr "季度数"
+
+#: app/localization.py:24
+msgctxt "media detail count label"
+msgid "Episodes"
+msgstr "集数"
+
+#: app/localization.py:25
+msgctxt "media detail label"
+msgid "Runtime"
+msgstr "时长"
+
+#: app/localization.py:26
+msgctxt "season detail label"
+msgid "Total runtime"
+msgstr "已知剧集总时长"
+
+#: app/localization.py:27
+msgctxt "media detail label"
+msgid "Studios"
+msgstr "制作公司"
+
+#: app/localization.py:28
+msgctxt "media detail label"
+msgid "Country"
+msgstr "国家/地区"
+
+#: app/localization.py:29
+msgctxt "media detail label"
+msgid "Languages"
+msgstr "语言"
+
+#: app/localization.py:30
+msgctxt "anime detail label"
+msgid "Season"
+msgstr "播出季度"
+
+#: app/localization.py:31
+msgctxt "anime detail label"
+msgid "Broadcast"
+msgstr "播出时间"
+
+#: app/localization.py:32
+msgctxt "adaptation detail label"
+msgid "Source"
+msgstr "改编来源"
+
+#: app/localization.py:33
+msgctxt "game detail label"
+msgid "Themes"
+msgstr "主题"
+
+#: app/localization.py:34
+msgctxt "game detail label"
+msgid "Platforms"
+msgstr "平台"
+
+#: app/localization.py:35
+msgctxt "game detail label"
+msgid "Companies"
+msgstr "公司"
+
+#: app/localization.py:36
+msgctxt "media detail label"
+msgid "Authors"
+msgstr "作者"
+
+#: app/localization.py:37
+msgctxt "media detail label"
+msgid "Author"
+msgstr "作者"
+
+#: app/localization.py:38
+msgctxt "media detail label"
+msgid "Publisher"
+msgstr "出版方"
+
+#: app/localization.py:39
+msgctxt "media detail label"
+msgid "Publishers"
+msgstr "出版方"
+
+#: app/localization.py:40
+msgctxt "media detail label"
+msgid "Year"
+msgstr "年份"
+
+#: app/localization.py:41
+msgctxt "manga detail label"
+msgid "Chapters"
+msgstr "章节数"
+
+#: app/localization.py:44
+msgctxt "manga detail label"
+msgid "Latest translated chapter"
+msgstr "最新译文章节"
+
+#: app/localization.py:46
+msgctxt "book detail label"
+msgid "Pages"
+msgstr "页数"
+
+#: app/localization.py:47
+msgctxt "book detail label"
+msgid "ISBN"
+msgstr "ISBN"
+
+#: app/localization.py:48
+msgctxt "boardgame detail label"
+msgid "Players"
+msgstr "游戏人数"
+
+#: app/localization.py:49
+msgctxt "boardgame detail label"
+msgid "Play time"
+msgstr "游戏时长"
+
+#: app/localization.py:50
+msgctxt "boardgame detail label"
+msgid "Minimum age"
+msgstr "最低年龄"
+
+#: app/localization.py:51
+msgctxt "boardgame detail label"
+msgid "Designers"
+msgstr "设计师"
+
+#: app/localization.py:52
+msgctxt "comic detail label"
+msgid "Issues"
+msgstr "期数"
+
+#: app/localization.py:53
+msgctxt "comic detail label"
+msgid "Last issue name"
+msgstr "最新一期名称"
+
+#: app/localization.py:54
+msgctxt "comic detail label"
+msgid "Last issue number"
+msgstr "最新一期编号"
+
+#: app/localization.py:55
+msgctxt "comic detail label"
+msgid "People"
+msgstr "创作者"
+
+#: app/localization.py:56
+msgctxt "media detail label"
+msgid "Last updated"
+msgstr "最后更新"
+
+#: app/localization.py:60
+msgctxt "movie detail label"
+msgid "Runtime"
+msgstr "片长"
+
+#: app/localization.py:61
+msgctxt "TV detail label"
+msgid "Runtime"
+msgstr "单集时长"
+
+#: app/localization.py:62
+msgctxt "anime detail label"
+msgid "Runtime"
+msgstr "单集时长"
+
+#: app/localization.py:63
+msgctxt "season detail label"
+msgid "Runtime"
+msgstr "平均单集时长"
+
+#: app/localization.py:67
+msgctxt "related media label"
+msgid "Parent game"
+msgstr "游戏本体"
+
+#: app/localization.py:68
+msgctxt "related media label"
+msgid "Remasters"
+msgstr "复刻版"
+
+#: app/localization.py:69
+msgctxt "related media label"
+msgid "Remakes"
+msgstr "重制版"
+
+#: app/localization.py:70
+msgctxt "related media label"
+msgid "Expansions"
+msgstr "扩展包"
+
+#: app/localization.py:71
+msgctxt "related media label"
+msgid "DLCs"
+msgstr "DLC"
+
+#: app/localization.py:74
+msgctxt "related media label"
+msgid "Standalone expansions"
+msgstr "独立扩展包"
+
+#: app/localization.py:76
+msgctxt "related media label"
+msgid "Expanded games"
+msgstr "扩展版"
+
+#: app/localization.py:77
+msgctxt "related media label"
+msgid "Recommendations"
+msgstr "推荐"
+
+#: app/localization.py:78
+msgctxt "related media label"
+msgid "Related anime"
+msgstr "相关动画"
+
+#: app/localization.py:79
+msgctxt "related media label"
+msgid "Related manga"
+msgstr "相关漫画"
+
+#: app/localization.py:80
+msgctxt "related media label"
+msgid "Other editions"
+msgstr "其他版本"
+
+#: app/localization.py:81
+msgctxt "related media label"
+msgid "Seasons"
+msgstr "季度"
+
+#: app/localization.py:85
+msgid "No synopsis available."
+msgstr "暂无简介。"
+
+#: app/localization.py:86
+msgid "No synopsis available"
+msgstr "暂无简介"
+
+#: app/localization.py:87 templates/app/media_details.html:388
+msgid "Unknown"
+msgstr "未知"
+
+#: app/localization.py:88
+msgid "Unknown Author"
+msgstr "未知作者"
+
+#: app/localization.py:89
+msgctxt "media format"
+msgid "Movie"
+msgstr "电影"
+
+#: app/localization.py:90
+msgctxt "media format"
+msgid "TV"
+msgstr "TV"
+
+#: app/localization.py:91
+msgctxt "media format"
+msgid "Anime"
+msgstr "动画"
+
+#: app/localization.py:92
+msgctxt "media format"
+msgid "Manga"
+msgstr "漫画"
+
+#: app/localization.py:93
+msgctxt "media format"
+msgid "OVA"
+msgstr "OVA"
+
+#: app/localization.py:94
+msgctxt "media format"
+msgid "ONA"
+msgstr "ONA"
+
+#: app/localization.py:95
+msgctxt "media format"
+msgid "One Shot"
+msgstr "单篇"
+
+#: app/localization.py:96
+msgctxt "media format"
+msgid "Light Novel"
+msgstr "轻小说"
+
+#: app/localization.py:97
+msgctxt "game format"
+msgid "Main game"
+msgstr "游戏本体"
+
+#: app/localization.py:98
+msgctxt "game format"
+msgid "DLC"
+msgstr "DLC"
+
+#: app/localization.py:99
+msgctxt "game format"
+msgid "Expansion"
+msgstr "扩展包"
+
+#: app/localization.py:100
+msgctxt "game format"
+msgid "Bundle"
+msgstr "捆绑包"
+
+#: app/localization.py:101
+msgctxt "game format"
+msgid "Standalone expansion"
+msgstr "独立扩展包"
+
+#: app/localization.py:102
+msgctxt "game format"
+msgid "Mod"
+msgstr "模组"
+
+#: app/localization.py:103
+msgctxt "game format"
+msgid "Episode"
+msgstr "章节"
+
+#: app/localization.py:104
+msgctxt "game format"
+msgid "Season"
+msgstr "季度"
+
+#: app/localization.py:105
+msgctxt "game format"
+msgid "Remake"
+msgstr "重制版"
+
+#: app/localization.py:106
+msgctxt "game format"
+msgid "Remaster"
+msgstr "复刻版"
+
+#: app/localization.py:107
+msgctxt "game format"
+msgid "Expanded game"
+msgstr "扩展版"
+
+#: app/localization.py:108
+msgctxt "game format"
+msgid "Port"
+msgstr "移植版"
+
+#: app/localization.py:109
+msgctxt "game format"
+msgid "Fork"
+msgstr "衍生版"
+
+#: app/localization.py:110
+msgctxt "game format"
+msgid "Pack"
+msgstr "内容包"
+
+#: app/localization.py:111
+msgctxt "game format"
+msgid "Update"
+msgstr "更新"
+
+#: app/localization.py:112
+msgctxt "work status"
+msgid "Released"
+msgstr "已发行"
+
+#: app/localization.py:113
+msgctxt "work status"
+msgid "Rumored"
+msgstr "传闻中"
+
+#: app/localization.py:114
+msgctxt "work status"
+msgid "Planned"
+msgstr "计划中"
+
+#: app/localization.py:115
+msgctxt "work status"
+msgid "In Production"
+msgstr "制作中"
+
+#: app/localization.py:116
+msgctxt "work status"
+msgid "Post Production"
+msgstr "后期制作"
+
+#: app/localization.py:117
+msgctxt "work status"
+msgid "Returning Series"
+msgstr "播出中"
+
+#: app/localization.py:118
+msgctxt "work status"
+msgid "Ended"
+msgstr "已完结"
+
+#: app/localization.py:119
+msgctxt "work status"
+msgid "Canceled"
+msgstr "已取消"
+
+#: app/localization.py:120
+msgctxt "work status"
+msgid "Pilot"
+msgstr "试播"
+
+#: app/localization.py:121
+msgctxt "work status"
+msgid "Finished"
+msgstr "已完结"
+
+#: app/localization.py:122
+msgctxt "work status"
+msgid "Airing"
+msgstr "播出中"
+
+#: app/localization.py:123
+msgctxt "work status"
+msgid "Upcoming"
+msgstr "即将播出"
+
+#: app/localization.py:124
+msgctxt "work status"
+msgid "Publishing"
+msgstr "连载中"
+
+#: app/localization.py:125
+msgctxt "work status"
+msgid "On Hiatus"
+msgstr "暂停连载"
+
+#: app/localization.py:126
+msgctxt "work status"
+msgid "Discontinued"
+msgstr "已停更"
+
+#: app/localization.py:127
+msgctxt "adaptation source"
+msgid "Original"
+msgstr "原创"
+
+#: app/localization.py:128
+msgctxt "adaptation source"
+msgid "Novel"
+msgstr "小说"
+
+#: app/localization.py:129
+msgctxt "adaptation source"
+msgid "Visual Novel"
+msgstr "视觉小说"
+
+#: app/localization.py:130
+msgctxt "adaptation source"
+msgid "Game"
+msgstr "游戏"
+
+#: app/localization.py:131
+msgctxt "adaptation source"
+msgid "Web Manga"
+msgstr "网络漫画"
+
+#: app/localization.py:132
+msgctxt "adaptation source"
+msgid "4-Koma Manga"
+msgstr "四格漫画"
+
+#: app/localization.py:136
+msgid "Monday"
+msgstr "星期一"
+
+#: app/localization.py:137
+msgid "Tuesday"
+msgstr "星期二"
+
+#: app/localization.py:138
+msgid "Wednesday"
+msgstr "星期三"
+
+#: app/localization.py:139
+msgid "Thursday"
+msgstr "星期四"
+
+#: app/localization.py:140
+msgid "Friday"
+msgstr "星期五"
+
+#: app/localization.py:141
+msgid "Saturday"
+msgstr "星期六"
+
+#: app/localization.py:142
+msgid "Sunday"
+msgstr "星期日"
+
+#: app/localization.py:146
+msgid "Mon"
+msgstr "周一"
+
+#: app/localization.py:147
+msgid "Tue"
+msgstr "周二"
+
+#: app/localization.py:148
+msgid "Wed"
+msgstr "周三"
+
+#: app/localization.py:149
+msgid "Thu"
+msgstr "周四"
+
+#: app/localization.py:150
+msgid "Fri"
+msgstr "周五"
+
+#: app/localization.py:151
+msgid "Sat"
+msgstr "周六"
+
+#: app/localization.py:152
+msgid "Sun"
+msgstr "周日"
+
+#: app/localization.py:153
+msgid "Jan"
+msgstr "1月"
+
+#: app/localization.py:154
+msgid "Feb"
+msgstr "2月"
+
+#: app/localization.py:155
+msgid "Mar"
+msgstr "3月"
+
+#: app/localization.py:156
+msgid "Apr"
+msgstr "4月"
+
+#: app/localization.py:157
+msgid "May"
+msgstr "5月"
+
+#: app/localization.py:158
+msgid "Jun"
+msgstr "6月"
+
+#: app/localization.py:159
+msgid "Jul"
+msgstr "7月"
+
+#: app/localization.py:160
+msgid "Aug"
+msgstr "8月"
+
+#: app/localization.py:161
+msgid "Sep"
+msgstr "9月"
+
+#: app/localization.py:162
+msgid "Oct"
+msgstr "10月"
+
+#: app/localization.py:163
+msgid "Nov"
+msgstr "11月"
+
+#: app/localization.py:164
+msgid "Dec"
+msgstr "12月"
+
+#: app/localization.py:165
+msgid "January"
+msgstr "1月"
+
+#: app/localization.py:166
+msgid "February"
+msgstr "2月"
+
+#: app/localization.py:167
+msgid "March"
+msgstr "3月"
+
+#: app/localization.py:168
+msgid "April"
+msgstr "4月"
+
+#: app/localization.py:169
+msgid "June"
+msgstr "6月"
+
+#: app/localization.py:170
+msgid "July"
+msgstr "7月"
+
+#: app/localization.py:171
+msgid "August"
+msgstr "8月"
+
+#: app/localization.py:172
+msgid "September"
+msgstr "9月"
+
+#: app/localization.py:173
+msgid "October"
+msgstr "10月"
+
+#: app/localization.py:174
+msgid "November"
+msgstr "11月"
+
+#: app/localization.py:175
+msgid "December"
+msgstr "12月"
+
+#: app/localization.py:188
+#, python-format
+msgid "%(hours)sh %(minutes)sm"
+msgstr "%(hours)s小时%(minutes)s分钟"
+
+#: app/localization.py:193
+#, python-format
+msgid "%(hours)sh"
+msgstr "%(hours)s小时"
+
+#: app/localization.py:194
+#, python-format
+msgid "%(minutes)sm"
+msgstr "%(minutes)s分钟"
 
 #: app/models.py:43
 msgid "The Movie Database"
@@ -115,7 +865,7 @@ msgstr "电视剧"
 msgid "TV Season"
 msgstr "电视剧季度"
 
-#: app/models.py:59 templates/app/media_details.html:579
+#: app/models.py:59 templates/app/media_details.html:578
 msgid "Episode"
 msgstr "剧集"
 
@@ -212,65 +962,96 @@ msgstr "已自动标记为已完成。"
 msgid "was left in progress because unreleased episodes remain."
 msgstr "因仍有未发布的剧集，保持为进行中。"
 
-#: app/templatetags/app_tags.py:148
+#: app/providers/services.py:114
+#, python-format
+msgid "There was an error contacting the %(provider)s API"
+msgstr "连接 %(provider)s API 时出错"
+
+#: app/providers/services.py:118
+msgid " (network error)"
+msgstr "（网络错误）"
+
+#: app/providers/services.py:123
+msgid ". Check the logs for more details."
+msgstr "。请查看日志了解详情。"
+
+#: app/templatetags/app_tags.py:172
 msgctxt "media type plural label"
 msgid "TV Show"
 msgid_plural "TV Shows"
 msgstr[0] "电视剧"
 
-#: app/templatetags/app_tags.py:151
+#: app/templatetags/app_tags.py:175
 msgctxt "media type plural label"
 msgid "TV Season"
 msgid_plural "TV Seasons"
 msgstr[0] "电视剧季度"
 
-#: app/templatetags/app_tags.py:154
+#: app/templatetags/app_tags.py:178
 msgctxt "media type plural label"
 msgid "Episode"
 msgid_plural "Episodes"
 msgstr[0] "剧集"
 
-#: app/templatetags/app_tags.py:157
+#: app/templatetags/app_tags.py:181
 msgctxt "media type plural label"
 msgid "Movie"
 msgid_plural "Movies"
 msgstr[0] "电影"
 
-#: app/templatetags/app_tags.py:160
+#: app/templatetags/app_tags.py:184
 msgctxt "media type plural label"
 msgid "Anime"
 msgid_plural "Anime"
 msgstr[0] "动画"
 
-#: app/templatetags/app_tags.py:163
+#: app/templatetags/app_tags.py:187
 msgctxt "media type plural label"
 msgid "Manga"
 msgid_plural "Manga"
 msgstr[0] "日式漫画"
 
-#: app/templatetags/app_tags.py:166
+#: app/templatetags/app_tags.py:190
 msgctxt "media type plural label"
 msgid "Game"
 msgid_plural "Games"
 msgstr[0] "游戏"
 
-#: app/templatetags/app_tags.py:169
+#: app/templatetags/app_tags.py:193
 msgctxt "media type plural label"
 msgid "Book"
 msgid_plural "Books"
 msgstr[0] "图书"
 
-#: app/templatetags/app_tags.py:172
+#: app/templatetags/app_tags.py:196
 msgctxt "media type plural label"
 msgid "Comic"
 msgid_plural "Comics"
 msgstr[0] "漫画"
 
-#: app/templatetags/app_tags.py:175
+#: app/templatetags/app_tags.py:199
 msgctxt "media type plural label"
 msgid "Boardgame"
 msgid_plural "Boardgames"
 msgstr[0] "桌游"
+
+#: app/templatetags/app_tags.py:337
+#, python-format
+msgid "Today %(time)s"
+msgstr "今天 %(time)s"
+
+#: app/templatetags/app_tags.py:339
+#, python-format
+msgid "Tomorrow %(time)s"
+msgstr "明天 %(time)s"
+
+#: app/views.py:185
+msgid "User not found"
+msgstr "未找到用户"
+
+#: app/views.py:190
+msgid "User doesn't have any media types enabled"
+msgstr "用户未启用任何媒体类型"
 
 #: app/views.py:447
 msgid "Manual items cannot be synced."
@@ -285,31 +1066,31 @@ msgstr "数据刚刚同步过，请稍候几秒。"
 msgid "%(title)s was synced to %(source)s successfully."
 msgstr "%(title)s 已成功同步到 %(source)s。"
 
-#: app/views.py:712
+#: app/views.py:713
 msgid "Invalid form data"
 msgstr "表单数据无效"
 
-#: app/views.py:778
+#: app/views.py:779
 #, python-format
 msgid "Season %(episode_number)s"
 msgstr "第 %(episode_number)s 季"
 
-#: app/views.py:782 templates/app/components/fill_track_episode.html:27
+#: app/views.py:783 templates/app/components/fill_track_episode.html:27
 #, python-format
 msgid "Episode %(episode_number)s"
 msgstr "第 %(episode_number)s 集"
 
-#: app/views.py:789
+#: app/views.py:790
 #, python-format
 msgid "%(media_name)s already exists in the database."
 msgstr "%(media_name)s 已存在于数据库中。"
 
-#: app/views.py:822
+#: app/views.py:823
 #, python-format
 msgid "%(item)s added successfully."
 msgstr "已成功添加 %(item)s。"
 
-#: app/views.py:957
+#: app/views.py:958
 msgid "Record not found"
 msgstr "未找到记录"
 
@@ -401,6 +1182,16 @@ msgstr "AniList 密钥无效。"
 msgid "Invalid AniList access token."
 msgstr "AniList 访问令牌无效。"
 
+#: integrations/imports/anilist.py:266
+#, python-format
+msgid "%(title)s: No matching MAL ID."
+msgstr "%(title)s：未找到匹配的 MAL ID。"
+
+#: integrations/imports/goodreads.py:66 integrations/imports/hltb.py:61
+#: integrations/imports/imdb.py:83 integrations/imports/yamtrack.py:63
+msgid "Invalid file format. Please upload a CSV file."
+msgstr "文件格式无效，请上传 CSV 文件。"
+
 #: integrations/imports/goodreads.py:81
 #, python-format
 msgid "Error processing entry: %(description)s - %(error)s"
@@ -430,11 +1221,6 @@ msgstr "相同的导入任务已在计划中。"
 #, python-format
 msgid "%(source)s import task scheduled."
 msgstr "%(source)s 导入任务已安排。"
-
-#: integrations/imports/hltb.py:61 integrations/imports/imdb.py:83
-#: integrations/imports/yamtrack.py:63
-msgid "Invalid file format. Please upload a CSV file."
-msgstr "文件格式无效，请上传 CSV 文件。"
 
 #: integrations/imports/hltb.py:106
 #, python-format
@@ -510,7 +1296,7 @@ msgstr "%(media_title)s：未找到有效的外部 ID。"
 msgid "Error processing entry: %(content)s"
 msgstr "处理条目时出错：%(content)s"
 
-#: integrations/imports/simkl.py:76
+#: integrations/imports/simkl.py:51 integrations/imports/simkl.py:76
 msgid "Invalid SIMKL secret key."
 msgstr "SIMKL 密钥无效。"
 
@@ -607,6 +1393,7 @@ msgstr "无法在 %(source)s 中找到匹配项"
 msgid "Failed to process Steam game %(name)s (%(appid)s): %(error)s"
 msgstr "处理 Steam 游戏 %(name)s（%(appid)s）失败：%(error)s"
 
+#: integrations/imports/trakt.py:78 integrations/imports/trakt.py:108
 #: integrations/imports/trakt.py:143
 msgid "Invalid Trakt secret key."
 msgstr "Trakt 密钥无效。"
@@ -651,6 +1438,30 @@ msgstr "处理评分条目时出错：%(entry)s"
 #, python-format
 msgid "Error processing comment entry: %(entry)s"
 msgstr "处理评论条目时出错：%(entry)s"
+
+#: integrations/imports/trakt.py:892
+msgid "The uploaded file is not a valid Trakt export archive."
+msgstr "上传的文件不是有效的 Trakt 导出归档。"
+
+#: integrations/imports/trakt.py:912
+msgid "The uncompressed Trakt export archive is too large to import."
+msgstr "解压后的 Trakt 导出归档过大，无法导入。"
+
+#: integrations/imports/trakt.py:924
+msgid ""
+"The uploaded archive does not contain any Trakt export data. Upload the ZIP "
+"file downloaded from the Trakt website."
+msgstr "上传的归档不包含 Trakt 导出数据。请上传从 Trakt 网站下载的 ZIP 文件。"
+
+#: integrations/imports/trakt.py:951
+#, python-format
+msgid "%(file)s: could not be read, skipped."
+msgstr "%(file)s：无法读取，已跳过。"
+
+#: integrations/imports/trakt.py:969
+#, python-format
+msgid "%(file)s: unexpected contents, skipped."
+msgstr "%(file)s：内容异常，已跳过。"
 
 #: integrations/imports/yamtrack.py:73
 #, python-format
@@ -782,6 +1593,10 @@ msgstr "从 Goodreads CSV 文件导入媒体的任务已加入队列。"
 msgid "Missing payload"
 msgstr "缺少请求数据"
 
+#: lists/forms.py:26
+msgid "Search users to add..."
+msgstr "搜索要添加的用户…"
+
 #: lists/views.py:100
 msgid "List not found"
 msgstr "未找到列表"
@@ -896,7 +1711,7 @@ msgstr "登录"
 msgid "Sign in to your account"
 msgstr "登录你的账户"
 
-#: templates/account/login.html:28
+#: templates/account/login.html:28 templates/app/media_list.html:227
 msgid "Sign In"
 msgstr "登录"
 
@@ -949,14 +1764,24 @@ msgstr "实例"
 msgid "You haven't started tracking it yet."
 msgstr "你还没有开始记录此条目。"
 
+#: templates/app/components/fill_track.html:75
+msgid "Update"
+msgstr "更新"
+
+#: templates/app/components/fill_track.html:77
+#: templates/lists/components/list_item_button.html:17
+msgid "Add"
+msgstr "添加"
+
 #: templates/app/components/fill_track.html:85
 #: templates/app/components/fill_track_episode.html:62
+#: templates/app/components/journal_items.html:67
 #: templates/lists/components/list_form.html:46
 msgid "Delete"
 msgstr "删除"
 
 #: templates/app/components/fill_track_episode.html:14
-#: templates/app/media_details.html:587
+#: templates/app/media_details.html:586
 msgid "Track Episode"
 msgstr "记录本集"
 
@@ -1035,18 +1860,19 @@ msgstr "添加到记录"
 #: templates/app/components/home_grid.html:48
 #: templates/app/components/media_card.html:82
 #: templates/app/components/media_card_list.html:49
-#: templates/app/media_details.html:307 templates/app/media_details.html:603
+#: templates/app/media_details.html:309 templates/app/media_details.html:602
 msgid "Add to custom lists"
 msgstr "添加到自定义列表"
 
 #: templates/app/components/home_grid.html:56
 #: templates/app/components/media_card.html:91
 #: templates/app/components/media_card_list.html:58
-#: templates/app/media_details.html:332 templates/app/media_details.html:625
+#: templates/app/media_details.html:334 templates/app/media_details.html:624
 msgid "View your activity history"
 msgstr "查看你的活动记录"
 
 #: templates/app/components/home_section.html:24
+#: templates/lists/components/list_grid.html:41
 #, python-format
 msgid "%(count)s item"
 msgid_plural "%(count)s items"
@@ -1087,11 +1913,56 @@ msgstr "删除活动记录"
 msgid "Delete activity?"
 msgstr "删除活动记录？"
 
-#: templates/app/components/search_parent_season.html:15
+#: templates/app/components/journal_items.html:52
+#, python-format
+msgid ""
+"This removes the activity for %(item)s from your history. This can't be "
+"undone."
+msgstr "这会从历史记录中移除 %(item)s 的活动，且无法撤销。"
+
+#: templates/app/components/journal_items.html:58 templates/app/journal.html:81
+#: templates/app/statistics.html:80
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/app/components/media_section_tabs.html:8
+msgid "Overview"
+msgstr "概览"
+
+#: templates/app/components/media_section_tabs.html:15
+#: templates/app/media_details.html:425
+msgid "Cast"
+msgstr "演职人员"
+
+#: templates/app/components/media_section_tabs.html:35
+msgid "Repeat records"
+msgstr "重复记录"
+
+#: templates/app/components/media_section_tabs.html:43
+msgctxt "media detail tab"
+msgid "Episodes"
+msgstr "剧集"
+
+#: templates/app/components/media_section_tabs.html:52
+#: templates/app/media_details.html:674
+msgid "Streaming"
+msgstr "在线观看"
+
+#: templates/app/components/media_section_tabs.html:61
+#: templates/app/media_details.html:701
+msgid "Time to Beat"
+msgstr "通关时长"
+
+#: templates/app/components/search_parent_season.html:6
+#, python-format
+msgid "Season %(number)s of %(title)s"
+msgstr "%(title)s 第 %(number)s 季"
+
+#: templates/app/components/search_parent_season.html:16
 msgid "No seasons found matching"
 msgstr "没有找到匹配的季度"
 
-#: templates/app/components/search_parent_season.html:15
+#: templates/app/components/search_parent_season.html:16
 #: templates/app/components/search_parent_tv.html:15
 msgid "Please try a different search term."
 msgstr "请尝试其他搜索词。"
@@ -1151,39 +2022,6 @@ msgstr "图片网址"
 msgid "Enter image URL"
 msgstr "输入图片网址"
 
-#: templates/app/create_entry.html:252 templates/app/media_list.html:149
-msgid "Score"
-msgstr "评分"
-
-#: templates/app/create_entry.html:278 templates/app/media_details.html:270
-#: templates/app/media_list.html:151 users/models.py:42
-msgid "Progress"
-msgstr "进度"
-
-#: templates/app/create_entry.html:308 templates/app/media_list.html:156
-msgid "Status"
-msgstr "状态"
-
-#: templates/app/create_entry.html:322 templates/app/journal.html:63
-#: templates/app/media_list.html:157 templates/app/statistics.html:62
-#: users/models.py:43
-msgid "Start Date"
-msgstr "开始日期"
-
-#: templates/app/create_entry.html:331 templates/app/journal.html:70
-#: templates/app/media_list.html:158 templates/app/statistics.html:69
-#: users/models.py:44
-msgid "End Date"
-msgstr "结束日期"
-
-#: templates/app/create_entry.html:340
-msgid "Notes"
-msgstr "备注"
-
-#: templates/app/create_entry.html:344
-msgid "Add any notes or comments..."
-msgstr "添加备注或评论…"
-
 #: templates/app/create_entry.html:351
 msgid "Create Entry"
 msgstr "创建条目"
@@ -1212,10 +2050,6 @@ msgstr "预设范围"
 #: templates/app/journal.html:40 templates/app/statistics.html:39
 msgid "Custom Range"
 msgstr "自定义范围"
-
-#: templates/app/journal.html:81 templates/app/statistics.html:80
-msgid "Cancel"
-msgstr "取消"
 
 #: templates/app/journal.html:86 templates/app/statistics.html:85
 msgid "Apply Range"
@@ -1276,119 +2110,144 @@ msgstr "更多记录选项"
 msgid "Add new entry"
 msgstr "添加新条目"
 
-#: templates/app/media_details.html:192
+#: templates/app/media_details.html:129
+#, python-format
+msgid "%(episode_count)s Episode"
+msgid_plural "%(episode_count)s Episodes"
+msgstr[0] "%(episode_count)s 集"
+
+#: templates/app/media_details.html:171
+#, python-format
+msgid "%(source)s Score"
+msgstr "%(source)s评分"
+
+#: templates/app/media_details.html:182
+#, python-format
+msgid "%(vote_count)s person rated"
+msgid_plural "%(vote_count)s people rated"
+msgstr[0] "%(vote_count)s人评分"
+
+#: templates/app/media_details.html:194
 msgid "YOUR SCORE"
 msgstr "你的评分"
 
-#: templates/app/media_details.html:205
+#: templates/app/media_details.html:207
 msgid "Click to edit"
 msgstr "点击编辑"
 
-#: templates/app/media_details.html:250
+#: templates/app/media_details.html:252
 msgid "Your History"
 msgstr "你的记录"
 
-#: templates/app/media_details.html:256 templates/app/media_details.html:526
+#: templates/app/media_details.html:258 templates/app/media_details.html:525
 #: templates/users/import_data.html:489
 msgid "Started"
 msgstr "开始于"
 
-#: templates/app/media_details.html:263
+#: templates/app/media_details.html:265
 msgid "Ended"
 msgstr "结束于"
 
-#: templates/app/media_details.html:286
+#: templates/app/media_details.html:288
 msgid "Your notes"
 msgstr "你的备注"
 
-#: templates/app/media_details.html:302
+#: templates/app/media_details.html:304
 msgid "Actions"
 msgstr "操作"
 
-#: templates/app/media_details.html:316
+#: templates/app/media_details.html:318
 msgid "Add to lists"
 msgstr "添加到列表"
 
-#: templates/app/media_details.html:341
+#: templates/app/media_details.html:343
 msgid "Activity history"
 msgstr "活动记录"
 
-#: templates/app/media_details.html:356
+#: templates/app/media_details.html:358
 msgid "Sync metadata with provider"
 msgstr "与提供商同步元数据"
 
-#: templates/app/media_details.html:371
+#: templates/app/media_details.html:373
 msgid "Sync metadata"
 msgstr "同步元数据"
 
-#: templates/app/media_details.html:376
+#: templates/app/media_details.html:378
 msgid "Details"
 msgstr "详情"
 
-#: templates/app/media_details.html:392
-msgid "Provider"
-msgstr "提供商"
+#: templates/app/media_details.html:395
+msgid "Data source"
+msgstr "数据来源"
 
-#: templates/app/media_details.html:399 templates/users/about.html:29
+#: templates/app/media_details.html:402 templates/users/about.html:29
 msgid "Links"
 msgstr "链接"
 
-#: templates/app/media_details.html:410
+#: templates/app/media_details.html:413
 msgid "No details available"
 msgstr "暂无详情"
 
-#: templates/app/media_details.html:422
-msgid "Cast"
-msgstr "演职人员"
-
-#: templates/app/media_details.html:434
+#: templates/app/media_details.html:437
 msgid "View all"
 msgstr "查看全部"
 
-#: templates/app/media_details.html:435
+#: templates/app/media_details.html:438
 #, python-format
 msgid "%(count)s cast members"
 msgstr "%(count)s 位演职人员"
 
-#: templates/app/media_details.html:492
+#: templates/app/media_details.html:471
+#, python-format
+msgid "Repeat records (%(repeat_count)s)"
+msgstr "重复记录（%(repeat_count)s）"
+
+#: templates/app/media_details.html:491
 msgid "Edit entry"
 msgstr "编辑条目"
 
-#: templates/app/media_details.html:528 templates/users/import_data.html:483
+#: templates/app/media_details.html:527 templates/users/import_data.html:483
 msgid "Finished"
 msgstr "已看完"
 
-#: templates/app/media_details.html:559
+#: templates/app/media_details.html:558
 msgid "Episodes"
 msgstr "剧集"
 
-#: templates/app/media_details.html:673
-msgid "Streaming"
-msgstr "在线观看"
+#: templates/app/media_details.html:652
+#, python-format
+msgid "Last watched: %(watched_at)s"
+msgstr "上次观看：%(watched_at)s"
 
-#: templates/app/media_details.html:677
+#: templates/app/media_details.html:654
+msgid "Last watched: No date provided"
+msgstr "上次观看：未记录日期"
+
+#: templates/app/media_details.html:658
+#, python-format
+msgid "Watched %(watch_count)s time"
+msgid_plural "Watched %(watch_count)s times"
+msgstr[0] "已观看 %(watch_count)s 次"
+
+#: templates/app/media_details.html:678
 msgid ""
 "Watch provider region is not configured. Set a region or disable this "
 "feature in the"
 msgstr "尚未配置观看提供商地区。请在以下位置设置地区或禁用此功能："
 
-#: templates/app/media_details.html:679
+#: templates/app/media_details.html:680
 msgid "preferences"
 msgstr "偏好设置"
 
-#: templates/app/media_details.html:700
-msgid "Time to Beat"
-msgstr "通关时长"
-
-#: templates/app/media_details.html:709
+#: templates/app/media_details.html:710
 msgid "Main Story"
 msgstr "主线剧情"
 
-#: templates/app/media_details.html:720
+#: templates/app/media_details.html:721
 msgid "Main + Extra"
 msgstr "主线 + 额外内容"
 
-#: templates/app/media_details.html:731
+#: templates/app/media_details.html:732
 msgid "Completionist"
 msgstr "完全通关"
 
@@ -1596,6 +2455,11 @@ msgid ""
 "applications."
 msgstr "此链接可用于将日历集成到任意日历应用中。"
 
+#: templates/events/components/calendar_list.html:29
+#, python-format
+msgid "%(content_number)s at %(release_time)s"
+msgstr "%(content_number)s，%(release_time)s"
+
 #: templates/lists/components/fill_lists.html:16
 msgid "You haven't created any lists yet."
 msgstr "你还没有创建任何列表。"
@@ -1624,10 +2488,6 @@ msgstr "编辑列表"
 #: templates/lists/components/list_item_button.html:9
 msgid "Remove"
 msgstr "移除"
-
-#: templates/lists/components/list_item_button.html:17
-msgid "Add"
-msgstr "添加"
 
 #: templates/lists/custom_lists.html:18
 msgid "Organize and share your media lists"
@@ -1669,6 +2529,18 @@ msgstr "创建自定义列表来整理媒体收藏并与朋友分享。"
 #: templates/lists/custom_lists.html:107
 msgid "Create Your First List"
 msgstr "创建第一个列表"
+
+#: templates/lists/list_detail.html:30
+#, python-format
+msgid "%(collaborator_count)s collaborator"
+msgid_plural "%(collaborator_count)s collaborators"
+msgstr[0] "%(collaborator_count)s 位协作者"
+
+#: templates/lists/list_detail.html:32
+#, python-format
+msgid "%(item_count)s item"
+msgid_plural "%(item_count)s items"
+msgstr[0] "%(item_count)s 项"
 
 #: templates/lists/list_detail.html:59
 msgid "Search in collection..."
@@ -2930,3 +3802,6 @@ msgstr "Jellyfin Webhook 设置已成功更新"
 msgid "Successfully cleared %(count)d search entry"
 msgid_plural "Successfully cleared %(count)d search entries"
 msgstr[0] "已成功清除 %(count)d 条搜索记录"
+
+#~ msgid "Provider"
+#~ msgstr "提供商"

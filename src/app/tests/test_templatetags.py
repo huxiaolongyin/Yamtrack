@@ -3,6 +3,7 @@ from unittest.mock import MagicMock, patch
 from django.test import TestCase, override_settings
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import override
 
 from app.models import Item, MediaTypes, Sources
 from app.templatetags import app_tags
@@ -119,6 +120,7 @@ class AppTagsTests(TestCase):
         for media_type, label in MediaTypes.choices:
             self.assertEqual(app_tags.media_type_readable(media_type), label)
 
+    @override("en")
     def test_media_type_readable_plural(self):
         """Test the media_type_readable_plural filter."""
         expected_plurals = {
@@ -186,6 +188,7 @@ class AppTagsTests(TestCase):
             self.assertTrue(isinstance(result, str))
 
     @override_settings(TRACK_TIME=False)
+    @override("en")
     def test_natural_day(self):
         """Test the natural_day filter."""
         # Create mock user with date_format preference
@@ -394,6 +397,7 @@ class AppTagsTests(TestCase):
         self.assertFalse(app_tags.show_media_score(0, mock_user_hide))
         self.assertFalse(app_tags.show_media_score(None, mock_user_hide))
 
+    @override("en")
     def test_seconds_to_duration(self):
         """Test conversion of seconds to human-readable duration."""
         self.assertIsNone(app_tags.seconds_to_duration(None))

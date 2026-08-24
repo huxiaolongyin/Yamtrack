@@ -282,9 +282,13 @@ def _episode_changes(record, info):
     """
     episode_number = info["episode_number"]
     if record.history_type == "+":
-        description = f"Watched episode {episode_number}"
+        description = gettext("Watched episode %(episode_number)s") % {
+            "episode_number": episode_number,
+        }
         return [{"description": description, "field": "end_date"}]
-    description = f"Updated episode {episode_number}"
+    description = gettext("Updated episode %(episode_number)s") % {
+        "episode_number": episode_number,
+    }
     return [{"description": description, "field": "progress"}]
 
 

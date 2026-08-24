@@ -75,7 +75,7 @@ def handle_oauth_callback(request, redirect_uri=None):
         )
     except services.ProviderAPIError as error:
         if error.status_code == requests.codes.unauthorized:
-            msg = "Invalid Trakt secret key."
+            msg = _("Invalid Trakt secret key.")
             raise MediaImportError(msg) from error
         raise
 
@@ -105,7 +105,7 @@ def get_username_from_oauth(access_token):
         )
     except services.ProviderAPIError as error:
         if error.status_code == requests.codes.unauthorized:
-            msg = "Invalid Trakt secret key."
+            msg = _("Invalid Trakt secret key.")
             raise MediaImportError(msg) from error
         raise
 
@@ -889,7 +889,7 @@ class TraktArchiveManager:
         try:
             self.zipfile = zipfile.ZipFile(file)
         except zipfile.BadZipFile as e:
-            msg = "The uploaded file is not a valid Trakt export archive."
+            msg = _("The uploaded file is not a valid Trakt export archive.")
             raise MediaImportError(msg) from e
 
         self.warnings = warnings if warnings is not None else []
@@ -908,7 +908,7 @@ class TraktArchiveManager:
                 continue
             uncompressed_size += info.file_size
             if uncompressed_size > MAX_EXPORT_UNCOMPRESSED_BYTES:
-                msg = "The uncompressed Trakt export archive is too large to import."
+                msg = _("The uncompressed Trakt export archive is too large to import.")
                 raise MediaImportError(msg)
 
             name = info.filename.rsplit("/", 1)[-1]
@@ -918,7 +918,7 @@ class TraktArchiveManager:
             self._files.setdefault(name[: -len(".json")], info.filename)
 
         if not self._recognized_export():
-            msg = (
+            msg = _(
                 "The uploaded archive does not contain any Trakt export data. "
                 "Upload the ZIP file downloaded from the Trakt website."
             )
@@ -945,7 +945,10 @@ class TraktArchiveManager:
             return json.loads(self.zipfile.read(filename))
         except (KeyError, OSError, json.JSONDecodeError, UnicodeDecodeError):
             logger.exception("Trakt export file %s could not be read", filename)
-            self.warnings.append(f"{base_name}.json: could not be read, skipped.")
+            self.warnings.append(
+                _("%(file)s: could not be read, skipped.")
+                % {"file": f"{base_name}.json"}
+            )
             return None
 
     def load(self, *prefixes):
@@ -961,7 +964,8 @@ class TraktArchiveManager:
                     entries.extend(page)
                 else:
                     self.warnings.append(
-                        f"{base_name}.json: unexpected contents, skipped."
+                        _("%(file)s: unexpected contents, skipped.")
+                        % {"file": f"{base_name}.json"}
                     )
         return entries
 

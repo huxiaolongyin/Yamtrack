@@ -182,12 +182,12 @@ def media_list(request, username, media_type):
     else:
         # privacy check then media type check
         if target_user.profile_private:
-            msg = "User not found"
+            msg = _("User not found")
             raise Http404(msg)
 
         enabled_media_types = target_user.get_enabled_media_types()
         if not enabled_media_types:
-            msg = "User doesn't have any media types enabled"
+            msg = _("User doesn't have any media types enabled")
             raise Http404(msg)
 
         if media_type not in enabled_media_types:
@@ -658,10 +658,11 @@ def media_save(request):
     else:
         logger.error(form.errors.as_json())
         for field, errors in form.errors.items():
+            field_label = form.fields[field].label if field in form.fields else field
             for error in errors:
                 messages.error(
                     request,
-                    f"{field.replace('_', ' ').title()}: {error}",
+                    f"{field_label}: {error}",
                 )
 
     return helpers.redirect_back(request)

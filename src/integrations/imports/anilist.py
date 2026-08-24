@@ -263,7 +263,7 @@ class AniListImporter:
         """Process a single entry from AniList."""
         if content["media"]["idMal"] is None:
             title = content["media"]["title"]["userPreferred"]
-            self.warnings.append(f"{title}: No matching MAL ID.")
+            self.warnings.append(_("%(title)s: No matching MAL ID.") % {"title": title})
             return
 
         # Check if we should process this entry based on mode

@@ -27,9 +27,9 @@
             {% endfor %}
           </div>
           <span class="text-sm text-gray-400">
-            {{ collaborators_count }} collaborator{{ collaborators_count|pluralize }}
+            {% blocktrans count collaborator_count=collaborators_count %}{{ collaborator_count }} collaborator{% plural %}{{ collaborator_count }} collaborators{% endblocktrans %}
             <span class="mx-2">•</span>
-            {{ items_count }} item{{ items_count|pluralize }}
+            {% blocktrans count item_count=items_count %}{{ item_count }} item{% plural %}{{ item_count }} items{% endblocktrans %}
           </span>
         </div>
       </div>

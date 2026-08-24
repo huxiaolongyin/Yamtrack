@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
   Chart.register(ChartDataLabels);
 
+  function localizeChartData(data) {
+    if (Array.isArray(data.labels)) {
+      data.labels = data.labels.map((label) => gettext(label));
+    }
+    if (Array.isArray(data.datasets)) {
+      data.datasets.forEach((dataset) => {
+        if (dataset.label) {
+          dataset.label = gettext(dataset.label);
+        }
+      });
+    }
+    return data;
+  }
+
   // Custom external tooltip for bar charts
   function customBarTooltip(context) {
     // External custom tooltip
@@ -289,7 +303,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "media_type_distribution"
   );
   if (mediaTypeDistributionElement) {
-    const mediaTypeData = JSON.parse(mediaTypeDistributionElement.textContent);
+    const mediaTypeData = localizeChartData(
+      JSON.parse(mediaTypeDistributionElement.textContent)
+    );
     initializeChartIfExists(
       "mediaTypeChart",
       "pie",
@@ -303,7 +319,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "status_pie_chart_data"
   );
   if (statusPieChartElement) {
-    const statusPieData = JSON.parse(statusPieChartElement.textContent);
+    const statusPieData = localizeChartData(
+      JSON.parse(statusPieChartElement.textContent)
+    );
     initializeChartIfExists(
       "statusChart",
       "pie",
@@ -317,7 +335,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "status_distribution"
   );
   if (statusDistributionElement) {
-    const statusData = JSON.parse(statusDistributionElement.textContent);
+    const statusData = localizeChartData(
+      JSON.parse(statusDistributionElement.textContent)
+    );
     initializeChartIfExists(
       "statusStackedChart",
       "bar",
@@ -330,7 +350,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const scoreDistributionElement =
     document.getElementById("score_distribution");
   if (scoreDistributionElement) {
-    const scoreData = JSON.parse(scoreDistributionElement.textContent);
+    const scoreData = localizeChartData(
+      JSON.parse(scoreDistributionElement.textContent)
+    );
     const scoreChartOptions = JSON.parse(JSON.stringify(barChartConfig)); // Deep clone
 
     // Add score-specific configurations

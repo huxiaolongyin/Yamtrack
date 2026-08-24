@@ -146,9 +146,9 @@ class IntegrationTest(StaticLiveServerTestCase):
         self.page.get_by_placeholder("Search for a season...").click()
         self.page.get_by_placeholder("Search for a season...").type("frien")
         expect(self.page.locator("#parent-season-results")).to_contain_text(
-            "Friends - Season 1",
+            "Season 1 of Friends",
         )
-        self.page.get_by_role("button", name="Friends - Season").click()
+        self.page.get_by_role("button", name="Season 1 of Friends").click()
         self.page.get_by_placeholder("Enter image URL").click()
         self.page.get_by_placeholder("Enter image URL").fill(
             "https://media.themoviedb.org/t/p/w227_and_h127_bestv2/v6Elr1W2elOyGi1MClgV0mIBVHC.jpg",

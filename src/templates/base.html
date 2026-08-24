@@ -1,8 +1,9 @@
 {% load static %}
 {% load app_tags %}
+{% load i18n %}
 
 <!DOCTYPE html>
-<html lang="en" class="scheme-dark bg-[#212529]">
+<html lang="{{ LANGUAGE_CODE }}" class="scheme-dark bg-[#212529]">
   <head>
     {# Required meta tags #}
     <meta charset="UTF-8">
@@ -30,6 +31,7 @@
     <script src="{% static 'js/libraries/htmx-2.0.4.min.js' %}"></script>
     <script defer src="{% static 'js/libraries/alpinejs-3.14.9.min.js' %}"></script>
     <script src="{% static 'js/libraries/lazysizes-5.3.2.min.js' %}" async></script>
+    <script src="{% url 'javascript-catalog' %}"></script>
 
     <link rel="apple-touch-icon"
           sizes="180x180"
@@ -83,7 +85,7 @@
                       {% include "app/icons/house.svg" with classes="w-5 h-5" %}
 
                     {% endif %}
-                    <span>Home</span>
+                    <span>{% trans "Home" %}</span>
                   </a>
                 </li>
 
@@ -125,7 +127,7 @@
                         {% include "app/icons/circle-plus.svg" with classes="w-5 h-5" %}
 
                       {% endif %}
-                      <span>Create Custom</span>
+                      <span>{% trans "Create Custom" %}</span>
                     </a>
                   </li>
 
@@ -140,7 +142,7 @@
                         {% include "app/icons/bars-pyramid.svg" with classes="w-5 h-5" %}
 
                       {% endif %}
-                      <span>Statistics</span>
+                      <span>{% trans "Statistics" %}</span>
                     </a>
                   </li>
 
@@ -155,7 +157,7 @@
                         {% include "app/icons/history.svg" with classes="w-5 h-5" %}
 
                       {% endif %}
-                      <span>Journal</span>
+                      <span>{% trans "Journal" %}</span>
                     </a>
                   </li>
 
@@ -170,7 +172,7 @@
                         {% include "app/icons/folder-plus.svg" with classes="w-5 h-5" %}
 
                       {% endif %}
-                      <span>Lists</span>
+                      <span>{% trans "Lists" %}</span>
                     </a>
                   </li>
 
@@ -185,7 +187,7 @@
                         {% include "app/icons/calendar.svg" with classes="w-5 h-5" %}
 
                       {% endif %}
-                      <span>Calendar</span>
+                      <span>{% trans "Calendar" %}</span>
                     </a>
                   </li>
                 </ul>
@@ -196,6 +198,28 @@
           {% block sidebar_logout %}
             <div class="p-4 border-t border-[#2c3136] mt-auto">
               <div class="space-y-2">
+                <form id="language-form"
+                      action="{% url 'set_language' %}"
+                      method="post"
+                      class="flex items-center space-x-3 px-4 py-2">
+                  {% csrf_token %}
+                  <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                  {% include "app/icons/language.svg" with classes="w-5 h-5 text-gray-400 shrink-0" %}
+                  {% get_current_language as CURRENT_LANGUAGE %}
+                  {% get_available_languages as AVAILABLE_LANGUAGES %}
+                  <label for="sidebar-language" class="sr-only">{% trans "Language" %}</label>
+                  <select id="sidebar-language"
+                          name="language"
+                          onchange="this.form.submit()"
+                          class="min-w-0 grow bg-transparent text-sm text-gray-400 hover:text-white focus:outline-none cursor-pointer">
+                    {% for code, name in AVAILABLE_LANGUAGES %}
+                      <option value="{{ code }}"
+                              class="bg-[#1a1d20] text-gray-100"
+                              {% if code == CURRENT_LANGUAGE %}selected{% endif %}>{{ name }}</option>
+                    {% endfor %}
+                  </select>
+                </form>
+
                 {% url 'account' as account_url %}
                 {% url 'notifications' as notifications_url %}
                 {% url 'sidebar' as sidebar_url %}
@@ -211,7 +235,7 @@
                     {% include "app/icons/settings.svg" with classes="w-5 h-5" %}
 
                   {% endif %}
-                  <span>Settings</span>
+                  <span>{% trans "Settings" %}</span>
                 </a>
 
                 <form method="post" action="{% url 'account_logout' %}" class="w-full">
@@ -220,7 +244,7 @@
                           class="w-full flex items-center space-x-3 px-4 py-2 rounded-md text-gray-400 hover:bg-[#23272b] hover:text-white transition-colors duration-200 text-sm cursor-pointer">
                     {% include "app/icons/logout.svg" with classes="w-5 h-5" %}
 
-                    <span>Logout</span>
+                    <span>{% trans "Logout" %}</span>
                   </button>
                 </form>
               </div>
@@ -256,7 +280,7 @@
                   <div class="relative w-full max-w-2xl">
                     <form method="get"
                           action="{% url 'search' %}"
-                          x-data=" { isOpen: false, selectedType: { display: '{{ search_type|media_type_readable_plural }}', value: '{{ search_type }}' }, mediaTypes: {% get_search_media_types user as search_types %}{{ search_types }}, getPlaceholder() { return `Search ${this.selectedType.display.toLowerCase()}...` } }">
+                          x-data=" { isOpen: false, selectedType: { display: '{{ search_type|media_type_readable_plural }}', value: '{{ search_type }}' }, mediaTypes: {% get_search_media_types user as search_types %}{{ search_types }}, getPlaceholder() { return interpolate(gettext('Search %s...'), [this.selectedType.display.toLowerCase()]) } }">
                       <div class="flex">
                         <div class="relative grow">
                           {# Search input #}

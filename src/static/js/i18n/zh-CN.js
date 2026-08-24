@@ -1,0 +1,3 @@
+/*! Select2 Simplified Chinese locale | source: https://github.com/select2/select2/blob/4.1.0-rc.0/src/js/select2/i18n/zh-CN.js */
+
+!function(){if(jQuery&&jQuery.fn&&jQuery.fn.select2&&jQuery.fn.select2.amd)var e=jQuery.fn.select2.amd;e.define("select2/i18n/zh-CN",[],function(){return{errorLoading:function(){return"无法载入结果。"},inputTooLong:function(e){return"请删除"+(e.input.length-e.maximum)+"个字符"},inputTooShort:function(e){return"请再输入至少"+(e.minimum-e.input.length)+"个字符"},loadingMore:function(){return"载入更多结果…"},maximumSelected:function(e){return"最多只能选择"+e.maximum+"个项目"},noResults:function(){return"未找到结果"},searching:function(){return"搜索中…"},removeAllItems:function(){return"删除所有项目"},removeItem:function(){return"删除项目"},search:function(){return"搜索"}}}),e.define,e.require}();
